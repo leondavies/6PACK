@@ -112,11 +112,5 @@
     <priority>0.7</priority>
   </url>
   
-  <url>
-    <loc>https://6pack.co.nz/brewery</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
   
 </urlset> 

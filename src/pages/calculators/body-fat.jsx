@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { Target, ArrowLeft, Info, Eye, Calculator, Users } from "lucide-react";
+import { Target, ArrowLeft, Info, Eye, Calculator, Users, Scale, TrendingUp, Dumbbell, Heart, Apple } from "lucide-react";
 import BlurIn from "../../components/blurText";
 
 function BodyFatCalculator() {
@@ -124,15 +124,23 @@ function BodyFatCalculator() {
   return (
     <>
       <Helmet>
-        <title>Body Fat Calculator - Body Fat Percentage | 6Pack Fitness</title>
+        <title>Free Body Fat Calculator New Zealand | Body Fat Percentage NZ | 6Pack</title>
         <meta
           name="description"
-          content="Calculate your body fat percentage using US Navy method or BMI formula. Get insights into your body composition and health status."
+          content="Free body fat calculator for New Zealanders. Calculate your body fat percentage using US Navy method or BMI formula. Get insights into your body composition and health status."
         />
         <meta
           name="keywords"
-          content="body fat calculator, body fat percentage, US Navy method, body composition, fitness calculator"
+          content="body fat calculator NZ, body fat percentage New Zealand, US Navy method calculator, body composition NZ, fitness calculator New Zealand"
         />
+        <meta property="og:title" content="Free Body Fat Calculator New Zealand | 6Pack" />
+        <meta property="og:description" content="Calculate your body fat percentage with our free New Zealand body fat calculator. Get body composition insights." />
+        <meta property="og:url" content="https://6pack.co.nz/calculators/body-fat" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Free Body Fat Calculator New Zealand | 6Pack" />
+        <meta name="twitter:description" content="Calculate your body fat percentage with our free NZ calculator." />
+        <link rel="canonical" href="https://6pack.co.nz/calculators/body-fat" />
       </Helmet>
 
       <div className="min-h-screen bg-gray-50 py-12">
@@ -457,6 +465,45 @@ function BodyFatCalculator() {
                       )}
                     </div>
                   </div>
+                </div>
+              </div>
+
+              {/* Related Calculators */}
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-4">Other Fitness Calculators</h3>
+                <div className="grid md:grid-cols-4 gap-4">
+                  <Link 
+                    to="/calculators/bmi" 
+                    className="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+                  >
+                    <Scale className="text-blue-500 mb-2" size={20} />
+                    <h4 className="font-semibold text-gray-900 text-sm">BMI Calculator</h4>
+                    <p className="text-xs text-gray-600">Check your weight status</p>
+                  </Link>
+                  <Link 
+                    to="/calculators/bmr" 
+                    className="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+                  >
+                    <Heart className="text-red-500 mb-2" size={20} />
+                    <h4 className="font-semibold text-gray-900 text-sm">BMR Calculator</h4>
+                    <p className="text-xs text-gray-600">Calculate daily calorie needs</p>
+                  </Link>
+                  <Link 
+                    to="/calculators/macro" 
+                    className="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+                  >
+                    <Apple className="text-green-500 mb-2" size={20} />
+                    <h4 className="font-semibold text-gray-900 text-sm">Macro Calculator</h4>
+                    <p className="text-xs text-gray-600">Plan your nutrition</p>
+                  </Link>
+                  <Link 
+                    to="/calculators/ideal-weight" 
+                    className="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+                  >
+                    <TrendingUp className="text-blue-500 mb-2" size={20} />
+                    <h4 className="font-semibold text-gray-900 text-sm">Ideal Weight</h4>
+                    <p className="text-xs text-gray-600">Find your target weight</p>
+                  </Link>
                 </div>
               </div>
             </div>

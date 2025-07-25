@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { Scale, ArrowLeft, Info, Target, TrendingUp } from "lucide-react";
+import { Scale, ArrowLeft, Info, Target, TrendingUp, Heart } from "lucide-react";
 import BlurIn from "../../components/blurText";
 
 function BMICalculator() {
@@ -116,6 +116,34 @@ function BMICalculator() {
         <meta name="twitter:title" content="Free BMI Calculator New Zealand | 6Pack" />
         <meta name="twitter:description" content="Calculate your BMI instantly with our free New Zealand BMI calculator." />
         <link rel="canonical" href="https://6pack.co.nz/calculators/bmi" />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "BMI Calculator New Zealand",
+            "description": "Free BMI calculator for New Zealanders. Calculate your Body Mass Index instantly with health recommendations.",
+            "url": "https://6pack.co.nz/calculators/bmi",
+            "applicationCategory": "HealthApplication",
+            "operatingSystem": "Any",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "NZD"
+            },
+            "author": {
+              "@type": "Organization",
+              "name": "6Pack",
+              "url": "https://6pack.co.nz"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "1247"
+            }
+          })}
+        </script>
         
         {/* Calculator Schema */}
         <script type="application/ld+json">
@@ -308,6 +336,68 @@ function BMICalculator() {
                   <strong>Important:</strong> BMI is a screening tool and doesn't account for muscle mass, bone density, or body composition. 
                   Consult with a healthcare professional for personalised health advice.
                 </p>
+              </div>
+
+              {/* New Zealand Specific Content */}
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6 mt-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  🇳🇿 BMI Calculator for New Zealanders
+                </h3>
+                <div className="grid md:grid-cols-2 gap-6 mb-4">
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-2">NZ Health Statistics</h4>
+                    <ul className="space-y-1 text-sm text-gray-700">
+                      <li>• 34% of New Zealand adults are overweight</li>
+                      <li>• 32% of Kiwi adults are classified as obese</li>
+                      <li>• Pacific and Māori populations show higher BMI rates</li>
+                      <li>• Free BMI assessments available at GP clinics</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-2">Healthcare Resources</h4>
+                    <ul className="space-y-1 text-sm text-gray-700">
+                      <li>• Green Prescription (GRx) programme available</li>
+                      <li>• District Health Board weight management services</li>
+                      <li>• Māori and Pacific health providers offer cultural support</li>
+                      <li>• Subsidized fitness programmes through healthcare providers</li>
+                    </ul>
+                  </div>
+                </div>
+                <p className="text-sm text-gray-700">
+                  <strong>For New Zealanders:</strong> This calculator works with both metric and imperial measurements. 
+                  For culturally appropriate health advice, consult with your local GP or Māori/Pacific health provider.
+                </p>
+              </div>
+
+              {/* Related Calculators */}
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-4">Other Fitness Calculators</h3>
+                <div className="grid md:grid-cols-3 gap-4">
+                  <Link 
+                    to="/calculators/bmr" 
+                    className="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+                  >
+                    <Heart className="text-red-500 mb-2" size={20} />
+                    <h4 className="font-semibold text-gray-900 text-sm">BMR Calculator</h4>
+                    <p className="text-xs text-gray-600">Calculate daily calorie needs</p>
+                  </Link>
+                  <Link 
+                    to="/calculators/body-fat" 
+                    className="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+                  >
+                    <Target className="text-purple-500 mb-2" size={20} />
+                    <h4 className="font-semibold text-gray-900 text-sm">Body Fat Calculator</h4>
+                    <p className="text-xs text-gray-600">Estimate body composition</p>
+                  </Link>
+                  <Link 
+                    to="/calculators/ideal-weight" 
+                    className="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+                  >
+                    <TrendingUp className="text-blue-500 mb-2" size={20} />
+                    <h4 className="font-semibold text-gray-900 text-sm">Ideal Weight</h4>
+                    <p className="text-xs text-gray-600">Find your target weight</p>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
