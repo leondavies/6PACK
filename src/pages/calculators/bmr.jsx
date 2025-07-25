@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { Heart, ArrowLeft, Info, Target, Flame, Scale, TrendingUp, Dumbbell, Apple } from "lucide-react";
 import BlurIn from "../../components/blurText";
+import ShareResults from "../../components/ui/ShareResults";
 
 function BMRCalculator() {
+  const [searchParams] = useSearchParams();
   const [age, setAge] = useState("");
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
@@ -14,6 +16,38 @@ function BMRCalculator() {
   const [bmr, setBMR] = useState(null);
   const [tdee, setTDEE] = useState(null);
   const [weightGoal, setWeightGoal] = useState("maintain");
+  const [isSharedResult, setIsSharedResult] = useState(false);
+
+  // Load shared results from URL parameters on component mount
+  useEffect(() => {
+    const sharedAge = searchParams.get('age');
+    const sharedHeight = searchParams.get('height');
+    const sharedWeight = searchParams.get('weight');
+    const sharedGender = searchParams.get('gender');
+    const sharedUnit = searchParams.get('unit');
+    const sharedActivity = searchParams.get('activityLevel');
+    const sharedBmr = searchParams.get('bmr');
+    
+    if (sharedAge && sharedHeight && sharedWeight && sharedBmr) {
+      setAge(sharedAge);
+      setHeight(sharedHeight);
+      setWeight(sharedWeight);
+      if (sharedGender) setGender(sharedGender);
+      if (sharedUnit) setUnit(sharedUnit);
+      if (sharedActivity) setActivityLevel(sharedActivity);
+      setIsSharedResult(true);
+      
+      // If we have BMR and TDEE values, set them directly
+      const sharedTdee = searchParams.get('tdee');
+      if (sharedTdee) {
+        setBMR(parseInt(sharedBmr));
+        setTDEE(parseInt(sharedTdee));
+      } else {
+        // Otherwise calculate them normally
+        setTimeout(() => calculateBMR(), 100);
+      }
+    }
+  }, [searchParams]);
 
   const activityLevels = [
     { value: "sedentary", label: "Sedentary", multiplier: 1.2, description: "Little or no exercise" },
@@ -270,6 +304,13 @@ function BMRCalculator() {
               {bmr && (
                 <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8">
                   <div className="text-center mb-6">
+                    {isSharedResult && (
+                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4">
+                        <p className="text-blue-800 text-sm">
+                          📤 These results were shared with you! Calculate your own results above.
+                        </p>
+                      </div>
+                    )}
                     <h2 className="text-2xl font-bold text-gray-900 mb-2">Your BMR</h2>
                     <div className="text-5xl font-bold text-red-600 mb-2">
                       {bmr}
@@ -284,6 +325,25 @@ function BMRCalculator() {
                     </div>
                     <div className="text-3xl font-bold text-red-600 mb-1">{tdee}</div>
                     <p className="text-sm text-red-700">calories per day including activity</p>
+                  </div>
+                  
+                  {/* Share Results */}
+                  <div className="mt-6 text-center">
+                    <ShareResults 
+                      title="BMR Calculator Results"
+                      results={`BMR: ${bmr} calories/day\nTDEE: ${tdee} calories/day\nActivity Level: ${activityLevels.find(l => l.value === activityLevel)?.label}`}
+                      hashtags={["BMRCalculator", "Metabolism", "6PackNZ"]}
+                      resultData={{
+                        age: age,
+                        height: height,
+                        weight: weight,
+                        gender: gender,
+                        unit: unit,
+                        activityLevel: activityLevel,
+                        bmr: bmr,
+                        tdee: tdee
+                      }}
+                    />
                   </div>
                 </div>
               )}

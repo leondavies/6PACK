@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { ArrowLeft, Clock, User, Eye, Calendar } from 'lucide-react';
 import { marked } from 'marked';
 import { articles } from '../../data/products';
+import ArticleShare from '../../components/ui/ArticleShare';
 
 export default function ArticlePage() {
   const { slug } = useParams();
@@ -186,17 +187,14 @@ export default function ArticlePage() {
             {/* Sidebar */}
             <div className="lg:col-span-1">
               <div className="sticky top-8 space-y-6">
-                {/* Share & Save */}
+                {/* Share Article */}
                 <div className="bg-gray-50 rounded-lg p-6">
                   <h3 className="font-semibold text-gray-900 mb-4">Share this article</h3>
-                  <div className="flex space-x-3">
-                    <button className="flex-1 bg-blue-600 text-white px-3 py-2 rounded text-sm hover:bg-blue-700 transition-colors">
-                      Share
-                    </button>
-                    <button className="flex-1 bg-gray-200 text-gray-700 px-3 py-2 rounded text-sm hover:bg-gray-300 transition-colors">
-                      Save
-                    </button>
-                  </div>
+                  <ArticleShare 
+                    title={article.title}
+                    excerpt={article.excerpt}
+                    url={`https://6pack.co.nz/articles/${article.slug}`}
+                  />
                 </div>
 
                 {/* Table of Contents */}

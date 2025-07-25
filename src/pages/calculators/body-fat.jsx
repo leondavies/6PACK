@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { Target, ArrowLeft, Info, Eye, Calculator, Users, Scale, TrendingUp, Dumbbell, Heart, Apple } from "lucide-react";
 import BlurIn from "../../components/blurText";
+import ShareResults from "../../components/ui/ShareResults";
 
 function BodyFatCalculator() {
+  const [searchParams] = useSearchParams();
   const [method, setMethod] = useState("navy");
   const [gender, setGender] = useState("male");
   const [unit, setUnit] = useState("metric");
@@ -17,6 +19,60 @@ function BodyFatCalculator() {
   const [bodyFat, setBodyFat] = useState(null);
   const [category, setCategory] = useState("");
   const [description, setDescription] = useState("");
+  const [isSharedResult, setIsSharedResult] = useState(false);
+
+  // Load shared results from URL parameters on component mount
+  useEffect(() => {
+    const sharedMethod = searchParams.get('method');
+    const sharedGender = searchParams.get('gender');
+    const sharedUnit = searchParams.get('unit');
+    const sharedAge = searchParams.get('age');
+    const sharedHeight = searchParams.get('height');
+    const sharedWeight = searchParams.get('weight');
+    const sharedWaist = searchParams.get('waist');
+    const sharedNeck = searchParams.get('neck');
+    const sharedHip = searchParams.get('hip');
+    const sharedBodyFat = searchParams.get('bodyFat');
+    const sharedCategory = searchParams.get('category');
+    
+    if (sharedBodyFat && sharedWaist && sharedNeck) {
+      if (sharedMethod) setMethod(sharedMethod);
+      if (sharedGender) setGender(sharedGender);
+      if (sharedUnit) setUnit(sharedUnit);
+      if (sharedAge) setAge(sharedAge);
+      if (sharedHeight) setHeight(sharedHeight);
+      if (sharedWeight) setWeight(sharedWeight);
+      setWaist(sharedWaist);
+      setNeck(sharedNeck);
+      if (sharedHip) setHip(sharedHip);
+      setIsSharedResult(true);
+      
+      // Set calculated values directly
+      if (sharedCategory) {
+        setBodyFat(parseFloat(sharedBodyFat));
+        setCategory(decodeURIComponent(sharedCategory));
+        
+        // Set description based on category  
+        const bodyFatValue = parseFloat(sharedBodyFat);
+        if (sharedGender === "male") {
+          if (bodyFatValue < 6) setDescription("Essential fat levels - may be too low");
+          else if (bodyFatValue < 14) setDescription("Athletic body fat range");
+          else if (bodyFatValue < 18) setDescription("Fitness body fat range");
+          else if (bodyFatValue < 25) setDescription("Average body fat range");
+          else setDescription("Above average body fat range");
+        } else {
+          if (bodyFatValue < 16) setDescription("Essential fat levels - may be too low");
+          else if (bodyFatValue < 21) setDescription("Athletic body fat range");
+          else if (bodyFatValue < 25) setDescription("Fitness body fat range");
+          else if (bodyFatValue < 32) setDescription("Average body fat range");
+          else setDescription("Above average body fat range");
+        }
+      } else {
+        // Otherwise calculate normally
+        setTimeout(() => calculateBodyFat(), 100);
+      }
+    }
+  }, [searchParams]);
 
   const calculateNavyMethod = () => {
     if (!height || !waist || !neck || (gender === "female" && !hip)) return null;
@@ -399,6 +455,13 @@ function BodyFatCalculator() {
               {bodyFat && (
                 <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8">
                   <div className="text-center">
+                    {isSharedResult && (
+                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4">
+                        <p className="text-blue-800 text-sm">
+                          📤 These results were shared with you! Calculate your own results above.
+                        </p>
+                      </div>
+                    )}
                     <h2 className="text-2xl font-bold text-gray-900 mb-2">Your Body Fat</h2>
                     <div className={`text-6xl font-bold mb-2 ${getBodyFatColor()}`}>
                       {bodyFat}%
@@ -406,9 +469,31 @@ function BodyFatCalculator() {
                     <div className={`text-xl font-semibold mb-2 ${getBodyFatColor()}`}>
                       {category}
                     </div>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 mb-4">
                       {description}
                     </p>
+                    
+                    {/* Share Results */}
+                    <div className="mt-6">
+                      <ShareResults 
+                        title="Body Fat Calculator Results"
+                        results={`Body Fat: ${bodyFat}% (${category})\n${description}`}
+                        hashtags={["BodyFatCalculator", "Fitness", "6PackNZ"]}
+                        resultData={{
+                          method: method,
+                          gender: gender,
+                          unit: unit,
+                          age: age,
+                          height: height,
+                          weight: weight,
+                          waist: waist,
+                          neck: neck,
+                          hip: hip,
+                          bodyFat: bodyFat,
+                          category: category
+                        }}
+                      />
+                    </div>
                   </div>
                 </div>
               )}
