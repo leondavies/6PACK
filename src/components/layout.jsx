@@ -1,5 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import Header from "./layout/Header";
+import Footer from "./layout/Footer";
 
 const Layout = ({ children }) => (
   <>
@@ -22,7 +24,13 @@ const Layout = ({ children }) => (
         style={{ display: "none", visibility: "hidden" }}
       ></iframe>
     </noscript>
-    {children}
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-1">
+        {children}
+      </main>
+      <Footer />
+    </div>
   </>
 );
 
