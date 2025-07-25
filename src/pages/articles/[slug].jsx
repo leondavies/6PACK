@@ -1,8 +1,8 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import { ArrowLeft, Clock, User, Eye, Calendar, Share2, Bookmark } from 'lucide-react';
+import { ArrowLeft, Clock, User, Eye, Calendar } from 'lucide-react';
 import { marked } from 'marked';
-import { articles, fitnessCategories } from '../../data/products';
+import { articles } from '../../data/products';
 
 export default function ArticlePage() {
   const { slug } = useParams();
@@ -80,32 +80,41 @@ export default function ArticlePage() {
       </Helmet>
 
       <div className="min-h-screen bg-white">
-        {/* Article Header */}
+        {/* Article Header with Hero Background */}
         <div className="relative bg-white">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          {/* Hero Background Image */}
+          <div className="absolute inset-0 z-0">
+            <img
+              src={article.image}
+              alt={article.title}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60"></div>
+          </div>
+          <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <Link 
               to="/articles" 
-              className="inline-flex items-center text-gray-600 hover:text-primary-600 mb-8 transition-colors"
+              className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Articles
             </Link>
             
             <div className="mb-6">
-              <span className="bg-primary-100 text-primary-800 px-4 py-2 rounded-full text-sm font-semibold">
+              <span className="bg-primary-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                 {article.category}
               </span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-gray-900">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
               {article.title}
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed max-w-4xl">
+            <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-4xl">
               {article.excerpt}
             </p>
             
-            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500">
+            <div className="flex flex-wrap items-center gap-6 text-sm text-white/80">
               <div className="flex items-center">
                 <User className="w-4 h-4 mr-2" />
                 <span className="font-medium">{article.author}</span>
@@ -130,17 +139,8 @@ export default function ArticlePage() {
           </div>
         </div>
 
-        {/* Article Image */}
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 relative z-10">
-          <div className="relative overflow-hidden rounded-xl shadow-2xl">
-            <img
-              src={article.image}
-              alt={article.title}
-              className="w-full h-72 md:h-[28rem] object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
-          </div>
-        </div>
+        {/* Spacer for content separation */}
+        <div className="h-8 bg-white"></div>
 
         {/* Article Content */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
