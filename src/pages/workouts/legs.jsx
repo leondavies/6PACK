@@ -394,7 +394,7 @@ function LegsWorkout() {
         </div>
 
         {/* Location & Difficulty Selection */}
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Workout Location Toggle */}
           <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
@@ -486,27 +486,26 @@ function LegsWorkout() {
               {/* Exercise List */}
               <div className="space-y-6">
                 {selectedWorkout.exercises.map((exercise, index) => (
-                  <div key={index} className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center font-bold">
+                  <div key={index} className="flex items-start gap-3 sm:gap-4">
+                      <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-sm sm:text-base">
                         {index + 1}
                       </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold text-gray-900 mb-3">{exercise.name}</h3>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 leading-tight">{exercise.name}</h3>
                         
                         {/* Exercise Stats */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                          <div className="bg-red-50 rounded-lg p-3 text-center">
-                            <div className="text-red-600 font-semibold">{exercise.sets}</div>
-                            <div className="text-sm text-red-800">Sets</div>
+                        <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-4">
+                          <div className="bg-red-50 rounded-lg p-2 sm:p-3 text-center">
+                            <div className="text-red-600 font-semibold text-sm sm:text-base">{exercise.sets}</div>
+                            <div className="text-xs sm:text-sm text-red-800">Sets</div>
                           </div>
-                          <div className="bg-orange-50 rounded-lg p-3 text-center">
-                            <div className="text-orange-600 font-semibold">{exercise.reps}</div>
-                            <div className="text-sm text-orange-800">Reps</div>
+                          <div className="bg-orange-50 rounded-lg p-2 sm:p-3 text-center">
+                            <div className="text-orange-600 font-semibold text-sm sm:text-base">{exercise.reps}</div>
+                            <div className="text-xs sm:text-sm text-orange-800">Reps</div>
                           </div>
-                          <div className="bg-yellow-50 rounded-lg p-3 text-center">
-                            <div className="text-yellow-600 font-semibold">{exercise.rest}</div>
-                            <div className="text-sm text-yellow-800">Rest</div>
+                          <div className="bg-yellow-50 rounded-lg p-2 sm:p-3 text-center">
+                            <div className="text-yellow-600 font-semibold text-sm sm:text-base">{exercise.rest}</div>
+                            <div className="text-xs sm:text-sm text-yellow-800">Rest</div>
                           </div>
                         </div>
                         
@@ -526,7 +525,6 @@ function LegsWorkout() {
                           </div>
                         </div>
                       </div>
-                    </div>
                   </div>
                 ))}
               </div>

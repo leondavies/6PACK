@@ -378,7 +378,7 @@ function ChestWorkout() {
         </div>
 
         {/* Location & Difficulty Selection */}
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Workout Location Toggle */}
           <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
@@ -419,14 +419,14 @@ function ChestWorkout() {
             <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
               Choose Your Fitness Level
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
               {Object.entries(workouts).map(([level, locationWorkouts]) => {
                 const workout = locationWorkouts[workoutLocation];
                 return (
                 <button
                   key={level}
                   onClick={() => setSelectedDifficulty(level)}
-                  className={`p-6 rounded-xl text-center transition-all ${
+                  className={`p-4 sm:p-6 rounded-xl text-center transition-all ${
                     selectedDifficulty === level
                       ? "bg-blue-600 text-white shadow-lg transform scale-105"
                       : "bg-gray-50 text-gray-700 hover:bg-gray-100"
@@ -466,47 +466,45 @@ function ChestWorkout() {
               {/* Exercise List */}
               <div className="space-y-6">
                 {selectedWorkout.exercises.map((exercise, index) => (
-                  <div key={index} className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+                  <div key={index} className="flex items-start gap-3 sm:gap-4">
+                      <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm sm:text-base">
                         {index + 1}
                       </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold text-gray-900 mb-3">{exercise.name}</h3>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 leading-tight">{exercise.name}</h3>
                         
                         {/* Exercise Stats */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                          <div className="bg-blue-50 rounded-lg p-3 text-center">
-                            <div className="text-blue-600 font-semibold">{exercise.sets}</div>
-                            <div className="text-sm text-blue-800">Sets</div>
+                        <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-4">
+                          <div className="bg-blue-50 rounded-lg p-2 sm:p-3 text-center">
+                            <div className="text-blue-600 font-semibold text-sm sm:text-base">{exercise.sets}</div>
+                            <div className="text-xs sm:text-sm text-blue-800">Sets</div>
                           </div>
-                          <div className="bg-green-50 rounded-lg p-3 text-center">
-                            <div className="text-green-600 font-semibold">{exercise.reps}</div>
-                            <div className="text-sm text-green-800">Reps</div>
+                          <div className="bg-green-50 rounded-lg p-2 sm:p-3 text-center">
+                            <div className="text-green-600 font-semibold text-sm sm:text-base">{exercise.reps}</div>
+                            <div className="text-xs sm:text-sm text-green-800">Reps</div>
                           </div>
-                          <div className="bg-purple-50 rounded-lg p-3 text-center">
-                            <div className="text-purple-600 font-semibold">{exercise.rest}</div>
-                            <div className="text-sm text-purple-800">Rest</div>
+                          <div className="bg-purple-50 rounded-lg p-2 sm:p-3 text-center">
+                            <div className="text-purple-600 font-semibold text-sm sm:text-base">{exercise.rest}</div>
+                            <div className="text-xs sm:text-sm text-purple-800">Rest</div>
                           </div>
                         </div>
                         
                         {/* Description */}
-                        <p className="text-gray-700 mb-3 leading-relaxed">
+                        <p className="text-gray-700 mb-3 leading-relaxed text-sm sm:text-base">
                           {exercise.description}
                         </p>
                         
                         {/* Tips */}
-                        <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg">
+                        <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 sm:p-4 rounded-r-lg">
                           <div className="flex items-start">
-                            <Info className="text-yellow-600 mr-2 mt-0.5 flex-shrink-0" size={16} />
-                            <div>
-                              <div className="font-medium text-yellow-800 mb-1">Pro Tip</div>
-                              <div className="text-yellow-700 text-sm">{exercise.tips}</div>
+                            <Info className="text-yellow-600 mr-2 mt-0.5 flex-shrink-0" size={14} />
+                            <div className="min-w-0">
+                              <div className="font-medium text-yellow-800 mb-1 text-sm">Pro Tip</div>
+                              <div className="text-yellow-700 text-xs sm:text-sm leading-relaxed">{exercise.tips}</div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
                   </div>
                 ))}
               </div>
@@ -520,9 +518,9 @@ function ChestWorkout() {
               Workout Guidelines & Safety Tips
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Before You Start</h3>
+                <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-4">Before You Start</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">
                     <CheckCircle className="text-green-500 mr-2 mt-0.5 flex-shrink-0" size={16} />
@@ -544,7 +542,7 @@ function ChestWorkout() {
               </div>
               
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Form & Safety</h3>
+                <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-4">Form & Safety</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">
                     <CheckCircle className="text-green-500 mr-2 mt-0.5 flex-shrink-0" size={16} />
