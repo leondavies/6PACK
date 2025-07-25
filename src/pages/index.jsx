@@ -11,7 +11,7 @@ function Index() {
   return (
     <>
       <Helmet>
-        <title>6Pack NZ | New Zealand's Premier Fitness & Training Hub | Free Calculators & Guides</title>
+        <title>6Pack NZ | New Zealand&apos;s Premier Fitness & Training Hub | Free Calculators & Guides</title>
         <meta
           name="description"
                       content="Transform your body with 6Pack NZ - New Zealand&apos;s top fitness resource. Free BMI, BMR & macro calculators, expert workout plans, nutrition guides, and science-backed fitness strategies for Kiwis."
@@ -102,42 +102,57 @@ function Index() {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-50 to-primary-100 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <BlurIn
-                className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight"
-                word="Transform Your Body with Science-Backed Fitness"
-              />
-              <p className="text-xl text-gray-600 leading-relaxed">
-                Discover expert fitness guides, proven workout strategies, and nutrition advice 
-                from New Zealand's top trainers. Build your dream physique with evidence-based 
-                training methods.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/articles"
-                  className="bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors flex items-center justify-center group"
-                >
-                  Explore Articles
-                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-                </Link>
-                <Link
-                  to="/supplements"
-                  className="border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-600 hover:text-white transition-colors text-center"
-                >
-                  Shop Supplements
-                </Link>
+      <section className="relative bg-gradient-to-r from-gray-900 to-gray-700 text-white overflow-hidden">
+        {/* Hero Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1600&h=800&fit=crop"
+            alt="Transform Your Body with Science-Backed Fitness"
+            className="w-full h-full object-cover opacity-30"
+          />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <BlurIn
+              className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
+              word="Transform Your Body with Science-Backed Fitness"
+            />
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
+              Discover expert fitness guides, proven workout strategies, and nutrition advice 
+              from New Zealand&apos;s top trainers. Build your dream physique with evidence-based 
+              training methods.
+            </p>
+            
+            <div className="flex flex-wrap justify-center gap-4 text-sm mb-8">
+              <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
+                <BookOpen className="mr-2" size={16} />
+                Expert-written content
+              </div>
+              <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
+                <Target className="mr-2" size={16} />
+                Science-backed research
+              </div>
+              <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
+                <TrendingUp className="mr-2" size={16} />
+                Proven results
               </div>
             </div>
-            <div className="relative bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl shadow-2xl h-96 flex items-center justify-center p-8 overflow-hidden">
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop&crop=center"
-                alt="Fitness Training and Muscle Building"
-                className="w-full h-full object-cover rounded-xl"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/articles"
+                className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
+              >
+                Explore Articles
+                <ArrowRight className="ml-2" size={20} />
+              </Link>
+              <Link
+                to="/workouts"
+                className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-gray-900 transition-colors inline-flex items-center justify-center"
+              >
+                Browse Workouts
+                <Users className="ml-2" size={20} />
+              </Link>
             </div>
           </div>
         </div>
@@ -382,7 +397,7 @@ function Index() {
               Why Choose 6Pack?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              New Zealand's most trusted fitness resource with expert-backed content
+              New Zealand&apos;s most trusted fitness resource with expert-backed content
             </p>
           </div>
           
