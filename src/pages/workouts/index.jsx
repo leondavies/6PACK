@@ -103,36 +103,38 @@ function WorkoutsIndex() {
             />
           </div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-            <BlurIn
-              className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
-              word="Complete Workout Programs"
-            />
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl leading-relaxed">
-              Transform your body with our expertly designed workout programs. From beginner-friendly routines to advanced challenges - build strength, muscle, and confidence at home.
-            </p>
-            
-            <div className="flex flex-wrap gap-4 text-sm mb-8">
-              <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
-                <Users className="mr-2" size={16} />
-                All fitness levels
+            <div className="text-center">
+              <BlurIn
+                className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
+                word="Complete Workout Programs"
+              />
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
+                Transform your body with our expertly designed workout programs. From beginner-friendly routines to advanced challenges - build strength, muscle, and confidence at home.
+              </p>
+              
+              <div className="flex flex-wrap justify-center gap-4 text-sm mb-8">
+                <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
+                  <Users className="mr-2" size={16} />
+                  All fitness levels
+                </div>
+                <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
+                  <Heart className="mr-2" size={16} />
+                  No equipment needed
+                </div>
+                <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
+                  <Target className="mr-2" size={16} />
+                  Proven results
+                </div>
               </div>
-              <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
-                <Heart className="mr-2" size={16} />
-                No equipment needed
-              </div>
-              <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
-                <Target className="mr-2" size={16} />
-                Proven results
-              </div>
-            </div>
 
-            <Link
-              to="/workouts/chest"
-              className="inline-flex items-center bg-white text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Start Your First Workout
-              <ArrowRight className="ml-2" size={20} />
-            </Link>
+              <Link
+                to="/workouts/chest"
+                className="inline-flex items-center bg-white text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Start Your First Workout
+                <ArrowRight className="ml-2" size={20} />
+              </Link>
+            </div>
           </div>
         </div>
 

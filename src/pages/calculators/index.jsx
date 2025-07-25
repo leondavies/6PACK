@@ -76,34 +76,48 @@ function Calculators() {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-50 to-primary-100 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-gradient-to-r from-gray-900 to-gray-700 text-white overflow-hidden">
+        {/* Hero Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&h=800&fit=crop"
+            alt="Fitness calculations and tracking"
+            className="w-full h-full object-cover opacity-30"
+          />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
-            <div className="bg-primary-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-8">
-              <Calculator className="text-primary-600" size={40} />
-            </div>
             <BlurIn
-              className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-6"
+              className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
               word="Fitness Calculators"
             />
-            <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
               Take the guesswork out of your fitness journey with our collection of science-based calculators. 
               Track your progress, set realistic goals, and optimise your training and nutrition.
             </p>
-            <div className="flex items-center justify-center gap-6 text-sm text-gray-500">
-              <div className="flex items-center">
+            
+            <div className="flex flex-wrap justify-center gap-4 text-sm mb-8">
+              <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
                 <Activity className="mr-2" size={16} />
-                <span>Science-backed formulas</span>
+                Science-backed formulas
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
                 <Target className="mr-2" size={16} />
-                <span>Personalised results</span>
+                Personalised results
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
                 <TrendingUp className="mr-2" size={16} />
-                <span>Track your progress</span>
+                Track your progress
               </div>
             </div>
+
+            <Link
+              to="/calculators/bmi"
+              className="inline-flex items-center bg-white text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors"
+            >
+              <Calculator className="mr-2" size={20} />
+              Start Calculating Now
+            </Link>
           </div>
         </div>
       </section>
