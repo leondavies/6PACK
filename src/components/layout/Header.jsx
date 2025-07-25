@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ShoppingCart, User, Menu, X } from "lucide-react";
 import useCart from "../../hooks/useCart";
@@ -45,6 +45,14 @@ const Header = () => {
               } transition-colors`}
             >
               Articles
+            </Link>
+            <Link
+              to="/calculators"
+              className={`${
+                location.pathname.startsWith("/calculators") ? "text-primary-600" : "text-gray-700 hover:text-primary-600"
+              } transition-colors`}
+            >
+              Calculators
             </Link>
             <Link
               to="/workouts"
@@ -117,6 +125,17 @@ const Header = () => {
                 } block px-3 py-2 rounded-md text-base font-medium transition-colors border-l-4 border-transparent`}
               >
                 Articles
+              </Link>
+              <Link
+                to="/calculators"
+                onClick={closeMobileMenu}
+                className={`${
+                  location.pathname.startsWith("/calculators") 
+                    ? "bg-primary-50 text-primary-600 border-primary-500" 
+                    : "text-gray-700 hover:bg-gray-50 hover:text-primary-600"
+                } block px-3 py-2 rounded-md text-base font-medium transition-colors border-l-4 border-transparent`}
+              >
+                Calculators
               </Link>
               <Link
                 to="/workouts"

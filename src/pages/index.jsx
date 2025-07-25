@@ -1,7 +1,6 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { ArrowRight, BookOpen, Target, TrendingUp, Users, Star } from "lucide-react";
+import { ArrowRight, BookOpen, Target, TrendingUp, Users, Scale } from "lucide-react";
 import BlurIn from "../components/blurText";
 import ImageWithFallback from "../components/ui/ImageWithFallback";
 import { articles, fitnessCategories } from "../data/products";
@@ -142,6 +141,128 @@ function Index() {
               className="bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors inline-flex items-center"
             >
               View All Articles
+              <ArrowRight className="ml-2" size={16} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Fitness Calculators Section */}
+      <section className="py-20 bg-gradient-to-br from-primary-50 to-primary-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Fitness Calculators
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Take the guesswork out of your fitness journey with our science-based calculators
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {/* BMI Calculator */}
+            <Link
+              to="/calculators/bmi"
+              className="group bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <Scale className="text-blue-600" size={24} />
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+                BMI Calculator
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Calculate your Body Mass Index and understand your weight status
+              </p>
+            </Link>
+
+            {/* BMR Calculator */}
+            <Link
+              to="/calculators/bmr"
+              className="group bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="bg-red-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <span className="text-red-600 font-bold text-lg">🔥</span>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+                BMR Calculator
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Determine your daily calorie needs and metabolic rate
+              </p>
+            </Link>
+
+            {/* Body Fat Calculator */}
+            <Link
+              to="/calculators/body-fat"
+              className="group bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <Target className="text-purple-600" size={24} />
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+                Body Fat Calculator
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Estimate your body fat percentage using proven methods
+              </p>
+            </Link>
+
+            {/* 1RM Calculator */}
+            <Link
+              to="/calculators/one-rep-max"
+              className="group bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="bg-orange-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <span className="text-orange-600 font-bold text-lg">💪</span>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+                1RM Calculator
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Calculate your one-rep max for strength training
+              </p>
+            </Link>
+
+            {/* Macro Calculator */}
+            <Link
+              to="/calculators/macro"
+              className="group bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <span className="text-green-600 font-bold text-lg">🍎</span>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+                Macro Calculator
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Plan your daily macronutrient needs for optimal results
+              </p>
+            </Link>
+
+            {/* Ideal Weight Calculator */}
+            <Link
+              to="/calculators/ideal-weight"
+              className="group bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="bg-indigo-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <TrendingUp className="text-indigo-600" size={24} />
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+                Ideal Weight Calculator
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Find your ideal weight range based on scientific formulas
+              </p>
+            </Link>
+          </div>
+          
+          <div className="text-center">
+            <Link
+              to="/calculators"
+              className="bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors inline-flex items-center"
+            >
+              View All Calculators
               <ArrowRight className="ml-2" size={16} />
             </Link>
           </div>
