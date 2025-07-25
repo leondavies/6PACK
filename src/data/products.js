@@ -7,7 +7,7 @@ export const articles = [
     author: "Dr. Mike Mitchell",
     publishDate: "2025-01-15",
     readTime: "12 min",
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=400&fit=crop&fm=webp&q=85",
     excerpt: "Discover the proven methods to maximize muscle growth with evidence-based training protocols, nutrition strategies, and recovery techniques.",
     content: `
 # The Complete Guide to Building Muscle: 7 Science-Backed Strategies
@@ -215,7 +215,7 @@ Remember, everyone's journey is different. What matters is that you start, stay 
     author: "Sarah Johnson",
     publishDate: "2025-01-14",
     readTime: "8 min",
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=400&fit=crop&fm=webp&q=85",
     excerpt: "Transform your fitness with HIIT workouts that burn fat, improve cardiovascular health, and save time.",
     content: `
 # High-Intensity Interval Training: Maximum Results in Minimum Time
@@ -508,7 +508,7 @@ Remember, the best workout is the one you'll consistently perform. HIIT's time e
     author: "Dr. Lisa Chen",
     publishDate: "2025-01-13",
     readTime: "10 min",
-    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&h=400&fit=crop&fm=webp&q=85",
     excerpt: "Master the science of nutrient timing to maximize your workout performance, muscle growth, and recovery.",
     content: `
 # Nutrition Timing: When to Eat for Optimal Performance and Recovery
@@ -909,7 +909,7 @@ Remember, the best nutrition plan is one you can follow consistently. Start with
     author: "Coach Mark Stevens",
     publishDate: "2025-01-12",
     readTime: "15 min",
-    image: "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=800&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=800&h=400&fit=crop&fm=webp&q=85",
     excerpt: "Master the deadlift with proper form, progressive programming, and injury prevention strategies.",
     content: `
 # Deadlift Mastery: Perfect Your Form and Avoid Common Mistakes
@@ -1425,7 +1425,7 @@ Remember, the deadlift is a skill that takes years to master. Focus on continuou
     author: "Dr. Sarah Mitchell",
     publishDate: "2025-01-16",
     readTime: "12 min",
-    image: "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=800&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=800&h=400&fit=crop&fm=webp&q=85",
     excerpt: "Discover how optimising your sleep can dramatically improve muscle growth, recovery, and performance with science-backed strategies.",
     content: `
 # Sleep for Muscle Growth: The Ultimate Recovery Guide
@@ -1970,7 +1970,7 @@ Remember, you can't out-train or out-eat poor sleep. Make sleep optimisation a p
     author: "Dr. Emma Thompson",
     publishDate: "2025-01-17",
     readTime: "14 min",
-    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=400&fit=crop&fm=webp&q=85",
     excerpt: "Master female-specific weight loss strategies that work with your hormones, metabolism, and lifestyle for lasting results.",
     content: `
 # Weight Loss for Women: A Science-Based Approach to Sustainable Results
@@ -2524,7 +2524,7 @@ Remember, the goal isn't just to lose weight—it's to build a healthier, strong
     author: "Coach James Wilson",
     publishDate: "2025-01-18",
     readTime: "16 min",
-    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=400&fit=crop&fm=webp&q=85",
     excerpt: "Everything you need to know to start your fitness journey successfully - from goal setting to workout plans and nutrition basics.",
     content: `
 # Complete Beginner's Guide to Fitness: Start Your Journey the Right Way
@@ -3429,7 +3429,7 @@ Remember, every expert was once a beginner. The most important workout is your n
     author: "Rachel Martinez",
     publishDate: "2025-01-19",
     readTime: "11 min",
-    image: "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=800&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=800&h=400&fit=crop&fm=webp&q=85",
     excerpt: "Transform your living space into an effective fitness studio with equipment-free workouts that deliver real results.",
     content: `
 # Effective Home Workouts: Get Fit Without a Gym
@@ -4025,7 +4025,7 @@ Remember, the best workout is the one you'll actually do consistently. Home work
     author: "Dr. Michael Chen",
     publishDate: "2025-01-20",
     readTime: "13 min",
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=400&fit=crop&fm=webp&q=85",
     excerpt: "Learn evidence-based strategies to prevent injuries, improve movement quality, and maintain long-term fitness success.",
     content: `
 # Injury Prevention: Keep Your Body Strong and Resilient
@@ -4640,7 +4640,7 @@ Remember, the goal isn't to eliminate all discomfort from exercise—it's to tra
     author: "Dr. Jennifer Adams",
     publishDate: "2025-01-21",
     readTime: "12 min",
-    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&h=400&fit=crop&fm=webp&q=85",
     excerpt: "Discover how exercise can be your most powerful tool for managing stress, anxiety, depression, and boosting overall mental wellbeing.",
     content: `
 # Exercise for Mental Health: The Science of Movement and Mood
@@ -5193,7 +5193,7 @@ export const fitnessCategories = [
     name: "Muscle Building",
     description: "Comprehensive guides on hypertrophy training, progressive overload, and muscle development strategies.",
     articleCount: 127,
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=400&fit=crop&fm=webp&q=85",
     slug: "muscle-building",
     color: "primary"
   },
@@ -5202,7 +5202,7 @@ export const fitnessCategories = [
     name: "Weight Loss",
     description: "Evidence-based fat loss strategies, diet plans, and sustainable weight management techniques.",
     articleCount: 95,
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&fm=webp&q=85",
     slug: "weight-loss",
     color: "accent"
   },
@@ -5211,7 +5211,7 @@ export const fitnessCategories = [
     name: "Strength Training",
     description: "Powerlifting techniques, compound movements, and progressive strength development programs.",
     articleCount: 112,
-    image: "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=600&h=400&fit=crop&fm=webp&q=85",
     slug: "strength-training",
     color: "secondary"
   },
@@ -5220,7 +5220,7 @@ export const fitnessCategories = [
     name: "Nutrition",
     description: "Sports nutrition, meal planning, supplementation, and dietary strategies for optimal performance.",
     articleCount: 89,
-    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&h=400&fit=crop&fm=webp&q=85",
     slug: "nutrition",
     color: "primary"
   },
@@ -5229,7 +5229,7 @@ export const fitnessCategories = [
     name: "Cardio & HIIT",
     description: "Cardiovascular training methods, HIIT protocols, and endurance building strategies.",
     articleCount: 73,
-    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=400&fit=crop&fm=webp&q=85",
     slug: "cardio-hiit",
     color: "accent"
   },
@@ -5238,7 +5238,7 @@ export const fitnessCategories = [
     name: "Recovery & Wellness",
     description: "Sleep optimization, stress management, mobility work, and recovery protocols.",
     articleCount: 56,
-    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=400&fit=crop&fm=webp&q=85",
     slug: "recovery-wellness",
     color: "secondary"
   }
@@ -5252,7 +5252,7 @@ export const workoutPlans = [
     duration: "12 weeks",
     level: "Intermediate",
     daysPerWeek: 4,
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=300&fit=crop&fm=webp&q=85",
     description: "Complete muscle building program with progressive overload and periodization.",
     featured: true
   },
@@ -5263,7 +5263,7 @@ export const workoutPlans = [
     duration: "8 weeks",
     level: "Beginner",
     daysPerWeek: 3,
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&fm=webp&q=85",
     description: "High-intensity interval training for maximum fat burn and conditioning.",
     featured: true
   }
@@ -5277,7 +5277,7 @@ export const supplements = [
     brand: "NZ Nutrition",
     category: "Protein",
     price: 79.99,
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop&fm=webp&q=85",
     description: "Ultra-pure whey protein isolate with 90% protein content. Perfect for muscle building and recovery.",
     rating: 4.8,
     inStock: true,
@@ -5291,7 +5291,7 @@ export const supplements = [
     brand: "Peak Performance",
     category: "Pre-Workout",
     price: 39.99,
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop&fm=webp&q=85",
     description: "Pure creatine monohydrate for increased strength, power and muscle mass.",
     rating: 4.9,
     inStock: true,
@@ -5305,7 +5305,7 @@ export const supplements = [
     brand: "FitGear",
     category: "Equipment",
     price: 299.99,
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop&fm=webp&q=85",
     description: "Space-saving adjustable dumbbells from 2.5kg to 25kg per dumbbell.",
     rating: 4.6,
     inStock: true,
@@ -5319,7 +5319,7 @@ export const supplements = [
     brand: "NZ Nutrition",
     category: "Pre-Workout", 
     price: 49.99,
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop&fm=webp&q=85",
     description: "High-energy pre-workout with caffeine, beta-alanine and citrulline malate.",
     rating: 4.5,
     inStock: true,
@@ -5333,7 +5333,7 @@ export const supplements = [
     brand: "FlexFit",
     category: "Equipment",
     price: 34.99,
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop&fm=webp&q=85",
     description: "Complete resistance band set with 5 different resistance levels and accessories.",
     rating: 4.4,
     inStock: true,
@@ -5347,7 +5347,7 @@ export const supplements = [
     brand: "Hydro Fuel",
     category: "Recovery",
     price: 44.99,
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop&fm=webp&q=85",
     description: "Branched-chain amino acids with electrolytes for hydration and recovery.",
     rating: 4.3,
     inStock: false,

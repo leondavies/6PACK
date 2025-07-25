@@ -86,7 +86,7 @@ function Calculators() {
         {/* Hero Background Image */}
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&h=800&fit=crop"
+            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop&fm=webp&q=85"
             alt="Fitness calculations and tracking"
             className="w-full h-full object-cover opacity-30"
           />
