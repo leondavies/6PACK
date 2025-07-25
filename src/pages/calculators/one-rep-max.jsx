@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { Dumbbell, ArrowLeft, Info, Target, Zap, Trophy, Scale, TrendingUp, Heart, Apple } from "lucide-react";
 import BlurIn from "../../components/blurText";
+import ShareResults from "../../components/ui/ShareResults";
 
 function OneRepMaxCalculator() {
+  const [searchParams] = useSearchParams();
   const [weight, setWeight] = useState("");
   const [reps, setReps] = useState("");
   const [unit, setUnit] = useState("metric");
@@ -12,6 +14,37 @@ function OneRepMaxCalculator() {
   const [exercise, setExercise] = useState("bench_press");
   const [oneRM, setOneRM] = useState(null);
   const [percentages, setPercentages] = useState(null);
+  const [isSharedResult, setIsSharedResult] = useState(false);
+
+  // Load shared results from URL parameters on component mount
+  useEffect(() => {
+    const sharedWeight = searchParams.get('weight');
+    const sharedReps = searchParams.get('reps');
+    const sharedUnit = searchParams.get('unit');
+    const sharedFormula = searchParams.get('formula');
+    const sharedExercise = searchParams.get('exercise');
+    const sharedOneRM = searchParams.get('oneRM');
+    
+    if (sharedWeight && sharedReps && sharedOneRM) {
+      setWeight(sharedWeight);
+      setReps(sharedReps);
+      if (sharedUnit) setUnit(sharedUnit);
+      if (sharedFormula) setFormula(sharedFormula);
+      if (sharedExercise) setExercise(sharedExercise);
+      setIsSharedResult(true);
+      
+      // Set calculated values directly
+      const oneRMValue = parseFloat(sharedOneRM);
+      setOneRM(oneRMValue);
+      
+      // Calculate percentages
+      const percentagesData = {};
+      [50, 60, 70, 75, 80, 85, 90, 95, 100].forEach(percent => {
+        percentagesData[percent] = Math.round(oneRMValue * (percent / 100));
+      });
+      setPercentages(percentagesData);
+    }
+  }, [searchParams]);
 
   const exercises = [
     { value: "bench_press", label: "Bench Press" },
@@ -321,6 +354,13 @@ function OneRepMaxCalculator() {
               {oneRM && (
                 <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8">
                   <div className="text-center mb-6">
+                    {isSharedResult && (
+                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4">
+                        <p className="text-blue-800 text-sm">
+                          📤 These results were shared with you! Calculate your own results above.
+                        </p>
+                      </div>
+                    )}
                     <h2 className="text-2xl font-bold text-gray-900 mb-2">Your Estimated 1RM</h2>
                     <div className="text-6xl font-bold text-orange-600 mb-2">
                       {Math.round(oneRM * 10) / 10}
@@ -336,6 +376,23 @@ function OneRepMaxCalculator() {
                     <p className="text-sm text-orange-800">
                       {weight}{unit === "metric" ? "kg" : "lbs"} × {reps} reps using {formulas.find(f => f.value === formula)?.label}
                     </p>
+                  </div>
+                  
+                  {/* Share Results */}
+                  <div className="mt-6 text-center">
+                    <ShareResults 
+                      title="1RM Calculator Results"
+                      results={`${exercises.find(e => e.value === exercise)?.label} 1RM: ${Math.round(oneRM * 10) / 10}${unit === "metric" ? "kg" : "lbs"}\nBased on: ${weight}${unit === "metric" ? "kg" : "lbs"} × ${reps} reps`}
+                      hashtags={["OneRepMax", "StrengthTraining", "6PackNZ"]}
+                      resultData={{
+                        weight: weight,
+                        reps: reps,
+                        unit: unit,
+                        formula: formula,
+                        exercise: exercise,
+                        oneRM: oneRM
+                      }}
+                    />
                   </div>
                 </div>
               )}

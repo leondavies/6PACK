@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { Scale, ArrowLeft, Info, Target, TrendingUp, Heart } from "lucide-react";
 import BlurIn from "../../components/blurText";
+import ShareResults from "../../components/ui/ShareResults";
 
 function BMICalculator() {
+  const [searchParams] = useSearchParams();
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
   const [unit, setUnit] = useState("metric"); // metric or imperial
@@ -12,6 +14,66 @@ function BMICalculator() {
   const [category, setCategory] = useState("");
   const [healthRisk, setHealthRisk] = useState("");
   const [recommendations, setRecommendations] = useState([]);
+  const [isSharedResult, setIsSharedResult] = useState(false);
+
+  // Load shared results from URL parameters on component mount
+  useEffect(() => {
+    const sharedHeight = searchParams.get('height');
+    const sharedWeight = searchParams.get('weight');
+    const sharedUnit = searchParams.get('unit');
+    const sharedBmi = searchParams.get('bmi');
+    const sharedCategory = searchParams.get('category');
+    const sharedHealthRisk = searchParams.get('healthRisk');
+    
+    if (sharedHeight && sharedWeight && sharedUnit && sharedBmi) {
+      setHeight(sharedHeight);
+      setWeight(sharedWeight);
+      setUnit(sharedUnit);
+      setIsSharedResult(true);
+      
+      // If we have complete calculated data, set it directly
+      if (sharedCategory && sharedHealthRisk) {
+        setBMI(parseFloat(sharedBmi));
+        setCategory(decodeURIComponent(sharedCategory));
+        setHealthRisk(decodeURIComponent(sharedHealthRisk));
+        
+        // Set recommendations based on category
+        const bmiValue = parseFloat(sharedBmi);
+        if (bmiValue < 18.5) {
+          setRecommendations([
+            "Consult with a healthcare provider about healthy weight gain",
+            "Focus on nutrient-dense, calorie-rich foods",
+            "Consider strength training to build muscle mass",
+            "Monitor for any underlying health conditions"
+          ]);
+        } else if (bmiValue < 25) {
+          setRecommendations([
+            "Maintain current healthy lifestyle habits",
+            "Continue regular physical activity",
+            "Focus on balanced nutrition",
+            "Regular health check-ups for prevention"
+          ]);
+        } else if (bmiValue < 30) {
+          setRecommendations([
+            "Aim to lose 5-10% of body weight gradually",
+            "Increase physical activity to 150+ minutes per week",
+            "Focus on portion control and nutrient-dense foods",
+            "Consider consulting a nutritionist or trainer"
+          ]);
+        } else {
+          setRecommendations([
+            "Consult healthcare provider for comprehensive weight management plan",
+            "Set realistic, gradual weight loss goals (1-2 lbs per week)",
+            "Combine cardiovascular exercise with strength training",
+            "Consider professional guidance from nutritionist or dietitian"
+          ]);
+        }
+      } else {
+        // Otherwise calculate them normally
+        setTimeout(() => calculateBMI(), 100);
+      }
+    }
+  }, [searchParams]);
 
   const calculateBMI = () => {
     if (!height || !weight) return;
@@ -298,6 +360,13 @@ function BMICalculator() {
               {bmi && (
                 <div className={`bg-white rounded-2xl shadow-sm border-2 p-8 ${getBMIBgColor()}`}>
                   <div className="text-center">
+                    {isSharedResult && (
+                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4">
+                        <p className="text-blue-800 text-sm">
+                          📤 These results were shared with you! Calculate your own results above.
+                        </p>
+                      </div>
+                    )}
                     <h2 className="text-2xl font-bold text-gray-900 mb-2">Your BMI</h2>
                     <div className={`text-6xl font-bold mb-2 ${getBMIColor()}`}>
                       {bmi}
@@ -305,9 +374,26 @@ function BMICalculator() {
                     <div className={`text-xl font-semibold mb-2 ${getBMIColor()}`}>
                       {category}
                     </div>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 mb-4">
                       {healthRisk}
                     </p>
+                    
+                    {/* Share Results */}
+                    <div className="mt-6">
+                      <ShareResults 
+                        title="BMI Calculator Results"
+                        results={`BMI: ${bmi} (${category})\nHealth Risk: ${healthRisk}`}
+                        hashtags={["BMICalculator", "Health", "6PackNZ"]}
+                        resultData={{
+                          height: height,
+                          weight: weight,
+                          unit: unit,
+                          bmi: bmi,
+                          category: category,
+                          healthRisk: healthRisk
+                        }}
+                      />
+                    </div>
                   </div>
                 </div>
               )}

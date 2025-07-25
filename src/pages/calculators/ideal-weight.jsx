@@ -1,16 +1,47 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { TrendingUp, ArrowLeft, Info, Target, Scale, Users, Heart, Dumbbell, Apple } from "lucide-react";
 import BlurIn from "../../components/blurText";
+import ShareResults from "../../components/ui/ShareResults";
 
 function IdealWeightCalculator() {
+  const [searchParams] = useSearchParams();
   const [height, setHeight] = useState("");
   const [gender, setGender] = useState("male");
   const [unit, setUnit] = useState("metric");
   const [bodyFrame, setBodyFrame] = useState("medium");
   const [idealWeights, setIdealWeights] = useState(null);
   const [averageWeight, setAverageWeight] = useState(null);
+  const [isSharedResult, setIsSharedResult] = useState(false);
+
+  // Load shared results from URL parameters on component mount
+  useEffect(() => {
+    const sharedHeight = searchParams.get('height');
+    const sharedGender = searchParams.get('gender');
+    const sharedUnit = searchParams.get('unit');
+    const sharedBodyFrame = searchParams.get('bodyFrame');
+    const sharedAverageWeight = searchParams.get('averageWeight');
+    
+    if (sharedHeight && sharedAverageWeight) {
+      setHeight(sharedHeight);
+      if (sharedGender) setGender(sharedGender);
+      if (sharedUnit) setUnit(sharedUnit);
+      if (sharedBodyFrame) setBodyFrame(sharedBodyFrame);
+      setIsSharedResult(true);
+      
+      // Set calculated values directly
+      setAverageWeight(parseFloat(sharedAverageWeight));
+      
+      // Reconstruct ideal weights (approximate range around average)
+      const avgWeight = parseFloat(sharedAverageWeight);
+      setIdealWeights({
+        low: Math.round(avgWeight * 0.9),
+        medium: Math.round(avgWeight),
+        high: Math.round(avgWeight * 1.1)
+      });
+    }
+  }, [searchParams]);
 
   const calculateIdealWeights = () => {
     if (!height) return;
@@ -304,17 +335,40 @@ function IdealWeightCalculator() {
               {averageWeight && (
                 <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8">
                   <div className="text-center">
+                    {isSharedResult && (
+                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4">
+                        <p className="text-blue-800 text-sm">
+                          📤 These results were shared with you! Calculate your own results above.
+                        </p>
+                      </div>
+                    )}
                     <h2 className="text-2xl font-bold text-gray-900 mb-2">Your Ideal Weight</h2>
                     <div className="text-6xl font-bold text-indigo-600 mb-2">
                       {Math.round(getAdjustedWeight(averageWeight) * 10) / 10}
                     </div>
                     <p className="text-gray-600 mb-4">{unit === "metric" ? "kilograms" : "pounds"}</p>
                     
-                    <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-4">
+                    <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-4 mb-4">
                       <p className="text-sm text-indigo-800">
                         Adjusted for {bodyFrame} body frame
                         {bodyFrame !== "medium" && ` (${bodyFrame === "small" ? "-10%" : "+10%"})`}
                       </p>
+                    </div>
+                    
+                    {/* Share Results */}
+                    <div className="mt-6">
+                      <ShareResults 
+                        title="Ideal Weight Calculator Results"
+                        results={`Ideal Weight: ${Math.round(getAdjustedWeight(averageWeight) * 10) / 10}${unit === "metric" ? "kg" : "lbs"}\nHeight: ${height}${unit === "metric" ? "cm" : "in"}\nBody Frame: ${bodyFrame}`}
+                        hashtags={["IdealWeight", "HealthGoals", "6PackNZ"]}
+                        resultData={{
+                          height: height,
+                          gender: gender,
+                          unit: unit,
+                          bodyFrame: bodyFrame,
+                          averageWeight: averageWeight
+                        }}
+                      />
                     </div>
                   </div>
                 </div>
