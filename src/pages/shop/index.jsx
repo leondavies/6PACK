@@ -8,22 +8,22 @@ import ImageWithFallback from "../../components/ui/ImageWithFallback";
 
 const ShopPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedStyle, setSelectedStyle] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
   const [sortBy, setSortBy] = useState("name");
   const [showFilters, setShowFilters] = useState(false);
   const [favorites, setFavorites] = useState(new Set());
   const { addToCart } = useCart();
 
-  // Get unique beer styles for filter
-  const beerStyles = [...new Set(products.map(product => product.style))];
+  // Get unique supplement categories for filter
+  const categories = [...new Set(products.map(product => product.category))];
 
   // Filter and sort products
   const filteredProducts = products
     .filter(product => {
       const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          product.brewery.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesStyle = !selectedStyle || product.style === selectedStyle;
-      return matchesSearch && matchesStyle;
+                          product.brand.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = !selectedCategory || product.category === selectedCategory;
+      return matchesSearch && matchesCategory;
     })
     .sort((a, b) => {
       switch (sortBy) {
@@ -59,10 +59,14 @@ const ShopPage = () => {
   return (
     <>
       <Helmet>
-        <title>Shop Craft Beer - 6Pack.co.nz</title>
+        <title>Fitness Supplements & Equipment - 6Pack</title>
         <meta
           name="description"
-          content="Shop premium New Zealand craft beers. Individual bottles and mixed packs from the country's best breweries."
+          content="Shop premium fitness supplements and equipment. Protein powders, pre-workouts, gym equipment from trusted New Zealand brands."
+        />
+        <meta
+          name="keywords"
+          content="fitness supplements, protein powder, pre-workout, gym equipment, New Zealand fitness"
         />
       </Helmet>
 
@@ -70,9 +74,9 @@ const ShopPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="mb-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Shop Craft Beers</h1>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Fitness Supplements & Equipment</h1>
             <p className="text-lg text-gray-600">
-              Discover premium craft beers from New Zealand's finest breweries
+              Premium supplements and equipment to fuel your fitness journey
             </p>
           </div>
 
@@ -84,28 +88,28 @@ const ShopPage = () => {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
                 <input
                   type="text"
-                  placeholder="Search beers or breweries..."
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                  placeholder="Search supplements or equipment..."
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
               </div>
 
-              {/* Style Filter */}
+              {/* Category Filter */}
               <select
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-                value={selectedStyle}
-                onChange={(e) => setSelectedStyle(e.target.value)}
+                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
               >
-                <option value="">All Styles</option>
-                {beerStyles.map(style => (
-                  <option key={style} value={style}>{style}</option>
+                <option value="">All Categories</option>
+                {categories.map(category => (
+                  <option key={category} value={category}>{category}</option>
                 ))}
               </select>
 
               {/* Sort */}
               <select
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
               >
@@ -129,7 +133,7 @@ const ShopPage = () => {
           {/* Results Count */}
           <div className="mb-6">
             <p className="text-gray-600">
-              Showing {filteredProducts.length} of {products.length} beers
+              Showing {filteredProducts.length} of {products.length} products
             </p>
           </div>
 
@@ -146,7 +150,7 @@ const ShopPage = () => {
                   />
                   {product.featured && (
                     <div className="absolute top-2 left-2">
-                      <span className="bg-amber-500 text-white px-2 py-1 rounded text-xs font-semibold">
+                      <span className="bg-primary-500 text-white px-2 py-1 rounded text-xs font-semibold">
                         Featured
                       </span>
                     </div>
@@ -171,12 +175,14 @@ const ShopPage = () => {
                 <div className="p-4">
                   <div className="mb-2">
                     <h3 className="font-semibold text-gray-900 mb-1">{product.name}</h3>
-                    <p className="text-sm text-gray-600">{product.brewery}</p>
+                    <p className="text-sm text-gray-600">{product.brand}</p>
                   </div>
 
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm bg-gray-100 px-2 py-1 rounded">{product.style}</span>
-                    <span className="text-sm text-gray-600">{product.abv}% ABV</span>
+                    <span className="text-sm bg-primary-100 text-primary-800 px-2 py-1 rounded">{product.category}</span>
+                    {product.servings && (
+                      <span className="text-sm text-gray-600">{product.servings} servings</span>
+                    )}
                   </div>
 
                   <div className="flex items-center mb-3">
@@ -184,6 +190,9 @@ const ShopPage = () => {
                       <Star className="text-yellow-400 fill-yellow-400" size={16} />
                       <span className="text-sm text-gray-600 ml-1">{product.rating}</span>
                     </div>
+                    {product.flavor && (
+                      <span className="text-xs text-gray-500 ml-auto">{product.flavor}</span>
+                    )}
                   </div>
 
                   <p className="text-sm text-gray-600 mb-4 line-clamp-2">
@@ -197,7 +206,7 @@ const ShopPage = () => {
                       disabled={!product.inStock}
                       className={`flex items-center px-4 py-2 rounded-lg font-semibold transition-colors ${
                         product.inStock
-                          ? "bg-amber-600 text-white hover:bg-amber-700"
+                          ? "bg-primary-600 text-white hover:bg-primary-700"
                           : "bg-gray-300 text-gray-500 cursor-not-allowed"
                       }`}
                     >
@@ -213,13 +222,13 @@ const ShopPage = () => {
           {/* Empty State */}
           {filteredProducts.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-gray-600 text-lg mb-4">No beers found matching your criteria</p>
+              <p className="text-gray-600 text-lg mb-4">No products found matching your criteria</p>
               <button
                 onClick={() => {
                   setSearchTerm("");
-                  setSelectedStyle("");
+                  setSelectedCategory("");
                 }}
-                className="text-amber-600 hover:text-amber-700 font-semibold"
+                className="text-primary-600 hover:text-primary-700 font-semibold"
               >
                 Clear all filters
               </button>

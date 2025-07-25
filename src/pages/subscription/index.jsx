@@ -1,56 +1,59 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
-import { Check, Star, Gift, Truck } from "lucide-react";
+import { Check, Star, Zap, Users, Target } from "lucide-react";
 import { toast } from "sonner";
 
 const SubscriptionPage = () => {
-  const [, setSelectedPlan] = useState("premium");
+  const [, setSelectedPlan] = useState("transform");
 
   const plans = [
     {
-      id: "starter",
-      name: "Starter Pack",
-      price: 49,
-      description: "Perfect for casual beer enthusiasts",
-      beers: 4,
+      id: "foundation",
+      name: "Foundation Plan",
+      price: 39,
+      description: "Perfect for fitness beginners",
+      duration: "12 weeks",
       features: [
-        "4 carefully selected craft beers",
-        "Tasting notes & brewery info",
-        "Free nationwide shipping",
+        "12-week beginner program",
+        "Basic workout plans",
+        "Nutrition guidelines", 
+        "Progress tracking tools",
+        "Email support",
         "Cancel anytime"
       ]
     },
     {
-      id: "premium",
-      name: "Premium Selection",
-      price: 69,
-      description: "Most popular choice for beer lovers",
-      beers: 6,
+      id: "transform",
+      name: "Transform Plan",
+      price: 59,
+      description: "Most popular for serious results",
+      duration: "16 weeks",
       popular: true,
       features: [
-        "6 premium craft beers",
-        "Mix of styles & limited releases",
-        "Detailed tasting guide",
-        "Brewery spotlight stories",
-        "Free nationwide shipping",
-        "Member-only discounts",
+        "16-week transformation program",
+        "Advanced workout plans",
+        "Custom meal plans",
+        "Video exercise library",
+        "Weekly check-ins",
+        "Priority support",
+        "Supplement recommendations",
         "Cancel anytime"
       ]
     },
     {
-      id: "connoisseur",
-      name: "Connoisseur Collection",
+      id: "elite",
+      name: "Elite Coaching",
       price: 89,
-      description: "For the serious craft beer aficionado",
-      beers: 8,
+      description: "For serious athletes and advanced trainers",
+      duration: "24 weeks",
       features: [
-        "8 rare & exclusive craft beers",
-        "Limited edition releases",
-        "Barrel-aged & specialty brews",
-        "Monthly virtual tasting session",
-        "Exclusive brewery merchandise",
-        "Priority access to new releases",
-        "Free nationwide shipping",
+        "24-week elite program",
+        "1-on-1 coaching sessions",
+        "Personalized training plans",
+        "Custom nutrition protocols",
+        "Weekly body composition tracking",
+        "Unlimited coach messaging",
+        "Supplement stack included",
         "Cancel anytime"
       ]
     }
@@ -80,10 +83,14 @@ const SubscriptionPage = () => {
   return (
     <>
       <Helmet>
-        <title>Beer Subscription Plans - 6Pack.co.nz</title>
+        <title>Fitness Coaching Programs - 6Pack</title>
         <meta
           name="description"
-          content="Choose from our craft beer subscription plans. Get premium New Zealand craft beers delivered monthly. Starting from $49/month."
+          content="Transform your body with our expert fitness coaching programs. Personalized training plans, nutrition guidance, and 24/7 support. Starting from $39/month."
+        />
+        <meta
+          name="keywords"
+          content="fitness coaching, personal training, workout plans, nutrition coaching, fitness transformation"
         />
       </Helmet>
 
@@ -92,11 +99,11 @@ const SubscriptionPage = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-gray-900 mb-4">
-              Monthly Beer Subscriptions
+              Fitness Coaching Programs
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover New Zealand's finest craft beers delivered to your door every month. 
-              Expertly curated selections from the country's best breweries.
+              Transform your body with expert-guided fitness programs designed by New Zealand's 
+              top trainers. Get personalized coaching, custom plans, and continuous support.
             </p>
           </div>
 
@@ -106,12 +113,12 @@ const SubscriptionPage = () => {
               <div
                 key={plan.id}
                 className={`relative bg-white rounded-2xl shadow-lg p-8 ${
-                  plan.popular ? "ring-2 ring-amber-500 scale-105" : ""
+                  plan.popular ? "ring-2 ring-primary-500 scale-105" : ""
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-amber-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
+                    <span className="bg-primary-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
                       <Star className="mr-1" size={16} />
                       Most Popular
                     </span>
@@ -125,7 +132,7 @@ const SubscriptionPage = () => {
                     <span className="text-4xl font-bold text-gray-900">${plan.price}</span>
                     <span className="text-gray-600 ml-2">/month</span>
                   </div>
-                  <p className="text-sm text-gray-500">{plan.beers} beers per month</p>
+                  <p className="text-sm text-gray-500">{plan.duration} program</p>
                 </div>
 
                 <ul className="space-y-4 mb-8">
@@ -141,11 +148,11 @@ const SubscriptionPage = () => {
                   onClick={() => handleSubscribe(plan.id)}
                   className={`w-full py-3 rounded-lg font-semibold transition-colors ${
                     plan.popular
-                      ? "bg-amber-600 text-white hover:bg-amber-700"
+                      ? "bg-primary-600 text-white hover:bg-primary-700"
                       : "bg-gray-100 text-gray-900 hover:bg-gray-200"
                   }`}
                 >
-                  Subscribe Now
+                  Start Program
                 </button>
               </div>
             ))}
@@ -156,35 +163,35 @@ const SubscriptionPage = () => {
             <h2 className="text-3xl font-bold text-center mb-12">What's Included</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Gift className="text-amber-600" size={32} />
+                <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Target className="text-primary-600" size={32} />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Curated Selection</h3>
+                <h3 className="text-xl font-semibold mb-2">Personalized Plans</h3>
                 <p className="text-gray-600">
-                  Each month features beers from different regions and styles, 
-                  carefully selected by our beer experts.
+                  Custom workout and nutrition plans tailored to your goals, 
+                  fitness level, and preferences.
                 </p>
               </div>
               
               <div className="text-center">
-                <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Truck className="text-amber-600" size={32} />
+                <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="text-primary-600" size={32} />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Free Shipping</h3>
+                <h3 className="text-xl font-semibold mb-2">Expert Coaching</h3>
                 <p className="text-gray-600">
-                  All subscription boxes include free nationwide shipping. 
-                  Delivered fresh to your door every month.
+                  Direct access to certified trainers and nutritionists 
+                  for guidance and support throughout your journey.
                 </p>
               </div>
               
               <div className="text-center">
-                <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Star className="text-amber-600" size={32} />
+                <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Zap className="text-primary-600" size={32} />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Exclusive Access</h3>
+                <h3 className="text-xl font-semibold mb-2">Proven Results</h3>
                 <p className="text-gray-600">
-                  Get first access to limited releases and brewery collaborations 
-                  not available in stores.
+                  Science-backed training methods and progress tracking 
+                  to ensure you achieve your fitness transformation goals.
                 </p>
               </div>
             </div>
@@ -195,31 +202,31 @@ const SubscriptionPage = () => {
             <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
             <div className="max-w-3xl mx-auto space-y-8">
               <div>
-                <h3 className="text-xl font-semibold mb-2">When will I receive my first box?</h3>
+                <h3 className="text-xl font-semibold mb-2">When does my program start?</h3>
                 <p className="text-gray-600">
-                  Your first box ships within 2-3 business days of subscription. 
-                  Subsequent boxes ship on the same day each month.
+                  Your personalized program begins within 24 hours of enrollment. 
+                  You'll receive your custom plan and coaching team assignment immediately.
                 </p>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">Can I cancel anytime?</h3>
                 <p className="text-gray-600">
-                  Absolutely! You can pause, skip, or cancel your subscription at any time 
-                  through your account dashboard.
+                  Absolutely! You can pause or cancel your coaching program at any time 
+                  through your account dashboard with no cancellation fees.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Do you ship nationwide?</h3>
+                <h3 className="text-xl font-semibold mb-2">Do I need gym equipment?</h3>
                 <p className="text-gray-600">
-                  Yes! We deliver to all major cities and towns across New Zealand. 
-                  Remote areas may have extended delivery times.
+                  Programs can be tailored for home workouts, gym access, or minimal equipment. 
+                  We'll customize your plan based on your available resources.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Can I gift a subscription?</h3>
+                <h3 className="text-xl font-semibold mb-2">What if I'm a complete beginner?</h3>
                 <p className="text-gray-600">
-                  Yes! Gift subscriptions are available for 3, 6, or 12 months. 
-                  Perfect for the beer lover in your life.
+                  Perfect! Our Foundation Plan is specifically designed for beginners. 
+                  We'll start you with proper form and gradually build your fitness level.
                 </p>
               </div>
             </div>

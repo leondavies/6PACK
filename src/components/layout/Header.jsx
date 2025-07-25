@@ -24,7 +24,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-amber-600">6Pack</div>
+            <div className="text-2xl font-bold text-primary-600">6Pack</div>
             <span className="text-sm text-gray-500">.co.nz</span>
           </Link>
 
@@ -33,51 +33,59 @@ const Header = () => {
             <Link
               to="/"
               className={`${
-                isActive("/") ? "text-amber-600" : "text-gray-700 hover:text-amber-600"
+                isActive("/") ? "text-primary-600" : "text-gray-700 hover:text-primary-600"
               } transition-colors`}
             >
               Home
             </Link>
             <Link
-              to="/shop"
+              to="/articles"
               className={`${
-                isActive("/shop") ? "text-amber-600" : "text-gray-700 hover:text-amber-600"
+                isActive("/articles") ? "text-primary-600" : "text-gray-700 hover:text-primary-600"
+              } transition-colors`}
+            >
+              Articles
+            </Link>
+            <Link
+              to="/workouts"
+              className={`${
+                isActive("/workouts") ? "text-primary-600" : "text-gray-700 hover:text-primary-600"
+              } transition-colors`}
+            >
+              Workouts
+            </Link>
+            <Link
+              to="/nutrition"
+              className={`${
+                isActive("/nutrition") ? "text-primary-600" : "text-gray-700 hover:text-primary-600"
+              } transition-colors`}
+            >
+              Nutrition
+            </Link>
+            <Link
+              to="/supplements"
+              className={`${
+                isActive("/supplements") ? "text-primary-600" : "text-gray-700 hover:text-primary-600"
               } transition-colors`}
             >
               Shop
-            </Link>
-            <Link
-              to="/subscription"
-              className={`${
-                isActive("/subscription") ? "text-amber-600" : "text-gray-700 hover:text-amber-600"
-              } transition-colors`}
-            >
-              Subscription
-            </Link>
-            <Link
-              to="/brewery"
-              className={`${
-                isActive("/brewery") ? "text-amber-600" : "text-gray-700 hover:text-amber-600"
-              } transition-colors`}
-            >
-              Breweries
             </Link>
           </nav>
 
           {/* Actions */}
           <div className="flex items-center space-x-4">
-            <button className="relative p-2 text-gray-700 hover:text-amber-600 transition-colors">
+            <button className="relative p-2 text-gray-700 hover:text-primary-600 transition-colors">
               <ShoppingCart size={20} />
-              <span className="absolute -top-2 -right-2 bg-amber-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+              <span className="absolute -top-2 -right-2 bg-primary-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                 {getCartItemCount()}
               </span>
             </button>
-            <button className="p-2 text-gray-700 hover:text-amber-600 transition-colors">
+            <button className="p-2 text-gray-700 hover:text-primary-600 transition-colors">
               <User size={20} />
             </button>
             <button 
               onClick={toggleMobileMenu}
-              className="md:hidden p-2 text-gray-700 hover:text-amber-600 transition-colors"
+              className="md:hidden p-2 text-gray-700 hover:text-primary-600 transition-colors"
             >
               {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
@@ -93,44 +101,55 @@ const Header = () => {
                 onClick={closeMobileMenu}
                 className={`${
                   isActive("/") 
-                    ? "bg-amber-50 text-amber-600 border-amber-500" 
-                    : "text-gray-700 hover:bg-gray-50 hover:text-amber-600"
+                    ? "bg-primary-50 text-primary-600 border-primary-500" 
+                    : "text-gray-700 hover:bg-gray-50 hover:text-primary-600"
                 } block px-3 py-2 rounded-md text-base font-medium transition-colors border-l-4 border-transparent`}
               >
                 Home
               </Link>
               <Link
-                to="/shop"
+                to="/articles"
                 onClick={closeMobileMenu}
                 className={`${
-                  isActive("/shop") 
-                    ? "bg-amber-50 text-amber-600 border-amber-500" 
-                    : "text-gray-700 hover:bg-gray-50 hover:text-amber-600"
+                  isActive("/articles") 
+                    ? "bg-primary-50 text-primary-600 border-primary-500" 
+                    : "text-gray-700 hover:bg-gray-50 hover:text-primary-600"
+                } block px-3 py-2 rounded-md text-base font-medium transition-colors border-l-4 border-transparent`}
+              >
+                Articles
+              </Link>
+              <Link
+                to="/workouts"
+                onClick={closeMobileMenu}
+                className={`${
+                  isActive("/workouts") 
+                    ? "bg-primary-50 text-primary-600 border-primary-500" 
+                    : "text-gray-700 hover:bg-gray-50 hover:text-primary-600"
+                } block px-3 py-2 rounded-md text-base font-medium transition-colors border-l-4 border-transparent`}
+              >
+                Workouts
+              </Link>
+              <Link
+                to="/nutrition"
+                onClick={closeMobileMenu}
+                className={`${
+                  isActive("/nutrition") 
+                    ? "bg-primary-50 text-primary-600 border-primary-500" 
+                    : "text-gray-700 hover:bg-gray-50 hover:text-primary-600"
+                } block px-3 py-2 rounded-md text-base font-medium transition-colors border-l-4 border-transparent`}
+              >
+                Nutrition
+              </Link>
+              <Link
+                to="/supplements"
+                onClick={closeMobileMenu}
+                className={`${
+                  isActive("/supplements") 
+                    ? "bg-primary-50 text-primary-600 border-primary-500" 
+                    : "text-gray-700 hover:bg-gray-50 hover:text-primary-600"
                 } block px-3 py-2 rounded-md text-base font-medium transition-colors border-l-4 border-transparent`}
               >
                 Shop
-              </Link>
-              <Link
-                to="/subscription"
-                onClick={closeMobileMenu}
-                className={`${
-                  isActive("/subscription") 
-                    ? "bg-amber-50 text-amber-600 border-amber-500" 
-                    : "text-gray-700 hover:bg-gray-50 hover:text-amber-600"
-                } block px-3 py-2 rounded-md text-base font-medium transition-colors border-l-4 border-transparent`}
-              >
-                Subscription
-              </Link>
-              <Link
-                to="/brewery"
-                onClick={closeMobileMenu}
-                className={`${
-                  isActive("/brewery") 
-                    ? "bg-amber-50 text-amber-600 border-amber-500" 
-                    : "text-gray-700 hover:bg-gray-50 hover:text-amber-600"
-                } block px-3 py-2 rounded-md text-base font-medium transition-colors border-l-4 border-transparent`}
-              >
-                Breweries
               </Link>
               
               {/* Mobile Actions */}
@@ -139,7 +158,7 @@ const Header = () => {
                   <span className="text-gray-700 font-medium">Cart</span>
                   <div className="flex items-center">
                     <ShoppingCart size={20} className="text-gray-700 mr-2" />
-                    <span className="bg-amber-600 text-white text-xs rounded-full h-6 w-6 flex items-center justify-center">
+                    <span className="bg-primary-600 text-white text-xs rounded-full h-6 w-6 flex items-center justify-center">
                       {getCartItemCount()}
                     </span>
                   </div>
