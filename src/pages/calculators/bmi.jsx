@@ -99,15 +99,48 @@ function BMICalculator() {
   return (
     <>
       <Helmet>
-        <title>BMI Calculator - Body Mass Index | 6Pack Fitness</title>
+        <title>Free BMI Calculator New Zealand | Body Mass Index Calculator NZ | 6Pack</title>
         <meta
           name="description"
-          content="Calculate your BMI (Body Mass Index) with our free calculator. Get personalised health recommendations and understand your weight status."
+          content="Free BMI calculator for New Zealanders. Calculate your Body Mass Index instantly, get personalised health recommendations, and understand your weight status. Metric & Imperial units supported."
         />
         <meta
           name="keywords"
-          content="BMI calculator, body mass index, weight calculator, health assessment, fitness calculator"
+          content="BMI calculator NZ, body mass index New Zealand, weight calculator, health assessment NZ, fitness calculator, BMI chart New Zealand, healthy weight NZ"
         />
+        <meta property="og:title" content="Free BMI Calculator New Zealand | 6Pack" />
+        <meta property="og:description" content="Calculate your BMI instantly with our free New Zealand BMI calculator. Get health recommendations and weight status analysis." />
+        <meta property="og:url" content="https://6pack.co.nz/calculators/bmi" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Free BMI Calculator New Zealand | 6Pack" />
+        <meta name="twitter:description" content="Calculate your BMI instantly with our free New Zealand BMI calculator." />
+        <link rel="canonical" href="https://6pack.co.nz/calculators/bmi" />
+        
+        {/* Calculator Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "BMI Calculator New Zealand",
+            "description": "Free BMI calculator for New Zealanders with health recommendations",
+            "url": "https://6pack.co.nz/calculators/bmi",
+            "applicationCategory": "HealthApplication",
+            "operatingSystem": "Web Browser",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "NZD"
+            },
+            "featureList": [
+              "Free BMI calculation",
+              "Metric and Imperial units",
+              "Health recommendations",
+              "Instant results",
+              "Mobile friendly"
+            ]
+          })}
+        </script>
       </Helmet>
 
       <div className="min-h-screen bg-gray-50 py-12">
@@ -183,8 +216,8 @@ function BMICalculator() {
                   step={unit === "metric" ? "1" : "0.1"}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 />
-                <p className="text-xs text-gray-500 mt-1">
-                                     {unit === "metric" ? "Enter height in centimetres" : "Enter as decimal (e.g., 5.8 for 5&apos;8\")"}
+                                  <p className="text-xs text-gray-500 mt-1">
+                                     {unit === "metric" ? "Enter height in centimetres" : "Enter as decimal (e.g., 5.8 for 5'8\")"}
                 </p>
               </div>
 

@@ -11,35 +11,92 @@ function Index() {
   return (
     <>
       <Helmet>
-        <title>6Pack - New Zealand's Premier Fitness Training Hub</title>
+        <title>6Pack NZ | New Zealand's Premier Fitness & Training Hub | Free Calculators & Guides</title>
         <meta
           name="description"
-          content="Transform your body with expert fitness guides, workout plans, and nutrition advice. Science-backed strategies for muscle building, weight loss, and peak performance."
+                      content="Transform your body with 6Pack NZ - New Zealand&apos;s top fitness resource. Free BMI, BMR & macro calculators, expert workout plans, nutrition guides, and science-backed fitness strategies for Kiwis."
         />
         <meta
           name="keywords"
-          content="fitness New Zealand, workout plans, muscle building, weight loss, strength training, nutrition guides, 6pack abs, fitness articles"
+          content="fitness New Zealand, gym NZ, workout plans NZ, muscle building New Zealand, weight loss NZ, strength training, nutrition guides, fitness calculators NZ, 6pack abs, fitness articles New Zealand, personal trainer NZ"
         />
-        <meta property="og:title" content="6Pack - New Zealand's Premier Fitness Training Hub" />
+        <meta property="og:title" content="6Pack NZ - New Zealand's Premier Fitness Training Hub" />
         <meta
           property="og:description"
-          content="Transform your body with expert fitness guides, workout plans, and nutrition advice from New Zealand's top fitness experts."
+          content="Transform your body with expert fitness guides, calculators, and nutrition advice from New Zealand's top fitness experts."
         />
-        <meta property="og:image" content="https://6pack.co.nz/fitness-hero.jpg" />
+        <meta property="og:image" content="https://6pack.co.nz/6pack.webp" />
         <meta property="og:url" content="https://6pack.co.nz" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="6Pack NZ - New Zealand's Premier Fitness Training Hub" />
+        <meta name="twitter:description" content="Transform your body with expert fitness guides and calculators from NZ's top fitness experts." />
+        <meta name="twitter:image" content="https://6pack.co.nz/6pack.webp" />
+        <link rel="canonical" href="https://6pack.co.nz" />
+        
+        {/* Enhanced Organization Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
+            "@id": "https://6pack.co.nz/#organization",
             name: "6Pack",
-            description: "New Zealand's Premier Fitness Training Hub",
+            alternateName: "6Pack NZ",
+            description: "New Zealand's Premier Fitness Training Hub with free calculators and expert guides",
             url: "https://6pack.co.nz",
-            logo: "https://6pack.co.nz/logo.png",
+            logo: {
+              "@type": "ImageObject",
+              "url": "https://6pack.co.nz/logo.png",
+              "width": 200,
+              "height": 60
+            },
+            address: {
+              "@type": "PostalAddress",
+              "addressCountry": "NZ",
+              "addressRegion": "Auckland"
+            },
+            foundingDate: "2024",
+            knowsAbout: [
+              "Fitness Training",
+              "Nutrition Advice", 
+              "Workout Plans",
+              "BMI Calculation",
+              "Weight Loss",
+              "Muscle Building",
+              "Strength Training"
+            ],
+            areaServed: {
+              "@type": "Country",
+              "name": "New Zealand"
+            },
             sameAs: [
               "https://twitter.com/6pack_nz",
               "https://facebook.com/6pack.co.nz",
               "https://instagram.com/6pack_nz"
             ]
+          })}
+        </script>
+        
+        {/* Website Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "https://6pack.co.nz/#website",
+            name: "6Pack",
+            url: "https://6pack.co.nz",
+            description: "New Zealand's Premier Fitness Training Hub",
+            publisher: {
+              "@id": "https://6pack.co.nz/#organization"
+            },
+            potentialAction: {
+              "@type": "SearchAction",
+              target: {
+                "@type": "EntryPoint",
+                urlTemplate: "https://6pack.co.nz/search?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
           })}
         </script>
       </Helmet>
