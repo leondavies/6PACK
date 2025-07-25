@@ -12,6 +12,10 @@ import BodyFatCalculator from "./pages/calculators/body-fat";
 import OneRepMaxCalculator from "./pages/calculators/one-rep-max";
 import MacroCalculator from "./pages/calculators/macro";
 import IdealWeightCalculator from "./pages/calculators/ideal-weight";
+import Workouts from "./pages/workouts";
+import ChestWorkout from "./pages/workouts/chest";
+import LegsWorkout from "./pages/workouts/legs";
+import CoreWorkout from "./pages/workouts/core";
 import Layout from "./components/layout";
 import { Toaster } from "sonner";
 
@@ -33,6 +37,10 @@ function App() {
           <Route path="/calculators/one-rep-max" element={<OneRepMaxCalculator />} />
           <Route path="/calculators/macro" element={<MacroCalculator />} />
           <Route path="/calculators/ideal-weight" element={<IdealWeightCalculator />} />
+          <Route path="/workouts" element={<Workouts />} />
+          <Route path="/workouts/chest" element={<ChestWorkout />} />
+          <Route path="/workouts/legs" element={<LegsWorkout />} />
+          <Route path="/workouts/core" element={<CoreWorkout />} />
         </Routes>
         <Toaster position="top-right" />
       </Layout>
