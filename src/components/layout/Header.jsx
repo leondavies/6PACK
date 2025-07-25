@@ -1,14 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ShoppingCart, User, Menu, X } from "lucide-react";
+import { ShoppingCart, User, Menu, X, Calculator, BookOpen, Dumbbell } from "lucide-react";
 import useCart from "../../hooks/useCart";
 
 const Header = () => {
   const location = useLocation();
   const { getCartItemCount } = useCart();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  const isActive = (path) => location.pathname === path;
+  const isActive = (path) => location.pathname === path || location.pathname.startsWith(path + '/');
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -18,82 +19,94 @@ const Header = () => {
     setIsMobileMenuOpen(false);
   };
 
-  return (
-    <header className="bg-white shadow-sm border-b sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-primary-600">6Pack</div>
-            <span className="text-sm text-gray-500">.co.nz</span>
-          </Link>
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-          {/* Navigation */}
-          <nav className="hidden md:flex space-x-8">
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location]);
+
+  return (
+    <header className={`fixed top-0 w-full z-40 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' 
+        : 'bg-white/90 backdrop-blur-sm'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
+          <div className="flex-1">
+            <Link to="/" className="flex items-center space-x-2 group">
+              <div className="text-3xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent group-hover:from-gray-700 group-hover:to-gray-900 transition-all duration-300">
+                6Pack
+              </div>
+              <span className="text-lg text-gray-500 font-semibold group-hover:text-gray-700 transition-colors">.co.nz</span>
+            </Link>
+          </div>
+
+          {/* Navigation - Centered */}
+          <nav className="hidden lg:flex space-x-2">
             <Link
               to="/"
-              className={`${
-                isActive("/") ? "text-primary-600" : "text-gray-700 hover:text-primary-600"
-              } transition-colors`}
+              className={`px-4 py-2 rounded-full font-medium transition-all duration-300 ${
+                isActive("/") 
+                  ? "bg-gray-900 text-white shadow-lg" 
+                  : "text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+              }`}
             >
               Home
             </Link>
             <Link
               to="/articles"
-              className={`${
-                isActive("/articles") ? "text-primary-600" : "text-gray-700 hover:text-primary-600"
-              } transition-colors`}
+              className={`px-4 py-2 rounded-full font-medium transition-all duration-300 flex items-center space-x-2 ${
+                isActive("/articles") 
+                  ? "bg-gray-900 text-white shadow-lg" 
+                  : "text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+              }`}
             >
-              Articles
+              <BookOpen size={16} />
+              <span>Articles</span>
             </Link>
             <Link
               to="/calculators"
-              className={`${
-                location.pathname.startsWith("/calculators") ? "text-primary-600" : "text-gray-700 hover:text-primary-600"
-              } transition-colors`}
+              className={`px-4 py-2 rounded-full font-medium transition-all duration-300 flex items-center space-x-2 ${
+                isActive("/calculators") 
+                  ? "bg-gray-900 text-white shadow-lg" 
+                  : "text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+              }`}
             >
-              Calculators
+              <Calculator size={16} />
+              <span>Calculators</span>
             </Link>
             <Link
               to="/workouts"
-              className={`${
-                isActive("/workouts") ? "text-primary-600" : "text-gray-700 hover:text-primary-600"
-              } transition-colors`}
+              className={`px-4 py-2 rounded-full font-medium transition-all duration-300 flex items-center space-x-2 ${
+                isActive("/workouts") 
+                  ? "bg-gray-900 text-white shadow-lg" 
+                  : "text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+              }`}
             >
-              Workouts
-            </Link>
-            <Link
-              to="/nutrition"
-              className={`${
-                isActive("/nutrition") ? "text-primary-600" : "text-gray-700 hover:text-primary-600"
-              } transition-colors`}
-            >
-              Nutrition
-            </Link>
-            <Link
-              to="/supplements"
-              className={`${
-                isActive("/supplements") ? "text-primary-600" : "text-gray-700 hover:text-primary-600"
-              } transition-colors`}
-            >
-              Shop
+              <Dumbbell size={16} />
+              <span>Workouts</span>
             </Link>
           </nav>
 
-          {/* Actions */}
-          <div className="flex items-center space-x-4">
-            <button className="relative p-2 text-gray-700 hover:text-primary-600 transition-colors">
-              <ShoppingCart size={20} />
-              <span className="absolute -top-2 -right-2 bg-primary-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                {getCartItemCount()}
-              </span>
-            </button>
-            <button className="p-2 text-gray-700 hover:text-primary-600 transition-colors">
-              <User size={20} />
-            </button>
+          {/* Right side - Mobile Menu Button */}
+          <div className="flex-1 flex justify-end">
             <button 
               onClick={toggleMobileMenu}
-              className="md:hidden p-2 text-gray-700 hover:text-primary-600 transition-colors"
+              className={`lg:hidden p-3 rounded-full transition-all duration-300 ${
+                isMobileMenuOpen 
+                  ? 'bg-gray-900 text-white' 
+                  : 'text-gray-700 hover:bg-gray-100'
+              }`}
             >
               {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
@@ -101,95 +114,69 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-b shadow-lg">
-              <Link
-                to="/"
-                onClick={closeMobileMenu}
-                className={`${
-                  isActive("/") 
-                    ? "bg-primary-50 text-primary-600 border-primary-500" 
-                    : "text-gray-700 hover:bg-gray-50 hover:text-primary-600"
-                } block px-3 py-2 rounded-md text-base font-medium transition-colors border-l-4 border-transparent`}
-              >
-                Home
-              </Link>
-              <Link
-                to="/articles"
-                onClick={closeMobileMenu}
-                className={`${
-                  isActive("/articles") 
-                    ? "bg-primary-50 text-primary-600 border-primary-500" 
-                    : "text-gray-700 hover:bg-gray-50 hover:text-primary-600"
-                } block px-3 py-2 rounded-md text-base font-medium transition-colors border-l-4 border-transparent`}
-              >
-                Articles
-              </Link>
-              <Link
-                to="/calculators"
-                onClick={closeMobileMenu}
-                className={`${
-                  location.pathname.startsWith("/calculators") 
-                    ? "bg-primary-50 text-primary-600 border-primary-500" 
-                    : "text-gray-700 hover:bg-gray-50 hover:text-primary-600"
-                } block px-3 py-2 rounded-md text-base font-medium transition-colors border-l-4 border-transparent`}
-              >
-                Calculators
-              </Link>
-              <Link
-                to="/workouts"
-                onClick={closeMobileMenu}
-                className={`${
-                  isActive("/workouts") 
-                    ? "bg-primary-50 text-primary-600 border-primary-500" 
-                    : "text-gray-700 hover:bg-gray-50 hover:text-primary-600"
-                } block px-3 py-2 rounded-md text-base font-medium transition-colors border-l-4 border-transparent`}
-              >
-                Workouts
-              </Link>
-              <Link
-                to="/nutrition"
-                onClick={closeMobileMenu}
-                className={`${
-                  isActive("/nutrition") 
-                    ? "bg-primary-50 text-primary-600 border-primary-500" 
-                    : "text-gray-700 hover:bg-gray-50 hover:text-primary-600"
-                } block px-3 py-2 rounded-md text-base font-medium transition-colors border-l-4 border-transparent`}
-              >
-                Nutrition
-              </Link>
-              <Link
-                to="/supplements"
-                onClick={closeMobileMenu}
-                className={`${
-                  isActive("/supplements") 
-                    ? "bg-primary-50 text-primary-600 border-primary-500" 
-                    : "text-gray-700 hover:bg-gray-50 hover:text-primary-600"
-                } block px-3 py-2 rounded-md text-base font-medium transition-colors border-l-4 border-transparent`}
-              >
-                Shop
-              </Link>
-              
-              {/* Mobile Actions */}
-              <div className="border-t border-gray-200 pt-4 mt-4">
-                <div className="flex items-center justify-between px-3 py-2">
-                  <span className="text-gray-700 font-medium">Cart</span>
-                  <div className="flex items-center">
-                    <ShoppingCart size={20} className="text-gray-700 mr-2" />
-                    <span className="bg-primary-600 text-white text-xs rounded-full h-6 w-6 flex items-center justify-center">
-                      {getCartItemCount()}
-                    </span>
-                  </div>
-                </div>
-                <div className="flex items-center px-3 py-2">
-                  <User size={20} className="text-gray-700 mr-2" />
-                  <span className="text-gray-700 font-medium">Account</span>
-                </div>
+        <div className={`lg:hidden fixed top-20 left-0 right-0 bg-gradient-to-b from-white via-white to-gray-50 backdrop-blur-md shadow-xl border-b border-gray-200 transition-all duration-300 z-30 ${
+          isMobileMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'
+        }`}>
+          <div className="px-6 py-8 space-y-3">
+            <Link
+              to="/"
+              onClick={closeMobileMenu}
+              className={`flex items-center space-x-4 px-5 py-4 rounded-2xl transition-all duration-300 group ${
+                isActive("/") 
+                  ? "bg-gradient-to-r from-gray-900 to-gray-700 text-white shadow-lg" 
+                  : "text-gray-700 hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 hover:shadow-md"
+              }`}
+            >
+              <span className="text-lg font-semibold">Home</span>
+            </Link>
+            
+            <Link
+              to="/articles"
+              onClick={closeMobileMenu}
+              className={`flex items-center space-x-4 px-5 py-4 rounded-2xl transition-all duration-300 group ${
+                isActive("/articles") 
+                  ? "bg-gradient-to-r from-gray-900 to-gray-700 text-white shadow-lg" 
+                  : "text-gray-700 hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 hover:shadow-md"
+              }`}
+            >
+              <div className={`p-2 rounded-xl ${isActive("/articles") ? "bg-white/20" : "bg-blue-100 group-hover:bg-blue-200"}`}>
+                <BookOpen size={20} className={isActive("/articles") ? "text-white" : "text-blue-600"} />
               </div>
-            </div>
+              <span className="text-lg font-semibold">Articles</span>
+            </Link>
+            
+            <Link
+              to="/calculators"
+              onClick={closeMobileMenu}
+              className={`flex items-center space-x-4 px-5 py-4 rounded-2xl transition-all duration-300 group ${
+                isActive("/calculators") 
+                  ? "bg-gradient-to-r from-gray-900 to-gray-700 text-white shadow-lg" 
+                  : "text-gray-700 hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 hover:shadow-md"
+              }`}
+            >
+              <div className={`p-2 rounded-xl ${isActive("/calculators") ? "bg-white/20" : "bg-green-100 group-hover:bg-green-200"}`}>
+                <Calculator size={20} className={isActive("/calculators") ? "text-white" : "text-green-600"} />
+              </div>
+              <span className="text-lg font-semibold">Calculators</span>
+            </Link>
+            
+            <Link
+              to="/workouts"
+              onClick={closeMobileMenu}
+              className={`flex items-center space-x-4 px-5 py-4 rounded-2xl transition-all duration-300 group ${
+                isActive("/workouts") 
+                  ? "bg-gradient-to-r from-gray-900 to-gray-700 text-white shadow-lg" 
+                  : "text-gray-700 hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 hover:shadow-md"
+              }`}
+            >
+              <div className={`p-2 rounded-xl ${isActive("/workouts") ? "bg-white/20" : "bg-orange-100 group-hover:bg-orange-200"}`}>
+                <Dumbbell size={20} className={isActive("/workouts") ? "text-white" : "text-orange-600"} />
+              </div>
+              <span className="text-lg font-semibold">Workouts</span>
+            </Link>
+
           </div>
-        )}
+        </div>
       </div>
     </header>
   );

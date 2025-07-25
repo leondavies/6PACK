@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { Dumbbell, ArrowLeft, Info, Target, Zap, Trophy } from "lucide-react";
+import { Dumbbell, ArrowLeft, Info, Target, Zap, Trophy, Scale, TrendingUp, Heart, Apple } from "lucide-react";
 import BlurIn from "../../components/blurText";
 
 function OneRepMaxCalculator() {
@@ -140,15 +140,23 @@ function OneRepMaxCalculator() {
   return (
     <>
       <Helmet>
-        <title>1RM Calculator - One Rep Max | 6Pack Fitness</title>
+        <title>Free 1RM Calculator New Zealand | One Rep Max Calculator NZ | 6Pack</title>
         <meta
           name="description"
-          content="Calculate your one-rep max (1RM) using proven formulas. Get training percentages and strength programming recommendations."
+          content="Free 1RM calculator for New Zealanders. Calculate your one-rep max using proven formulas. Get training percentages and strength programming recommendations for Kiwis."
         />
         <meta
           name="keywords"
-          content="1RM calculator, one rep max, strength training, powerlifting, training percentages"
+          content="1RM calculator NZ, one rep max New Zealand, strength training calculator, powerlifting NZ, training percentages calculator, max lift calculator"
         />
+        <meta property="og:title" content="Free 1RM Calculator New Zealand | 6Pack" />
+        <meta property="og:description" content="Calculate your one-rep max with our free New Zealand 1RM calculator. Get training percentages and strength programming tips." />
+        <meta property="og:url" content="https://6pack.co.nz/calculators/one-rep-max" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Free 1RM Calculator New Zealand | 6Pack" />
+        <meta name="twitter:description" content="Calculate your one-rep max with our free NZ calculator." />
+        <link rel="canonical" href="https://6pack.co.nz/calculators/one-rep-max" />
       </Helmet>
 
       <div className="min-h-screen bg-gray-50 py-12">
@@ -384,6 +392,45 @@ function OneRepMaxCalculator() {
                       <li>• Test your actual 1RM only when well-rested and prepared</li>
                     </ul>
                   </div>
+                </div>
+              </div>
+
+              {/* Related Calculators */}
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-4">Other Fitness Calculators</h3>
+                <div className="grid md:grid-cols-4 gap-4">
+                  <Link 
+                    to="/calculators/bmi" 
+                    className="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+                  >
+                    <Scale className="text-blue-500 mb-2" size={20} />
+                    <h4 className="font-semibold text-gray-900 text-sm">BMI Calculator</h4>
+                    <p className="text-xs text-gray-600">Check your weight status</p>
+                  </Link>
+                  <Link 
+                    to="/calculators/bmr" 
+                    className="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+                  >
+                    <Heart className="text-red-500 mb-2" size={20} />
+                    <h4 className="font-semibold text-gray-900 text-sm">BMR Calculator</h4>
+                    <p className="text-xs text-gray-600">Calculate daily calorie needs</p>
+                  </Link>
+                  <Link 
+                    to="/calculators/body-fat" 
+                    className="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+                  >
+                    <Target className="text-purple-500 mb-2" size={20} />
+                    <h4 className="font-semibold text-gray-900 text-sm">Body Fat Calculator</h4>
+                    <p className="text-xs text-gray-600">Estimate body composition</p>
+                  </Link>
+                  <Link 
+                    to="/calculators/macro" 
+                    className="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+                  >
+                    <Apple className="text-green-500 mb-2" size={20} />
+                    <h4 className="font-semibold text-gray-900 text-sm">Macro Calculator</h4>
+                    <p className="text-xs text-gray-600">Plan your nutrition</p>
+                  </Link>
                 </div>
               </div>
             </div>

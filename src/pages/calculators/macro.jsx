@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { Apple, ArrowLeft, Info, Target, Utensils, Activity } from "lucide-react";
+import { Apple, ArrowLeft, Info, Target, Utensils, Activity, Scale, TrendingUp, Dumbbell, Heart } from "lucide-react";
 import BlurIn from "../../components/blurText";
 
 function MacroCalculator() {
@@ -160,15 +160,23 @@ function MacroCalculator() {
   return (
     <>
       <Helmet>
-        <title>Macro Calculator - Macronutrient Calculator | 6Pack Fitness</title>
+        <title>Free Macro Calculator New Zealand | Macronutrient Calculator NZ | 6Pack</title>
         <meta
           name="description"
-          content="Calculate your daily macronutrient needs (protein, carbs, fat) based on your goals. Get personalised nutrition recommendations."
+          content="Free macro calculator for New Zealanders. Calculate your daily macronutrient needs (protein, carbs, fat) based on your fitness goals. Personalised nutrition planning for Kiwis."
         />
         <meta
           name="keywords"
-          content="macro calculator, macronutrient calculator, protein calculator, nutrition calculator, diet planning"
+          content="macro calculator NZ, macronutrient calculator New Zealand, protein calculator NZ, nutrition calculator New Zealand, diet planning NZ, IIFYM calculator"
         />
+        <meta property="og:title" content="Free Macro Calculator New Zealand | 6Pack" />
+        <meta property="og:description" content="Calculate your daily macronutrient needs with our free New Zealand macro calculator. Get personalised nutrition recommendations." />
+        <meta property="og:url" content="https://6pack.co.nz/calculators/macro" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Free Macro Calculator New Zealand | 6Pack" />
+        <meta name="twitter:description" content="Calculate your daily macronutrient needs with our free NZ calculator." />
+        <link rel="canonical" href="https://6pack.co.nz/calculators/macro" />
       </Helmet>
 
       <div className="min-h-screen bg-gray-50 py-12">
@@ -470,6 +478,45 @@ function MacroCalculator() {
                       <li>• Track for 1-2 weeks, then adjust based on progress</li>
                     </ul>
                   </div>
+                </div>
+              </div>
+
+              {/* Related Calculators */}
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-4">Other Fitness Calculators</h3>
+                <div className="grid md:grid-cols-4 gap-4">
+                  <Link 
+                    to="/calculators/bmi" 
+                    className="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+                  >
+                    <Scale className="text-blue-500 mb-2" size={20} />
+                    <h4 className="font-semibold text-gray-900 text-sm">BMI Calculator</h4>
+                    <p className="text-xs text-gray-600">Check your weight status</p>
+                  </Link>
+                  <Link 
+                    to="/calculators/bmr" 
+                    className="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+                  >
+                    <Heart className="text-red-500 mb-2" size={20} />
+                    <h4 className="font-semibold text-gray-900 text-sm">BMR Calculator</h4>
+                    <p className="text-xs text-gray-600">Calculate daily calorie needs</p>
+                  </Link>
+                  <Link 
+                    to="/calculators/body-fat" 
+                    className="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+                  >
+                    <Target className="text-purple-500 mb-2" size={20} />
+                    <h4 className="font-semibold text-gray-900 text-sm">Body Fat Calculator</h4>
+                    <p className="text-xs text-gray-600">Estimate body composition</p>
+                  </Link>
+                  <Link 
+                    to="/calculators/ideal-weight" 
+                    className="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+                  >
+                    <TrendingUp className="text-blue-500 mb-2" size={20} />
+                    <h4 className="font-semibold text-gray-900 text-sm">Ideal Weight</h4>
+                    <p className="text-xs text-gray-600">Find your target weight</p>
+                  </Link>
                 </div>
               </div>
             </div>

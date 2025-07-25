@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet } from "react-helmet";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
@@ -26,7 +25,7 @@ const Layout = ({ children }) => (
     </noscript>
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 pt-20">
         {children}
       </main>
       <Footer />

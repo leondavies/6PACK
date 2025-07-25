@@ -210,7 +210,7 @@ function Index() {
           <div className="text-center">
             <Link
               to="/articles"
-              className="bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors inline-flex items-center"
+              className="bg-gray-900 text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-800 transition-colors inline-flex items-center"
             >
               View All Articles
               <ArrowRight className="ml-2" size={16} />
@@ -220,15 +220,34 @@ function Index() {
       </section>
 
       {/* Fitness Calculators Section */}
-      <section className="py-20 bg-gradient-to-br from-primary-50 to-primary-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-gradient-to-r from-gray-900 to-gray-700 text-white overflow-hidden py-20">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&h=800&fit=crop"
+            alt="Fitness calculations and tracking"
+            className="w-full h-full object-cover opacity-20"
+          />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Fitness Calculators
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
               Take the guesswork out of your fitness journey with our science-based calculators
             </p>
+            
+            <div className="flex flex-wrap justify-center gap-4 text-sm mt-8">
+              <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
+                <Target className="mr-2" size={16} />
+                Personalised results
+              </div>
+              <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
+                <TrendingUp className="mr-2" size={16} />
+                Science-backed formulas
+              </div>
+            </div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
@@ -332,7 +351,7 @@ function Index() {
           <div className="text-center">
             <Link
               to="/calculators"
-              className="bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors inline-flex items-center"
+              className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
             >
               View All Calculators
               <ArrowRight className="ml-2" size={16} />
@@ -449,15 +468,17 @@ function Index() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/articles"
-              className="bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
+              className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
             >
               Start Reading Articles
+              <BookOpen className="ml-2" size={20} />
             </Link>
             <Link
               to="/workouts"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors"
+              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-gray-900 transition-colors inline-flex items-center justify-center"
             >
               Browse Workouts
+              <Users className="ml-2" size={20} />
             </Link>
           </div>
         </div>

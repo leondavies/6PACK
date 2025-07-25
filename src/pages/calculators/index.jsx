@@ -59,20 +59,26 @@ function Calculators() {
   return (
     <>
       <Helmet>
-        <title>Fitness Calculators - 6Pack | BMI, BMR, Body Fat & More</title>
+        <title>Free Fitness Calculators New Zealand | BMI, BMR, Body Fat Calculator NZ | 6Pack</title>
         <meta
           name="description"
-          content="Free fitness calculators including BMI, BMR, body fat percentage, 1RM, macro calculator and more. Plan your fitness journey with accurate calculations."
+          content="Free fitness calculators for New Zealanders. Calculate BMI, BMR, body fat percentage, 1RM, macros and ideal weight. Science-based tools for Kiwis planning their fitness journey."
         />
         <meta
           name="keywords"
-          content="fitness calculators, BMI calculator, BMR calculator, body fat calculator, 1RM calculator, macro calculator, ideal weight calculator"
+          content="fitness calculators NZ, BMI calculator New Zealand, BMR calculator NZ, body fat calculator New Zealand, 1RM calculator NZ, macro calculator New Zealand, health calculators NZ"
         />
-        <meta property="og:title" content="Fitness Calculators - 6Pack" />
+        <meta property="og:title" content="Free Fitness Calculators New Zealand | 6Pack" />
         <meta
           property="og:description"
-          content="Free fitness calculators to help plan your transformation journey. Calculate BMI, BMR, body fat percentage and more."
+          content="Free fitness calculators for New Zealand. Calculate BMI, BMR, body fat percentage and more with our science-based tools."
         />
+        <meta property="og:url" content="https://6pack.co.nz/calculators" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Free Fitness Calculators New Zealand | 6Pack" />
+        <meta name="twitter:description" content="Free fitness calculators for NZ. Calculate BMI, BMR, body fat and more." />
+        <link rel="canonical" href="https://6pack.co.nz/calculators" />
       </Helmet>
 
       {/* Hero Section */}
