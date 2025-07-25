@@ -271,12 +271,12 @@ function getRandomDate() {
 
 function getRandomImage(category) {
   const imageMap = {
-    muscleBuilding: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=400&fit=crop',
-    weightLoss: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=400&fit=crop',
-    nutrition: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&h=400&fit=crop',
-    strengthTraining: 'https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=800&h=400&fit=crop',
-    cardio: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=400&fit=crop',
-    recovery: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=400&fit=crop'
+    muscleBuilding: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=400&fit=crop&fm=webp&q=85',
+    weightLoss: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=400&fit=crop&fm=webp&q=85',
+    nutrition: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&h=400&fit=crop&fm=webp&q=85',
+    strengthTraining: 'https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=800&h=400&fit=crop&fm=webp&q=85',
+    cardio: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=400&fit=crop&fm=webp&q=85',
+    recovery: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=400&fit=crop&fm=webp&q=85'
   };
   return imageMap[category] || imageMap.muscleBuilding;
 }

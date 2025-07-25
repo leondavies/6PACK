@@ -9,7 +9,7 @@ function WorkoutsIndex() {
       slug: "chest",
       title: "Chest Workouts",
       description: "Build a powerful chest with bodyweight exercises and advanced techniques.",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=400&fit=crop&fm=webp&q=85",
       duration: "25-50 min",
       difficulty: "All Levels",
       exercises: "15+ exercises",
@@ -21,7 +21,7 @@ function WorkoutsIndex() {
       slug: "legs", 
       title: "Leg Workouts",
       description: "Develop unstoppable leg strength with squats, lunges, and advanced movements.",
-      image: "https://images.unsplash.com/photo-1434608519344-49d77a699e1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=800&h=400&fit=crop&fm=webp&q=85",
       duration: "20-45 min",
       difficulty: "All Levels", 
       exercises: "15+ exercises",
@@ -33,7 +33,7 @@ function WorkoutsIndex() {
       slug: "core",
       title: "Core & Abs Workouts", 
       description: "Build six-pack abs and core stability with targeted exercises.",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=400&fit=crop&fm=webp&q=85",
       duration: "15-40 min",
       difficulty: "All Levels",
       exercises: "15+ exercises", 
@@ -57,7 +57,7 @@ function WorkoutsIndex() {
         />
         <meta property="og:title" content="Complete Workout Programs | Home Fitness Routines" />
         <meta property="og:description" content="Transform your body with our complete workout programs. Expert fitness routines for chest, legs, and core - all levels welcome." />
-        <meta property="og:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=600&fit=crop&fm=webp&q=85" />
         <meta property="og:url" content="https://6pack.co.nz/workouts" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -97,7 +97,7 @@ function WorkoutsIndex() {
         <div className="relative bg-gradient-to-r from-gray-900 to-gray-700 text-white overflow-hidden">
           <div className="absolute inset-0">
             <img
-              src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=600&fit=crop&fm=webp&q=85"
               alt="Complete fitness workout programs"
               className="w-full h-full object-cover opacity-30"
             />

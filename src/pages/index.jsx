@@ -106,9 +106,11 @@ function Index() {
         {/* Hero Background Image */}
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1600&h=800&fit=crop"
+            src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&h=600&fit=crop&fm=webp&q=85"
             alt="Transform Your Body with Science-Backed Fitness"
             className="w-full h-full object-cover opacity-30"
+            loading="eager"
+            fetchpriority="high"
           />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -224,7 +226,7 @@ function Index() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&h=800&fit=crop"
+            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop&fm=webp&q=85"
             alt="Fitness calculations and tracking"
             className="w-full h-full object-cover opacity-20"
           />

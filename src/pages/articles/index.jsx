@@ -52,7 +52,7 @@ export default function ArticlesPage() {
           {/* Hero Background Image */}
           <div className="absolute inset-0">
             <img
-              src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&h=800&fit=crop"
+              src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&h=800&fit=crop&fm=webp&q=85"
               alt="Fitness Knowledge Hub"
               className="w-full h-full object-cover opacity-30"
             />

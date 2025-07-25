@@ -309,7 +309,7 @@ function LegsWorkout() {
         />
         <meta property="og:title" content="Ultimate Leg Workout Guide | Build Strong Legs at Home" />
         <meta property="og:description" content="Transform your legs with our complete workout guide. Build strength and muscle with proven exercises for all fitness levels." />
-        <meta property="og:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=1200&h=600&fit=crop&fm=webp&q=85" />
         <meta property="og:url" content="https://6pack.co.nz/workouts/legs" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -324,7 +324,7 @@ function LegsWorkout() {
             "@type": "Article",
             "headline": "Ultimate Leg Workout Guide - Build Strong Legs at Home",
             "description": "Comprehensive leg workout guide with exercises for all fitness levels",
-            "image": "https://images.unsplash.com/photo-1434608519344-49d77a699e1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80",
+            "image": "https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=1200&h=600&fit=crop&fm=webp&q=85",
             "author": {
               "@type": "Organization",
               "name": "6Pack"
@@ -354,7 +354,7 @@ function LegsWorkout() {
         <div className="relative bg-gradient-to-r from-red-600 to-orange-600 text-white overflow-hidden">
           <div className="absolute inset-0">
             <img
-              src="https://images.unsplash.com/photo-1434608519344-49d77a699e1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80"
+              src="https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=1200&h=600&fit=crop&fm=webp&q=85"
               alt="Athletic legs workout training"
               className="w-full h-full object-cover opacity-20"
             />

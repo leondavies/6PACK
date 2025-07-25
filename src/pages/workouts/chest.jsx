@@ -293,7 +293,7 @@ function ChestWorkout() {
         />
         <meta property="og:title" content="Complete Chest Workout Guide | Build Chest Muscle at Home" />
         <meta property="og:description" content="Transform your chest with our complete workout guide. Beginner to advanced exercises for building powerful chest muscles at home." />
-        <meta property="og:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=600&fit=crop&fm=webp&q=85" />
         <meta property="og:url" content="https://6pack.co.nz/workouts/chest" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -308,7 +308,7 @@ function ChestWorkout() {
             "@type": "Article",
             "headline": "Complete Chest Workout Guide - Build Chest Muscle at Home",
             "description": "Comprehensive chest workout guide with exercises for all fitness levels",
-            "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+            "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=600&fit=crop&fm=webp&q=85",
             "author": {
               "@type": "Organization",
               "name": "6Pack"
@@ -338,7 +338,7 @@ function ChestWorkout() {
         <div className="relative bg-gradient-to-r from-blue-600 to-purple-700 text-white overflow-hidden">
           <div className="absolute inset-0">
             <img
-              src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=600&fit=crop&fm=webp&q=85"
               alt="Muscular chest workout"
               className="w-full h-full object-cover opacity-20"
             />
