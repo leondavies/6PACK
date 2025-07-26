@@ -14,6 +14,14 @@ export const articles = [
 
 Building muscle is one of the most rewarding yet challenging aspects of fitness. Whether you're a complete beginner or looking to break through a plateau, this comprehensive guide will give you the scientifically-proven strategies to maximize your muscle growth.
 
+## TLDR
+
+• **Progressive overload is key**: Gradually increase weight, reps, or sets when you can complete all sets with perfect form
+• **Focus on 6-12 rep range**: Spend 70% of your training in this "hypertrophy sweet spot" for maximum muscle growth
+• **Prioritize compound movements**: Start workouts with squats, deadlifts, bench press, and pull-ups when you're fresh
+• **Eat 1.6-2.4g protein per kg body weight**: Spread across 4-6 meals with 20-40g post-workout within 2 hours
+• **Get 7-9 hours of quality sleep**: 95% of growth hormone is released during deep sleep stages
+
 ## Introduction: Why Muscle Building Matters
 
 Muscle building, or hypertrophy, isn't just about looking good. Research shows that increased muscle mass:

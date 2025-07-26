@@ -40,7 +40,12 @@ export default function ArticlePage() {
     "@type": "Article",
     "headline": article.title,
     "description": article.excerpt,
-    "image": article.image,
+    "image": {
+      "@type": "ImageObject",
+      "url": article.image.replace(/w=\d+&h=\d+/, 'w=1200&h=630'),
+      "width": 1200,
+      "height": 630
+    },
     "author": {
       "@type": "Person",
       "name": article.author
@@ -71,7 +76,9 @@ export default function ArticlePage() {
         {/* Open Graph tags */}
         <meta property="og:title" content={article.title} />
         <meta property="og:description" content={article.excerpt} />
-        <meta property="og:image" content={article.image} />
+        <meta property="og:image" content={article.image.replace(/w=\d+&h=\d+/, 'w=1200&h=630')} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://6pack.co.nz/articles/${article.slug}`} />
         
@@ -79,7 +86,7 @@ export default function ArticlePage() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={article.title} />
         <meta name="twitter:description" content={article.excerpt} />
-        <meta name="twitter:image" content={article.image} />
+        <meta name="twitter:image" content={article.image.replace(/w=\d+&h=\d+/, 'w=1200&h=630')} />
         
         {/* Article specific meta tags */}
         <meta property="article:author" content={article.author} />
