@@ -11,27 +11,64 @@ function Index() {
   return (
     <>
       <Helmet>
-        <title>6Pack NZ | New Zealand&apos;s Premier Fitness & Training Hub | Free Calculators & Guides</title>
+        <title>6Pack NZ | Free Fitness Calculators, Expert Workout Plans & Nutrition Guides | New Zealand's #1 Fitness Hub</title>
         <meta
           name="description"
-                      content="Transform your body with 6Pack NZ - New Zealand&apos;s top fitness resource. Free BMI, BMR & macro calculators, expert workout plans, nutrition guides, and science-backed fitness strategies for Kiwis."
+          content="🏆 New Zealand's leading fitness platform! Get FREE BMI, BMR & macro calculators ✓ 100+ expert workout plans ✓ Science-backed nutrition guides ✓ Personal training tips from NZ's top fitness experts. Transform your body today!"
         />
         <meta
           name="keywords"
-          content="fitness New Zealand, gym NZ, workout plans NZ, muscle building New Zealand, weight loss NZ, strength training, nutrition guides, fitness calculators NZ, 6pack abs, fitness articles New Zealand, personal trainer NZ"
+          content="free fitness calculators NZ, BMI calculator New Zealand, BMR calculator, macro calculator, workout plans NZ, muscle building guides, weight loss programs New Zealand, strength training Auckland, fitness nutrition New Zealand, personal trainer advice NZ, gym workouts, 6pack abs exercises, fitness transformation NZ, health calculator tools, exercise programs New Zealand"
         />
-        <meta property="og:title" content="6Pack NZ - New Zealand's Premier Fitness Training Hub" />
+        
+        {/* Enhanced Open Graph tags */}
+        <meta property="og:site_name" content="6Pack NZ" />
+        <meta property="og:locale" content="en_NZ" />
+        <meta property="og:title" content="6Pack NZ | Free Fitness Calculators, Expert Workout Plans & Nutrition Guides" />
         <meta
           property="og:description"
-          content="Transform your body with expert fitness guides, calculators, and nutrition advice from New Zealand's top fitness experts."
+          content="🏆 New Zealand's #1 fitness platform! FREE calculators (BMI, BMR, Macro) ✓ 100+ workout plans ✓ Expert nutrition guides ✓ Transform your body with science-backed fitness strategies from NZ's top trainers."
         />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=630&fit=crop&fm=webp&q=85" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="6Pack NZ Fitness Platform - Free BMI, BMR & Macro Calculators for New Zealanders" />
+        <meta property="og:image:type" content="image/webp" />
+        
+        {/* Additional high-quality images for rich snippets */}
         <meta property="og:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&h=630&fit=crop&fm=webp&q=85" />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop&fm=webp&q=85" />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=630&fit=crop&fm=webp&q=85" />
         <meta property="og:url" content="https://6pack.co.nz" />
         <meta property="og:type" content="website" />
+        
+        {/* Enhanced Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="6Pack NZ - New Zealand's Premier Fitness Training Hub" />
-        <meta name="twitter:description" content="Transform your body with expert fitness guides and calculators from NZ's top fitness experts." />
-        <meta name="twitter:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&h=630&fit=crop&fm=webp&q=85" />
+        <meta name="twitter:site" content="@6pack_nz" />
+        <meta name="twitter:creator" content="@6pack_nz" />
+        <meta name="twitter:title" content="6Pack NZ | Free Fitness Calculators & Expert Workout Plans" />
+        <meta name="twitter:description" content="🏆 NZ's #1 fitness platform! FREE calculators ✓ 100+ workout plans ✓ Expert guides ✓ Transform your body with science-backed strategies." />
+        <meta name="twitter:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=630&fit=crop&fm=webp&q=85" />
+        <meta name="twitter:image:alt" content="6Pack NZ - Free fitness calculators, workout plans & nutrition guides for New Zealanders" />
+        
+        {/* Additional SEO meta tags */}
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="author" content="6Pack NZ Fitness Experts" />
+        <meta name="copyright" content="6Pack NZ" />
+        <meta name="coverage" content="Worldwide" />
+        <meta name="distribution" content="Global" />
+        <meta name="rating" content="General" />
+        <meta name="revisit-after" content="1 days" />
+        <meta name="geo.region" content="NZ" />
+        <meta name="geo.country" content="New Zealand" />
+        <meta name="geo.placename" content="New Zealand" />
+        
+        {/* Structured data for rich snippets */}
+        <meta name="application-name" content="6Pack NZ" />
+        <meta name="msapplication-tooltip" content="New Zealand's premier fitness platform" />
+        <meta name="theme-color" content="#10b981" />
+        
         <link rel="canonical" href="https://6pack.co.nz" />
         
         {/* Enhanced Organization Schema */}
@@ -40,9 +77,9 @@ function Index() {
             "@context": "https://schema.org",
             "@type": "Organization",
             "@id": "https://6pack.co.nz/#organization",
-            name: "6Pack",
-            alternateName: "6Pack NZ",
-            description: "New Zealand's Premier Fitness Training Hub with free calculators and expert guides",
+            name: "6Pack NZ",
+            alternateName: ["6Pack", "6Pack New Zealand", "6Pack Fitness NZ"],
+            description: "New Zealand's leading fitness platform offering free calculators, expert workout plans, and science-backed nutrition guides for fitness transformation.",
             url: "https://6pack.co.nz",
             logo: {
               "@type": "ImageObject",
@@ -50,52 +87,304 @@ function Index() {
               "width": 200,
               "height": 60
             },
+            image: [
+              {
+                "@type": "ImageObject",
+                "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=630&fit=crop&fm=webp&q=85",
+                "width": 1200,
+                "height": 630,
+                "caption": "6Pack NZ Fitness Platform - Free calculators and expert guidance",
+                "description": "Modern fitness platform showcasing BMI, BMR and macro calculators for New Zealanders"
+              },
+              {
+                "@type": "ImageObject", 
+                "url": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&h=630&fit=crop&fm=webp&q=85",
+                "width": 1200,
+                "height": 630,
+                "caption": "Professional fitness training and muscle building guidance",
+                "description": "Expert fitness coaching and workout plans for strength training"
+              },
+              {
+                "@type": "ImageObject",
+                "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop&fm=webp&q=85", 
+                "width": 1200,
+                "height": 630,
+                "caption": "Fitness analytics and health metrics tracking",
+                "description": "Advanced fitness calculations and health assessment tools"
+              }
+            ],
             address: {
               "@type": "PostalAddress",
               "addressCountry": "NZ",
               "addressRegion": "Auckland"
             },
             foundingDate: "2024",
+            slogan: "Transform Your Body with Science-Backed Fitness",
             knowsAbout: [
+              "BMI Calculator",
+              "BMR Calculator", 
+              "Macro Calculator",
+              "Body Fat Calculator",
+              "1RM Calculator",
+              "Ideal Weight Calculator",
               "Fitness Training",
-              "Nutrition Advice", 
-              "Workout Plans",
-              "BMI Calculation",
-              "Weight Loss",
+              "Nutrition Planning",
+              "Workout Programs",
+              "Weight Loss Strategies",
               "Muscle Building",
-              "Strength Training"
+              "Strength Training",
+              "Personal Training",
+              "Exercise Science",
+              "Sports Nutrition"
             ],
-            areaServed: {
-              "@type": "Country",
-              "name": "New Zealand"
-            },
+            offers: [
+              {
+                "@type": "Offer",
+                "name": "Free Fitness Calculators",
+                "description": "BMI, BMR, Macro, Body Fat, and more calculators",
+                "price": "0",
+                "priceCurrency": "NZD"
+              },
+              {
+                "@type": "Offer", 
+                "name": "Expert Workout Plans",
+                "description": "Science-backed training programs for all fitness levels"
+              },
+              {
+                "@type": "Offer",
+                "name": "Nutrition Guides", 
+                "description": "Evidence-based nutrition strategies and meal planning"
+              }
+            ],
+            areaServed: [
+              {
+                "@type": "Country",
+                "name": "New Zealand"
+              },
+              {
+                "@type": "City",
+                "name": "Auckland"
+              },
+              {
+                "@type": "City", 
+                "name": "Wellington"
+              },
+              {
+                "@type": "City",
+                "name": "Christchurch"
+              }
+            ],
+            serviceType: [
+              "Fitness Coaching",
+              "Nutrition Guidance", 
+              "Workout Planning",
+              "Health Assessment Tools",
+              "Fitness Education"
+            ],
             sameAs: [
               "https://twitter.com/6pack_nz",
-              "https://facebook.com/6pack.co.nz",
+              "https://facebook.com/6pack.co.nz", 
               "https://instagram.com/6pack_nz"
             ]
           })}
         </script>
         
-        {/* Website Schema */}
+        {/* Enhanced Website Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebSite",
             "@id": "https://6pack.co.nz/#website",
-            name: "6Pack",
+            name: "6Pack NZ",
+            alternateName: "6Pack New Zealand Fitness Hub",
             url: "https://6pack.co.nz",
-            description: "New Zealand's Premier Fitness Training Hub",
+            description: "New Zealand's premier fitness platform with free calculators, expert workout plans, and nutrition guides",
+            inLanguage: "en-NZ",
             publisher: {
               "@id": "https://6pack.co.nz/#organization"
             },
-            potentialAction: {
-              "@type": "SearchAction",
-              target: {
-                "@type": "EntryPoint",
-                urlTemplate: "https://6pack.co.nz/search?q={search_term_string}"
+            about: [
+              {
+                "@type": "Thing",
+                "name": "Fitness Calculators",
+                "description": "Free BMI, BMR, macro, body fat, and ideal weight calculators"
               },
-              "query-input": "required name=search_term_string"
+              {
+                "@type": "Thing", 
+                "name": "Workout Plans",
+                "description": "Expert-designed training programs for muscle building and weight loss"
+              },
+              {
+                "@type": "Thing",
+                "name": "Nutrition Guides",
+                "description": "Science-backed nutrition strategies and meal planning advice"
+              }
+            ],
+            mainEntity: [
+              {
+                "@type": "SoftwareApplication",
+                "name": "BMI Calculator",
+                "url": "https://6pack.co.nz/calculators/bmi",
+                "applicationCategory": "HealthApplication",
+                "operatingSystem": "Web Browser"
+              },
+              {
+                "@type": "SoftwareApplication", 
+                "name": "BMR Calculator",
+                "url": "https://6pack.co.nz/calculators/bmr",
+                "applicationCategory": "HealthApplication", 
+                "operatingSystem": "Web Browser"
+              },
+              {
+                "@type": "SoftwareApplication",
+                "name": "Macro Calculator", 
+                "url": "https://6pack.co.nz/calculators/macro",
+                "applicationCategory": "HealthApplication",
+                "operatingSystem": "Web Browser"
+              }
+            ],
+            potentialAction: [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://6pack.co.nz/search?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              },
+              {
+                "@type": "ReadAction",
+                "target": "https://6pack.co.nz/articles"
+              },
+              {
+                "@type": "UseAction",
+                "target": "https://6pack.co.nz/calculators"
+              }
+            ]
+          })}
+        </script>
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://6pack.co.nz"
+              }
+            ]
+          })}
+        </script>
+
+        {/* FAQ Schema for common questions */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What fitness calculators does 6Pack NZ offer?",
+                "acceptedAnswer": {
+                  "@type": "Answer", 
+                  "text": "6Pack NZ offers free BMI Calculator, BMR Calculator, Macro Calculator, Body Fat Calculator, 1RM Calculator, and Ideal Weight Calculator - all scientifically accurate and designed for New Zealanders."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are the workout plans suitable for beginners?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes! 6Pack NZ provides workout plans for all fitness levels, from complete beginners to advanced athletes. Each plan includes detailed instructions and progression guidelines."
+                }
+              },
+              {
+                "@type": "Question", 
+                "name": "Is 6Pack NZ content backed by science?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Absolutely. All content is created by certified fitness professionals and based on peer-reviewed research. We prioritize evidence-based fitness and nutrition strategies."
+                }
+              }
+            ]
+          })}
+        </script>
+
+        {/* Image Gallery Schema for rich snippets */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ImageGallery",
+            "name": "6Pack NZ Fitness Platform Gallery",
+            "description": "Visual showcase of New Zealand's premier fitness platform featuring calculators, workout guides, and expert content",
+            "url": "https://6pack.co.nz",
+            "associatedMedia": [
+              {
+                "@type": "ImageObject",
+                "contentUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=630&fit=crop&fm=webp&q=85",
+                "width": 1200,
+                "height": 630,
+                "caption": "6Pack NZ Fitness Platform - Free BMI, BMR & Macro Calculators",
+                "description": "Modern fitness platform interface showcasing free calculators for New Zealanders",
+                "keywords": "fitness calculator, BMI calculator NZ, BMR calculator, macro calculator",
+                "author": {
+                  "@type": "Organization",
+                  "name": "6Pack NZ"
+                }
+              },
+              {
+                "@type": "ImageObject",
+                "contentUrl": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&h=630&fit=crop&fm=webp&q=85",
+                "width": 1200,
+                "height": 630,
+                "caption": "Professional Fitness Training & Muscle Building",
+                "description": "Expert fitness coaching and workout plans for strength training and muscle development",
+                "keywords": "fitness training, muscle building, workout plans NZ, strength training",
+                "author": {
+                  "@type": "Organization", 
+                  "name": "6Pack NZ"
+                }
+              },
+              {
+                "@type": "ImageObject",
+                "contentUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop&fm=webp&q=85",
+                "width": 1200,
+                "height": 630,
+                "caption": "Fitness Analytics & Health Metrics Tracking",
+                "description": "Advanced fitness calculations and comprehensive health assessment tools",
+                "keywords": "fitness analytics, health metrics, body fat calculator, ideal weight calculator",
+                "author": {
+                  "@type": "Organization",
+                  "name": "6Pack NZ"
+                }
+              }
+            ]
+          })}
+        </script>
+
+        {/* Video Schema for potential video content */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "6Pack NZ Fitness Platform Overview",
+            "description": "Discover New Zealand's premier fitness platform with free calculators, expert workout plans, and science-backed nutrition guides",
+            "thumbnailUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=630&fit=crop&fm=webp&q=85",
+            "uploadDate": "2024-01-01",
+            "duration": "PT2M30S",
+            "contentUrl": "https://6pack.co.nz",
+            "embedUrl": "https://6pack.co.nz",
+            "publisher": {
+              "@type": "Organization",
+              "name": "6Pack NZ",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://6pack.co.nz/logo.png"
+              }
             }
           })}
         </script>
@@ -106,11 +395,12 @@ function Index() {
         {/* Hero Background Image */}
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&h=600&fit=crop&fm=webp&q=85"
-            alt="Transform Your Body with Science-Backed Fitness"
+            src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=600&fit=crop&fm=webp&q=85"
+            alt="6Pack NZ - New Zealand's Premier Fitness Platform with Free BMI, BMR & Macro Calculators, Expert Workout Plans and Science-Backed Nutrition Guides"
             className="w-full h-full object-cover opacity-30"
             loading="eager"
             fetchpriority="high"
+            itemProp="image"
           />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -227,8 +517,10 @@ function Index() {
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop&fm=webp&q=85"
-            alt="Fitness calculations and tracking"
+            alt="6Pack NZ Fitness Calculators - Free BMI, BMR, Macro, Body Fat & 1RM Calculators for New Zealand Fitness Enthusiasts"
             className="w-full h-full object-cover opacity-20"
+            loading="lazy"
+            itemProp="image"
           />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

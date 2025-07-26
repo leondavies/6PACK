@@ -179,3 +179,70 @@ Before deploying, always test:
 - Use proper social media image dimensions
 - Test social sharing before deploying
 - Include structured data where relevant
+
+## CRITICAL: Article TLDR Requirements
+
+**Every article MUST include a TLDR section immediately after the title and before the first content paragraph.**
+
+### TLDR Format Requirements
+
+```markdown
+## TLDR
+
+• **Key point 1**: Brief explanation with specific actionable advice
+• **Key point 2**: Include numbers/specifics where possible (e.g., "2-3 times per week")
+• **Key point 3**: Focus on practical implementation, not theory
+• **Key point 4**: Use bold for the main concept, regular text for details
+• **Key point 5**: 3-5 bullet points maximum for scannability
+```
+
+### TLDR Writing Guidelines
+
+**Content Requirements:**
+- 3-5 bullet points maximum
+- Each point starts with **bold key concept**
+- Include specific numbers, timeframes, or measurements
+- Focus on actionable takeaways readers can implement immediately
+- Use simple, direct language (avoid jargon)
+
+**Formatting Rules:**
+- Always use `##` heading level for "TLDR"
+- Use bullet points (`•`) not dashes or numbers
+- Bold the key concept, regular text for explanation
+- Place immediately after article title, before first paragraph
+- Add blank line before and after TLDR section
+
+**Examples of Good vs Bad TLDR Points:**
+
+❌ **Bad:** "Exercise is important for health"
+✅ **Good:** "**Aim for 150 minutes moderate exercise weekly**: Equivalent to 30 minutes, 5 days per week for optimal health benefits"
+
+❌ **Bad:** "Nutrition timing matters"
+✅ **Good:** "**Eat 20-40g protein within 2 hours post-workout**: Maximizes muscle protein synthesis and recovery"
+
+### Why TLDR Sections Are Critical
+
+1. **User Experience**: 80% of users scan before reading - TLDR captures them
+2. **Mobile Optimization**: Quick access to key info on smaller screens  
+3. **Social Sharing**: People share content with clear, digestible takeaways
+4. **SEO Benefits**: Featured snippets often pull from well-formatted summary content
+5. **Retention**: Readers remember 3-5 key points better than long paragraphs
+
+### Article Structure Template
+
+```markdown
+# Article Title
+
+Brief intro paragraph setting context and hook.
+
+## TLDR
+
+• **Key takeaway 1**: Specific actionable advice
+• **Key takeaway 2**: Include numbers and timeframes
+• **Key takeaway 3**: Focus on practical implementation
+
+## Main Content Section 1
+[Detailed content...]
+```
+
+**Remember**: TLDR is not optional - it's a critical user experience feature that improves engagement, sharing, and retention.
