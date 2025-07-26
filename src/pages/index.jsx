@@ -25,13 +25,13 @@ function Index() {
           property="og:description"
           content="Transform your body with expert fitness guides, calculators, and nutrition advice from New Zealand's top fitness experts."
         />
-        <meta property="og:image" content="https://6pack.co.nz/6pack.webp" />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&h=630&fit=crop&fm=webp&q=85" />
         <meta property="og:url" content="https://6pack.co.nz" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="6Pack NZ - New Zealand's Premier Fitness Training Hub" />
         <meta name="twitter:description" content="Transform your body with expert fitness guides and calculators from NZ's top fitness experts." />
-        <meta name="twitter:image" content="https://6pack.co.nz/6pack.webp" />
+        <meta name="twitter:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&h=630&fit=crop&fm=webp&q=85" />
         <link rel="canonical" href="https://6pack.co.nz" />
         
         {/* Enhanced Organization Schema */}

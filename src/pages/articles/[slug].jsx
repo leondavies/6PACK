@@ -4,10 +4,28 @@ import { ArrowLeft, Clock, User, Eye, Calendar } from 'lucide-react';
 import { marked } from 'marked';
 import { articles } from '../../data/products';
 import ArticleShare from '../../components/ui/ArticleShare';
+import TableOfContents from '../../components/ui/TableOfContents';
 
 export default function ArticlePage() {
   const { slug } = useParams();
   const article = articles.find(a => a.slug === slug);
+  
+  // Process content to add IDs to headings
+  const processedContent = article ? (() => {
+    let html = marked(article.content);
+    
+    // Add IDs to h2 and h3 tags
+    html = html.replace(/<h([23])>([^<]+)<\/h[23]>/g, (match, level, text) => {
+      const id = text
+        .toLowerCase()
+        .replace(/[^\w\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/^-+|-+$/g, '');
+      return `<h${level} id="${id}">${text}</h${level}>`;
+    });
+    
+    return html;
+  })() : '';
 
   if (!article) {
     return <Navigate to="/articles" replace />;
@@ -167,7 +185,7 @@ export default function ArticlePage() {
                 prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-mono">
                 <div 
                   className="article-content"
-                  dangerouslySetInnerHTML={{ __html: marked(article.content) }}
+                  dangerouslySetInnerHTML={{ __html: processedContent }}
                 />
               </div>
 
@@ -198,20 +216,7 @@ export default function ArticlePage() {
                 </div>
 
                 {/* Table of Contents */}
-                <div className="bg-gray-50 rounded-lg p-6">
-                  <h3 className="font-semibold text-gray-900 mb-4">Table of Contents</h3>
-                  <nav className="space-y-2 text-sm">
-                    <a href="#introduction" className="block text-gray-600 hover:text-primary-600 transition-colors">
-                      1. Introduction
-                    </a>
-                    <a href="#key-points" className="block text-gray-600 hover:text-primary-600 transition-colors">
-                      2. Key Points
-                    </a>
-                    <a href="#conclusion" className="block text-gray-600 hover:text-primary-600 transition-colors">
-                      3. Conclusion
-                    </a>
-                  </nav>
-                </div>
+                <TableOfContents content={article.content} />
               </div>
             </div>
           </div>
