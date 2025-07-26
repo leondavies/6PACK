@@ -14,13 +14,7 @@ export const articles = [
 
 Building muscle is one of the most rewarding yet challenging aspects of fitness. Whether you're a complete beginner or looking to break through a plateau, this comprehensive guide will give you the scientifically-proven strategies to maximize your muscle growth.
 
-## TLDR
-
-• **Progressive overload is key**: Gradually increase weight, reps, or sets when you can complete all sets with perfect form
-• **Focus on 6-12 rep range**: Spend 70% of your training in this "hypertrophy sweet spot" for maximum muscle growth
-• **Prioritize compound movements**: Start workouts with squats, deadlifts, bench press, and pull-ups when you're fresh
-• **Eat 1.6-2.4g protein per kg body weight**: Spread across 4-6 meals with 20-40g post-workout within 2 hours
-• **Get 7-9 hours of quality sleep**: 95% of growth hormone is released during deep sleep stages
+🔗 **[Jump to TLDR](#tldr)** - Get the key takeaways in 30 seconds
 
 ## Introduction: Why Muscle Building Matters
 
@@ -207,6 +201,14 @@ Building muscle is a science, but it's not rocket science. Focus on these seven 
 
 Remember, everyone's journey is different. What matters is that you start, stay consistent, and make adjustments based on your results. The muscle you build today will serve you for the rest of your life.
 
+## TLDR
+
+• **Progressive overload is key**: Gradually increase weight, reps, or sets when you can complete all sets with perfect form
+• **Focus on 6-12 rep range**: Spend 70% of your training in this "hypertrophy sweet spot" for maximum muscle growth
+• **Prioritize compound movements**: Start workouts with squats, deadlifts, bench press, and pull-ups when you're fresh
+• **Eat 1.6-2.4g protein per kg body weight**: Spread across 4-6 meals with 20-40g post-workout within 2 hours
+• **Get 7-9 hours of quality sleep**: 95% of growth hormone is released during deep sleep stages
+
 **Ready to start your muscle building journey? Check out our personalized coaching programs to get expert guidance every step of the way.**
     `,
     tags: ["muscle building", "strength training", "hypertrophy", "workout plans"],
@@ -227,6 +229,8 @@ Remember, everyone's journey is different. What matters is that you start, stay 
     excerpt: "Transform your fitness with HIIT workouts that burn fat, improve cardiovascular health, and save time.",
     content: `
 # High-Intensity Interval Training: Maximum Results in Minimum Time
+
+🔗 **[Jump to TLDR](#tldr)** - Get the key takeaways in 30 seconds
 
 In our fast-paced world, finding time for exercise can be challenging. Enter High-Intensity Interval Training (HIIT) - a scientifically-proven method that delivers exceptional results in a fraction of the time of traditional cardio.
 
@@ -500,6 +504,14 @@ HIIT is one of the most effective and time-efficient forms of exercise available
 
 Remember, the best workout is the one you'll consistently perform. HIIT's time efficiency makes it sustainable for even the busiest schedules, helping you build lifelong fitness habits.
 
+## TLDR
+
+• **HIIT burns 25-30% more calories than steady cardio**: Plus continues burning calories for up to 24 hours post-workout
+• **Start with 2-3 sessions per week**: Begin with 30/30 protocol (30 seconds work, 30 seconds rest) for 15-20 minutes
+• **Work intervals should be 8-9/10 effort**: If you can speak comfortably, you're not working hard enough
+• **Always warm up for 3-5 minutes**: Cold muscles + high intensity = injury risk
+• **Limit to 3-4 times per week maximum**: More isn't better - adequate recovery prevents overtraining
+
 **Ready to transform your fitness with HIIT? Start with our beginner-friendly programs and progress at your own pace with expert guidance.**
     `,
     tags: ["HIIT", "cardio", "fat loss", "time-efficient workouts"],
@@ -520,6 +532,8 @@ Remember, the best workout is the one you'll consistently perform. HIIT's time e
     excerpt: "Master the science of nutrient timing to maximize your workout performance, muscle growth, and recovery.",
     content: `
 # Nutrition Timing: When to Eat for Optimal Performance and Recovery
+
+🔗 **[Jump to TLDR](#tldr)** - Get the key takeaways in 30 seconds
 
 Nutrition timing - when you eat specific nutrients around your workouts - can significantly impact your performance, recovery, and body composition goals. While total daily intake remains most important, strategic timing can provide that extra edge for serious fitness enthusiasts.
 
@@ -901,6 +915,14 @@ Nutrition timing can enhance your results, but it's the cherry on top of a good 
 
 Remember, the best nutrition plan is one you can follow consistently. Start with basic timing principles and gradually refine based on your experience and results.
 
+## TLDR
+
+• **Eat 30-60 minutes before training**: 15-30g fast carbs (banana, dates) for quick energy without digestive issues
+• **Post-workout nutrition within 2 hours**: 20-40g protein + 0.5-1.2g carbs per kg body weight for recovery
+• **Daily totals matter more than perfect timing**: Focus on hitting protein and calorie targets consistently first
+• **Hydrate strategically**: 500ml water 2-3 hours before, 200ml 15-20 minutes before, 200-300ml every 15-20 minutes during exercise
+• **Individual tolerance varies**: Experiment to find what works for your digestion and performance
+
 **Ready to optimize your nutrition timing? Our personalized coaching programs include customized meal timing strategies based on your schedule, goals, and preferences.**
     `,
     tags: ["nutrition timing", "pre-workout nutrition", "post-workout meals", "performance"],
@@ -921,6 +943,8 @@ Remember, the best nutrition plan is one you can follow consistently. Start with
     excerpt: "Master the deadlift with proper form, progressive programming, and injury prevention strategies.",
     content: `
 # Deadlift Mastery: Perfect Your Form and Avoid Common Mistakes
+
+🔗 **[Jump to TLDR](#tldr)** - Get the key takeaways in 30 seconds
 
 The deadlift is often called the "king of exercises" - and for good reason. It's one of the most effective movements for building total-body strength, power, and muscle mass. However, it's also one of the most technical lifts, requiring proper form to maximize benefits and minimize injury risk.
 
@@ -1417,6 +1441,14 @@ The deadlift is a fundamental human movement pattern that, when performed correc
 
 Remember, the deadlift is a skill that takes years to master. Focus on continuous improvement rather than perfection, and you'll build strength that serves you both in and out of the gym.
 
+## TLDR
+
+• **Setup is 80% of success**: Bar over mid-foot, hip hinge (not squat), shoulders over bar, create tension before lifting
+• **Keep bar close to body**: Engage lats throughout the lift - imagine crushing oranges in your armpits
+• **Drive through whole foot**: Think "push the floor away" rather than pulling the weight up
+• **Master hip hinge movement**: Practice Romanian deadlifts and bodyweight hip hinges before adding heavy weight
+• **Start light and progress slowly**: Perfect form with lighter weights beats ego lifting with poor technique
+
 **Ready to master your deadlift? Our expert coaches provide personalized form analysis and programming to help you lift safely and effectively.**
     `,
     tags: ["deadlift", "strength training", "powerlifting", "form technique"],
@@ -1437,6 +1469,8 @@ Remember, the deadlift is a skill that takes years to master. Focus on continuou
     excerpt: "Discover how optimising your sleep can dramatically improve muscle growth, recovery, and performance with science-backed strategies.",
     content: `
 # Sleep for Muscle Growth: The Ultimate Recovery Guide
+
+🔗 **[Jump to TLDR](#tldr)** - Get the key takeaways in 30 seconds
 
 While most fitness enthusiasts focus intensely on training and nutrition, they often overlook the most critical component of muscle growth and recovery: sleep. Quality sleep isn't just about feeling rested—it's when your body undergoes the majority of its repair, growth, and adaptation processes.
 
@@ -1962,6 +1996,14 @@ Quality sleep isn't a luxury—it's a necessity for anyone serious about their f
 
 Remember, you can't out-train or out-eat poor sleep. Make sleep optimisation a priority, and watch your muscle growth, strength gains, and overall performance reach new levels.
 
+## TLDR
+
+• **Aim for 8+ hours of quality sleep**: Athletes need 8-10 hours for optimal recovery and muscle protein synthesis
+• **Create optimal sleep environment**: 16-19°C room temperature, complete darkness, consistent bedtime/wake times
+• **Begin wind-down 90 minutes before bed**: Dim lights, no screens, gentle stretching or reading
+• **Poor sleep kills gains**: Just one week of 5-hour sleep reduces testosterone by 10-15% and muscle protein synthesis by 18%
+• **Track sleep quality not just quantity**: Monitor energy levels, recovery, and performance to optimize your sleep protocol
+
 **Ready to transform your recovery? Our sleep optimisation coaching includes personalised sleep protocols, environment setup guidance, and ongoing monitoring to maximise your muscle growth potential.**
     `,
     tags: ["sleep", "recovery", "muscle growth", "performance optimization"],
@@ -1982,6 +2024,8 @@ Remember, you can't out-train or out-eat poor sleep. Make sleep optimisation a p
     excerpt: "Master female-specific weight loss strategies that work with your hormones, metabolism, and lifestyle for lasting results.",
     content: `
 # Weight Loss for Women: A Science-Based Approach to Sustainable Results
+
+🔗 **[Jump to TLDR](#tldr)** - Get the key takeaways in 30 seconds
 
 Weight loss for women is uniquely complex due to hormonal fluctuations, metabolic differences, and societal pressures. This comprehensive guide addresses the science behind female metabolism and provides practical, sustainable strategies for achieving and maintaining a healthy weight.
 
@@ -2516,6 +2560,14 @@ Successful weight loss for women requires understanding and working with your un
 
 Remember, the goal isn't just to lose weight—it's to build a healthier, stronger, more confident version of yourself that lasts a lifetime.
 
+## TLDR
+
+• **Create moderate 20% caloric deficit**: Use BMR × activity factor, then subtract 20% for sustainable 0.5-1lb weekly loss
+• **Prioritize protein (25-35% of calories)**: 0.8-1.2g per pound body weight to preserve muscle and increase satiety
+• **Strength training 3-4x per week**: Essential for maintaining metabolism and creating "toned" appearance during weight loss
+• **Work with your menstrual cycle**: Expect 1-5lb fluctuations throughout cycle - focus on 4-6 week trends, not daily scale changes
+• **Address sleep and stress**: Poor sleep increases hunger hormones, while chronic stress elevates cortisol and promotes fat storage
+
 **Ready to start your transformation? Our female-focused coaching programs provide personalised nutrition and training plans that work with your unique physiology for sustainable results.**
     `,
     tags: ["weight loss", "women's health", "hormones", "sustainable diet"],
@@ -2536,6 +2588,8 @@ Remember, the goal isn't just to lose weight—it's to build a healthier, strong
     excerpt: "Everything you need to know to start your fitness journey successfully - from goal setting to workout plans and nutrition basics.",
     content: `
 # Complete Beginner's Guide to Fitness: Start Your Journey the Right Way
+
+🔗 **[Jump to TLDR](#tldr)** - Get the key takeaways in 30 seconds
 
 Starting a fitness journey can feel overwhelming with endless information, conflicting advice, and intimidating gym environments. This comprehensive guide cuts through the noise to provide you with everything you need to build a strong foundation for lifelong health and fitness.
 
@@ -3421,6 +3475,14 @@ Congratulations on taking the first step towards a healthier, stronger you! Reme
 
 Remember, every expert was once a beginner. The most important workout is your next one. You've got this!
 
+## TLDR
+
+• **Start with 2-3 workouts per week**: 20-30 minutes each, focusing on consistency over intensity to build the habit
+• **Include both cardio and strength training**: Strength training 2-3x weekly prevents muscle loss and boosts metabolism
+• **Set SMART goals**: Specific, measurable, achievable, relevant, time-bound (e.g., "10 push-ups in 8 weeks")
+• **Progress gradually**: Increase duration by 5-10 minutes or add 1 extra session weekly to avoid burnout
+• **Focus on compound bodyweight movements**: Squats, push-ups, planks, lunges work multiple muscles efficiently
+
 **Ready to take your fitness to the next level? Our expert coaches provide personalised programmes, form guidance, and ongoing support to help you achieve your goals safely and effectively.**
     `,
     tags: ["beginner fitness", "workout plans", "exercise basics", "fitness motivation"],
@@ -3441,6 +3503,8 @@ Remember, every expert was once a beginner. The most important workout is your n
     excerpt: "Transform your living space into an effective fitness studio with equipment-free workouts that deliver real results.",
     content: `
 # Effective Home Workouts: Get Fit Without a Gym
+
+🔗 **[Jump to TLDR](#tldr)** - Get the key takeaways in 30 seconds
 
 In today's busy world, home workouts have become more popular and effective than ever. Whether you're short on time, prefer privacy, or want to save money, training at home can be just as effective as gym workouts when done correctly.
 
@@ -4017,6 +4081,14 @@ Home workouts are a legitimate, effective way to build fitness, strength, and en
 
 Remember, the best workout is the one you'll actually do consistently. Home workouts remove barriers and excuses, making fitness accessible regardless of your schedule, budget, or location.
 
+## TLDR
+
+• **Bodyweight exercises build muscle effectively**: Progressive overload through increased reps, sets, and exercise variations
+• **Master the basics first**: Push-ups, squats, lunges, planks, and glute bridges form foundation of home training
+• **Circuit training maximizes efficiency**: 30-45 seconds work, 15-30 seconds rest format combines strength and cardio
+• **Minimal space needed**: 6x6 feet (yoga mat area) is sufficient for most effective bodyweight exercises
+• **Progress through variations**: Wall push-ups → knee push-ups → standard → diamond → one-arm push-ups
+
 **Ready to transform your home into a fitness haven? Our online coaching programs provide personalised home workout plans, form guidance via video analysis, and ongoing motivation to help you achieve your goals.**
     `,
     tags: ["home workouts", "bodyweight exercises", "no equipment", "HIIT"],
@@ -4037,6 +4109,8 @@ Remember, the best workout is the one you'll actually do consistently. Home work
     excerpt: "Learn evidence-based strategies to prevent injuries, improve movement quality, and maintain long-term fitness success.",
     content: `
 # Injury Prevention: Keep Your Body Strong and Resilient
+
+🔗 **[Jump to TLDR](#tldr)** - Get the key takeaways in 30 seconds
 
 Prevention is always better than cure, especially when it comes to exercise injuries. This comprehensive guide provides evidence-based strategies to keep your body healthy, functional, and injury-free throughout your fitness journey.
 
@@ -4632,6 +4706,14 @@ Injury prevention is an investment in your long-term health and fitness success.
 
 Remember, the goal isn't to eliminate all discomfort from exercise—it's to train smart, move well, and maintain a resilient body that can handle the demands you place on it.
 
+## TLDR
+
+• **Movement quality trumps quantity**: Perfect your exercise form before increasing intensity or weight
+• **Warm up with purpose**: 15-20 minute protocol including mobility, activation, and movement preparation
+• **Address muscle imbalances early**: Strengthen weak glutes, stretch tight hip flexors, improve posture daily
+• **Follow the 10% rule**: Increase training volume by no more than 10% per week to allow adaptation
+• **Listen to your body**: Distinguish between normal muscle fatigue and concerning pain that needs attention
+
 **Ready to bulletproof your body? Our injury prevention specialists provide personalised movement assessments, corrective exercise programmes, and ongoing guidance to keep you training safely and effectively.**
     `,
     tags: ["injury prevention", "prehab", "movement quality", "recovery"],
@@ -4652,6 +4734,8 @@ Remember, the goal isn't to eliminate all discomfort from exercise—it's to tra
     excerpt: "Discover how exercise can be your most powerful tool for managing stress, anxiety, depression, and boosting overall mental wellbeing.",
     content: `
 # Exercise for Mental Health: The Science of Movement and Mood
+
+🔗 **[Jump to TLDR](#tldr)** - Get the key takeaways in 30 seconds
 
 Exercise isn't just about physical fitness—it's one of the most powerful tools available for mental health and emotional wellbeing. This comprehensive guide explores the science behind exercise's impact on the brain and provides practical strategies for using movement to improve your mental health.
 
@@ -5185,6 +5269,14 @@ Exercise is a powerful, accessible tool for mental health that works on multiple
 
 Remember, your mental health journey is unique. Be patient with yourself, celebrate small victories, and don't hesitate to seek professional support when needed. Movement can be a powerful ally in your mental health toolkit.
 
+## TLDR
+
+• **Exercise is as effective as medication for depression**: 30-45 minutes of moderate exercise 4-5x per week shows 60-70% response rates
+• **Start small when motivation is low**: Even 5-10 minutes of movement provides immediate mood benefits
+• **Outdoor exercise enhances benefits**: Natural light exposure and nature connection amplify mental health improvements
+• **Different activities for different moods**: High-intensity for stress release, gentle movement for anxiety, varied activities for ADHD
+• **Consistency beats intensity**: Regular moderate exercise trumps sporadic intense sessions for mental health
+
 **Ready to harness the power of exercise for your mental health? Our mental health-informed fitness coaches provide personalised exercise prescriptions, emotional support, and ongoing guidance to help you use movement as medicine.**
     `,
     tags: ["mental health", "exercise therapy", "stress relief", "depression"],
@@ -5205,6 +5297,8 @@ Remember, your mental health journey is unique. Be patient with yourself, celebr
     excerpt: "We lab-tested 12 popular protein powders sold in New Zealand for protein content, heavy metals, and taste. The results will surprise you - including which $80 'premium' brand failed quality tests.",
     content: `
 # NZ Protein Shake Showdown: We Tested 12 Popular Brands (Shocking Results)
+
+🔗 **[Jump to Summary](#tldr)** - Get the key findings in 30 seconds
 
 We spent $800 and 3 months lab-testing every popular protein powder in New Zealand. The results will change how you shop forever.
 
@@ -5343,6 +5437,14 @@ Before buying any protein powder, most active adults need 1.6-2.2g protein per k
 Many Kiwis are already getting enough protein from whole foods and don't need supplements at all.
 
 **Ready to optimize your nutrition? Use our macro calculator to determine your exact protein needs and build a meal plan that works for your goals and budget.**
+
+## TLDR
+
+• **Local NZ grass-fed brand wins overall**: $35 price, 102% protein accuracy, undetectable heavy metals, great taste
+• **Expensive doesn't mean quality**: $80 premium brand contained only 68% of claimed protein plus heavy metal contamination
+• **Shop smart for supplements**: Supermarkets are 40-60% more expensive than Chemist Warehouse or online retailers
+• **Check for third-party testing**: Many brands make false claims about protein content and purity
+• **Most people don't need protein powder**: 1.6-2.2g per kg body weight easily achievable through whole foods
     `,
     tags: ["protein powder", "supplements", "New Zealand", "comparison", "review", "lab testing"],
     featured: true,
@@ -5362,6 +5464,8 @@ Many Kiwis are already getting enough protein from whole foods and don't need su
     excerpt: "This scientifically-proven morning routine takes just 5 minutes but can boost your metabolism by up to 15% all day. Used by NZ Olympic athletes.",
     content: `
 # The 5-Minute Metabolism Hack That Burns 300 Extra Calories Daily
+
+🔗 **[Jump to Summary](#tldr)** - Get the key steps in 30 seconds
 
 **What if I told you that 5 minutes could change your entire day?**
 
@@ -5514,6 +5618,14 @@ This isn't about perfection - it's about showing up for yourself every single mo
 **Ready to start? Set your alarm 5 minutes earlier tomorrow. Your future self will thank you.**
 
 *Want to maximize your results? Calculate your exact calorie needs with our BMR calculator and see how this morning routine fits into your daily burn.*
+
+## TLDR
+
+• **Morning HIIT boosts metabolism 15% all day**: 5-minute high-intensity circuit creates EPOC effect lasting hours
+• **Timing is critical**: Must be performed within 30 minutes of waking for maximum metabolic boost
+• **Maximum effort required**: Each 45-second interval should be 8-10/10 intensity - you should be breathless
+• **Simple bodyweight exercises**: Explosive squats, burpee push-ups, mountain climbers, jumping jacks, high knees
+• **Results within 1-2 weeks**: Participants burned average 294 extra calories daily and lost 1.8kg in 4 weeks
     `,
     tags: ["metabolism", "morning routine", "weight loss", "HIIT", "calorie burn", "EPOC"],
     featured: true,
@@ -5533,6 +5645,8 @@ This isn't about perfection - it's about showing up for yourself every single mo
     excerpt: "We compared prices, quality, and selection of 50 fitness foods across all three major NZ supermarkets. The winner might surprise you.",
     content: `
 # New World vs Woolworths vs Pak'nSave: Which NZ Supermarket Has Best Gym Food?
+
+🔗 **[Jump to Summary](#tldr)** - Get the key findings in 30 seconds
 
 **I spent 6 weeks comparing 50 fitness foods across all three major New Zealand supermarkets. The results will change where you shop.**
 
@@ -5795,6 +5909,14 @@ I created identical meal prep shopping lists for one week:
 **The real winner?** Your wallet and health when you shop smart across all three stores.
 
 *Ready to optimize your nutrition budget? Use our macro calculator to determine exactly what foods you need, then apply these shopping strategies to save hundreds per year.*
+
+## TLDR
+
+• **Pak'nSave wins for budget fitness shopping**: Cheapest protein sources, saves $700+ annually vs competitors
+• **New World best for quality-focused athletes**: Premium produce lasts 2-3 days longer, excellent butchery service
+• **Woolworths ideal for convenience**: Best loyalty program, superior online shopping, good middle-ground pricing
+• **Skip supermarkets for supplements**: All three charge 40-60% more than Chemist Warehouse for protein powder
+• **Smart strategy**: Main shop at Pak'nSave for staples, New World for fresh produce, Woolworths for convenience
     `,
     tags: ["supermarket comparison", "grocery shopping", "meal prep", "budget fitness", "New Zealand"],
     featured: false,
@@ -5814,6 +5936,8 @@ I created identical meal prep shopping lists for one week:
     excerpt: "A biomechanics study of 500 New Zealanders revealed shocking form mistakes that reduce results by 60%. Here's the 30-second fix.",
     content: `
 # Why 90% of Kiwis Are Doing Push-Ups Wrong (And How to Fix It)
+
+🔗 **[Jump to Summary](#tldr)** - Get the key fixes in 30 seconds
 
 **The most common exercise in New Zealand is being done wrong by almost everyone.**
 
@@ -6007,6 +6131,14 @@ One perfect push-up is worth more than 10 sloppy ones. Your body adapts to what 
 **Start tomorrow:** Do 5 perfect push-ups using these guidelines. Focus on feeling your chest muscles work. Build from there.
 
 *Ready to master other fundamental movements? Check out our complete form guides for squats, deadlifts, and pull-ups.*
+
+## TLDR
+
+• **Hand placement is everything**: Position hands 2-3 inches forward of shoulders, angle fingers outward 15-30 degrees
+• **Go to full depth**: Chest must touch ground or hands - shallow reps reduce muscle activation by 40%
+• **Move as one solid unit**: Maintain straight line from head to heels, avoid the "worm" movement pattern
+• **Protect your shoulders**: Keep shoulder blades squeezed together, shoulders back and down throughout movement
+• **Quality beats quantity**: One perfect push-up worth more than 10 sloppy ones - focus on perfect form first
     `,
     tags: ["push-ups", "exercise form", "strength training", "biomechanics", "injury prevention"],
     featured: true,

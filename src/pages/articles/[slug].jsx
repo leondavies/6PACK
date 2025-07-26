@@ -1,4 +1,5 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { ArrowLeft, Clock, User, Eye, Calendar } from 'lucide-react';
 import { marked } from 'marked';
@@ -9,6 +10,40 @@ import TableOfContents from '../../components/ui/TableOfContents';
 export default function ArticlePage() {
   const { slug } = useParams();
   const article = articles.find(a => a.slug === slug);
+
+  // Handle smooth scrolling with header offset
+  useEffect(() => {
+    // Add smooth scroll behavior
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    // Handle anchor links with offset for fixed header
+    const handleAnchorClick = (e) => {
+      const target = e.target.closest('a[href^="#"]');
+      if (target) {
+        e.preventDefault();
+        const targetId = target.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          const headerHeight = 80; // Height of fixed header (pt-20 = 80px)
+          const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+          const offsetPosition = elementPosition - headerHeight;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
+    };
+
+    document.addEventListener('click', handleAnchorClick);
+    
+    return () => {
+      document.removeEventListener('click', handleAnchorClick);
+      document.documentElement.style.scrollBehavior = 'auto';
+    };
+  }, []);
   
   // Process content to add IDs to headings
   const processedContent = article ? (() => {

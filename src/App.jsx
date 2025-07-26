@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import Home from "./pages";
 import Shop from "./pages/shop";
 import Subscription from "./pages/subscription";
-import Brewery from "./pages/brewery";
 import Articles from "./pages/articles";
 import ArticlePage from "./pages/articles/[slug]";
 import Calculators from "./pages/calculators";
@@ -40,7 +39,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/subscription" element={<Subscription />} />
-          <Route path="/brewery" element={<Brewery />} />
           <Route path="/articles" element={<Articles />} />
           <Route path="/articles/:slug" element={<ArticlePage />} />
           <Route path="/calculators" element={<Calculators />} />
