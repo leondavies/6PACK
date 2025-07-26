@@ -128,9 +128,11 @@ function BMRCalculator() {
         <meta property="og:description" content="Calculate your BMR and daily calorie needs with our free New Zealand BMR calculator. Get personalised nutrition recommendations." />
         <meta property="og:url" content="https://6pack.co.nz/calculators/bmr" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=630&fit=crop&fm=webp&q=85" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free BMR Calculator New Zealand | 6Pack" />
         <meta name="twitter:description" content="Calculate your BMR and daily calorie needs with our free NZ calculator." />
+        <meta name="twitter:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=630&fit=crop&fm=webp&q=85" />
         <link rel="canonical" href="https://6pack.co.nz/calculators/bmr" />
       </Helmet>
 

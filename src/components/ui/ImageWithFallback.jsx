@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const ImageWithFallback = ({ 
   src, 
   alt, 
-  fallbackSrc = "/6pack.webp", 
+  fallbackSrc = "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=400&fit=crop&fm=webp&q=85", 
   className = "",
   priority = false,
   width,
