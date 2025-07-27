@@ -10,6 +10,10 @@
       "destination": "/api/meta?page=bmi"
     },
     {
+      "source": "/articles/([^/]+)",
+      "destination": "/api/meta?page=article&slug=$1"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
@@ -17,6 +21,15 @@
   "headers": [
     {
       "source": "/calculators/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/articles/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
