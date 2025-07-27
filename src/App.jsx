@@ -18,6 +18,7 @@ import ChestWorkout from "./pages/workouts/chest";
 import LegsWorkout from "./pages/workouts/legs";
 import CoreWorkout from "./pages/workouts/core";
 import GymFinder from "./pages/gym-finder";
+import NotFound from "./pages/404";
 import Layout from "./components/layout";
 import { Toaster } from "sonner";
 
@@ -55,6 +56,8 @@ function App() {
           <Route path="/workouts/legs" element={<LegsWorkout />} />
           <Route path="/workouts/core" element={<CoreWorkout />} />
           <Route path="/gym-finder" element={<GymFinder />} />
+          <Route path="/404" element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Toaster position="top-right" />
       </Layout>
