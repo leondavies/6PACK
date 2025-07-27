@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { MapPin, Search, Filter, Star, Clock, Phone, Globe, Navigation, Sliders } from 'lucide-react';
-import { searchGymsNearby, getMockGymsNearby, geocodeAddress, calculateDistance } from '../services/googlePlaces';
+import { searchGymsNearby, getMockGymsNearby, geocodeAddress, calculateDistance, getAutocompleteSuggestions } from '../services/googlePlaces';
 
 export default function GymFinder() {
   const [userLocation, setUserLocation] = useState(null);
@@ -14,6 +14,9 @@ export default function GymFinder() {
   const [sortBy, setSortBy] = useState('distance'); // distance, rating, name
   const [priceFilter, setPriceFilter] = useState('all'); // all, low, medium, high
   const [ratingFilter, setRatingFilter] = useState(0); // minimum rating
+  const [suggestions, setSuggestions] = useState([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [selectedSuggestionIndex, setSelectedSuggestionIndex] = useState(-1);
 
   // Get user's current location
   const getCurrentLocation = () => {
@@ -90,15 +93,76 @@ export default function GymFinder() {
     }
   };
 
+  // Handle autocomplete input changes
+  const handleAddressChange = async (value) => {
+    setSearchAddress(value);
+    setSelectedSuggestionIndex(-1);
+    
+    if (value.trim().length >= 2) {
+      try {
+        const autocompleteSuggestions = await getAutocompleteSuggestions(value);
+        setSuggestions(autocompleteSuggestions);
+        setShowSuggestions(autocompleteSuggestions.length > 0);
+      } catch (error) {
+        console.error('Error getting autocomplete suggestions:', error);
+        setSuggestions([]);
+        setShowSuggestions(false);
+      }
+    } else {
+      setSuggestions([]);
+      setShowSuggestions(false);
+    }
+  };
+
+  // Handle suggestion selection
+  const handleSuggestionSelect = (suggestion) => {
+    setSearchAddress(suggestion.description);
+    setSuggestions([]);
+    setShowSuggestions(false);
+    setSelectedSuggestionIndex(-1);
+    // Automatically search for gyms when a suggestion is selected
+    handleAddressSearch(suggestion.description);
+  };
+
+  // Handle keyboard navigation in suggestions
+  const handleKeyDown = (e) => {
+    if (!showSuggestions || suggestions.length === 0) return;
+
+    switch (e.key) {
+      case 'ArrowDown':
+        e.preventDefault();
+        setSelectedSuggestionIndex(prev => 
+          prev < suggestions.length - 1 ? prev + 1 : prev
+        );
+        break;
+      case 'ArrowUp':
+        e.preventDefault();
+        setSelectedSuggestionIndex(prev => prev > 0 ? prev - 1 : -1);
+        break;
+      case 'Enter':
+        e.preventDefault();
+        if (selectedSuggestionIndex >= 0) {
+          handleSuggestionSelect(suggestions[selectedSuggestionIndex]);
+        } else {
+          handleAddressSearch();
+        }
+        break;
+      case 'Escape':
+        setShowSuggestions(false);
+        setSelectedSuggestionIndex(-1);
+        break;
+    }
+  };
+
   // Handle address search using geocoding
-  const handleAddressSearch = async () => {
-    if (!searchAddress.trim()) return;
+  const handleAddressSearch = async (address = searchAddress) => {
+    if (!address.trim()) return;
     
     setLoading(true);
     setLocationError('');
     
     try {
-      const location = await geocodeAddress(searchAddress);
+      const location = await geocodeAddress(address);
       setUserLocation(location);
       await findNearbyGyms(location.lat, location.lng);
     } catch (error) {
@@ -229,18 +293,49 @@ export default function GymFinder() {
                 </button>
               </div>
 
-              {/* Address Search */}
+              {/* Address Search with Autocomplete */}
               <div className="flex-1 flex gap-2">
                 <div className="relative flex-1">
-                  <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                  <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 z-10" />
                   <input
                     type="text"
                     placeholder="Enter city or address (e.g., Auckland, Wellington)"
                     value={searchAddress}
-                    onChange={(e) => setSearchAddress(e.target.value)}
-                    onKeyPress={(e) => e.key === 'Enter' && handleAddressSearch()}
+                    onChange={(e) => handleAddressChange(e.target.value)}
+                    onKeyDown={handleKeyDown}
+                    onFocus={() => suggestions.length > 0 && setShowSuggestions(true)}
+                    onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
                     className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   />
+                  
+                  {/* Autocomplete Suggestions */}
+                  {showSuggestions && suggestions.length > 0 && (
+                    <div className="absolute top-full left-0 right-0 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-60 overflow-y-auto">
+                      {suggestions.map((suggestion, index) => (
+                        <div
+                          key={suggestion.id}
+                          onClick={() => handleSuggestionSelect(suggestion)}
+                          className={`px-4 py-3 cursor-pointer hover:bg-gray-50 border-b border-gray-100 last:border-b-0 ${
+                            index === selectedSuggestionIndex ? 'bg-primary-50 border-primary-200' : ''
+                          }`}
+                        >
+                          <div className="flex items-center">
+                            <MapPin className="w-4 h-4 text-gray-400 mr-3 flex-shrink-0" />
+                            <div className="flex-1 min-w-0">
+                              <div className="font-medium text-gray-900 truncate">
+                                {suggestion.mainText}
+                              </div>
+                              {suggestion.secondaryText && (
+                                <div className="text-sm text-gray-500 truncate">
+                                  {suggestion.secondaryText}
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
                 <button
                   onClick={handleAddressSearch}
