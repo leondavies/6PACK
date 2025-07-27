@@ -52,8 +52,8 @@ export default async function handler(req, res) {
       key: API_KEY,
       // Bias results to New Zealand
       components: 'country:nz',
-      // Focus on cities and addresses
-      types: '(cities)'
+      // Include all address types: addresses, businesses, and places
+      types: 'geocode'
     });
 
     const response = await fetch(`${baseUrl}?${params}`);
