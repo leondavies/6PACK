@@ -172,17 +172,17 @@ function BMICalculator() {
         />
         <meta property="og:title" content="Free BMI Calculator New Zealand | 6Pack" />
         <meta property="og:description" content="Calculate your BMI instantly with our free New Zealand BMI calculator. Get health recommendations and weight status analysis." />
-        <meta property="og:image" content="https://6pack.co.nz/bmi-calculator-social.jpg" />
+        <meta property="og:image" content="https://www.6pack.co.nz/bmi-calculator-social.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="6Pack NZ BMI Calculator - Calculate your Body Mass Index instantly" />
-        <meta property="og:url" content="https://6pack.co.nz/calculators/bmi" />
+        <meta property="og:url" content="https://www.6pack.co.nz/calculators/bmi" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free BMI Calculator New Zealand | 6Pack" />
         <meta name="twitter:description" content="Calculate your BMI instantly with our free New Zealand BMI calculator." />
-        <meta name="twitter:image" content="https://6pack.co.nz/bmi-calculator-social.jpg" />
-        <link rel="canonical" href="https://6pack.co.nz/calculators/bmi" />
+        <meta name="twitter:image" content="https://www.6pack.co.nz/bmi-calculator-social.jpg" />
+        <link rel="canonical" href="https://www.6pack.co.nz/calculators/bmi" />
         
         {/* Structured Data */}
         <script type="application/ld+json">
@@ -191,7 +191,7 @@ function BMICalculator() {
             "@type": "WebApplication",
             "name": "BMI Calculator New Zealand",
             "description": "Free BMI calculator for New Zealanders. Calculate your Body Mass Index instantly with health recommendations.",
-            "url": "https://6pack.co.nz/calculators/bmi",
+            "url": "https://www.6pack.co.nz/calculators/bmi",
             "applicationCategory": "HealthApplication",
             "operatingSystem": "Any",
             "offers": {
@@ -202,7 +202,7 @@ function BMICalculator() {
             "author": {
               "@type": "Organization",
               "name": "6Pack",
-              "url": "https://6pack.co.nz"
+              "url": "https://www.6pack.co.nz"
             },
             "aggregateRating": {
               "@type": "AggregateRating",
@@ -219,7 +219,7 @@ function BMICalculator() {
             "@type": "WebApplication",
             "name": "BMI Calculator New Zealand",
             "description": "Free BMI calculator for New Zealanders with health recommendations",
-            "url": "https://6pack.co.nz/calculators/bmi",
+            "url": "https://www.6pack.co.nz/calculators/bmi",
             "applicationCategory": "HealthApplication",
             "operatingSystem": "Web Browser",
             "offers": {

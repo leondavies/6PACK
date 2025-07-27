@@ -29,13 +29,13 @@ function Index() {
           property="og:description"
           content="🏆 New Zealand's #1 fitness platform! FREE calculators (BMI, BMR, Macro) ✓ 100+ workout plans ✓ Expert nutrition guides ✓ Transform your body with science-backed fitness strategies from NZ's top trainers."
         />
-        <meta property="og:image" content="https://6pack.co.nz/og-image.jpg" />
+        <meta property="og:image" content="https://www.6pack.co.nz/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="6Pack NZ - New Zealand's Premier Fitness Platform with Free Calculators, Expert Workout Plans & Nutrition Guides" />
         <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:secure_url" content="https://6pack.co.nz/og-image.jpg" />
-        <meta property="og:url" content="https://6pack.co.nz" />
+        <meta property="og:image:secure_url" content="https://www.6pack.co.nz/og-image.jpg" />
+        <meta property="og:url" content="https://www.6pack.co.nz" />
         <meta property="og:type" content="website" />
         
         {/* Enhanced Twitter Card tags */}
@@ -44,7 +44,7 @@ function Index() {
         <meta name="twitter:creator" content="@6pack_nz" />
         <meta name="twitter:title" content="6Pack NZ | Free Fitness Calculators & Expert Workout Plans" />
         <meta name="twitter:description" content="🏆 NZ's #1 fitness platform! FREE calculators ✓ 100+ workout plans ✓ Expert guides ✓ Transform your body with science-backed strategies." />
-        <meta name="twitter:image" content="https://6pack.co.nz/og-image.jpg" />
+        <meta name="twitter:image" content="https://www.6pack.co.nz/og-image.jpg" />
         <meta name="twitter:image:alt" content="6Pack NZ - Free fitness calculators, workout plans & nutrition guides for New Zealanders" />
         
         {/* Additional SEO meta tags */}
@@ -66,49 +66,49 @@ function Index() {
         <meta name="format-detection" content="telephone=no" />
         
         {/* Additional image meta tags */}
-        <link rel="image_src" href="https://6pack.co.nz/og-image.jpg" />
-        <meta name="thumbnail" content="https://6pack.co.nz/og-image.jpg" />
+        <link rel="image_src" href="https://www.6pack.co.nz/og-image.jpg" />
+        <meta name="thumbnail" content="https://www.6pack.co.nz/og-image.jpg" />
         
         {/* Apple-specific meta tags */}
         <meta name="apple-mobile-web-app-title" content="6Pack NZ" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <link rel="apple-touch-icon" href="https://6pack.co.nz/og-image.jpg" />
+        <link rel="apple-touch-icon" href="https://www.6pack.co.nz/og-image.jpg" />
         
         {/* Structured data for rich snippets */}
         <meta name="application-name" content="6Pack NZ" />
         <meta name="msapplication-tooltip" content="New Zealand's premier fitness platform" />
         <meta name="theme-color" content="#10b981" />
         
-        <link rel="canonical" href="https://6pack.co.nz" />
+        <link rel="canonical" href="https://www.6pack.co.nz" />
         
         {/* Enhanced Organization Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "@id": "https://6pack.co.nz/#organization",
+            "@id": "https://www.6pack.co.nz/#organization",
             name: "6Pack NZ",
             alternateName: ["6Pack", "6Pack New Zealand", "6Pack Fitness NZ"],
             description: "New Zealand's leading fitness platform offering free calculators, expert workout plans, and science-backed nutrition guides for fitness transformation.",
-            url: "https://6pack.co.nz",
+            url: "https://www.6pack.co.nz",
             logo: {
               "@type": "ImageObject",
-              "url": "https://6pack.co.nz/og-image.jpg",
+              "url": "https://www.6pack.co.nz/og-image.jpg",
               "width": 1200,
               "height": 630,
-              "contentUrl": "https://6pack.co.nz/og-image.jpg",
-              "thumbnailUrl": "https://6pack.co.nz/favicon.svg"
+              "contentUrl": "https://www.6pack.co.nz/og-image.jpg",
+              "thumbnailUrl": "https://www.6pack.co.nz/favicon.svg"
             },
             image: [
               {
                 "@type": "ImageObject",
-                "url": "https://6pack.co.nz/og-image.jpg",
+                "url": "https://www.6pack.co.nz/og-image.jpg",
                 "width": 1200,
                 "height": 630,
                 "caption": "6Pack NZ - New Zealand's Premier Fitness Platform",
                 "description": "Official branded image showcasing 6Pack NZ's comprehensive fitness platform with free calculators, expert workout plans, and science-backed nutrition guides designed specifically for New Zealanders",
-                "contentUrl": "https://6pack.co.nz/og-image.jpg"
+                "contentUrl": "https://www.6pack.co.nz/og-image.jpg"
               }
             ],
             address: {
@@ -200,7 +200,7 @@ function Index() {
             brand: {
               "@type": "Brand",
               "name": "6Pack NZ",
-              "logo": "https://6pack.co.nz/og-image.jpg"
+              "logo": "https://www.6pack.co.nz/og-image.jpg"
             }
           })}
         </script>
@@ -210,14 +210,14 @@ function Index() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebSite",
-            "@id": "https://6pack.co.nz/#website",
+            "@id": "https://www.6pack.co.nz/#website",
             name: "6Pack NZ",
             alternateName: "6Pack New Zealand Fitness Hub",
-            url: "https://6pack.co.nz",
+            url: "https://www.6pack.co.nz",
             description: "New Zealand's premier fitness platform with free calculators, expert workout plans, and nutrition guides",
             inLanguage: "en-NZ",
             publisher: {
-              "@id": "https://6pack.co.nz/#organization"
+              "@id": "https://www.6pack.co.nz/#organization"
             },
             about: [
               {
@@ -240,21 +240,21 @@ function Index() {
               {
                 "@type": "SoftwareApplication",
                 "name": "BMI Calculator",
-                "url": "https://6pack.co.nz/calculators/bmi",
+                "url": "https://www.6pack.co.nz/calculators/bmi",
                 "applicationCategory": "HealthApplication",
                 "operatingSystem": "Web Browser"
               },
               {
                 "@type": "SoftwareApplication", 
                 "name": "BMR Calculator",
-                "url": "https://6pack.co.nz/calculators/bmr",
+                "url": "https://www.6pack.co.nz/calculators/bmr",
                 "applicationCategory": "HealthApplication", 
                 "operatingSystem": "Web Browser"
               },
               {
                 "@type": "SoftwareApplication",
                 "name": "Macro Calculator", 
-                "url": "https://6pack.co.nz/calculators/macro",
+                "url": "https://www.6pack.co.nz/calculators/macro",
                 "applicationCategory": "HealthApplication",
                 "operatingSystem": "Web Browser"
               }
@@ -264,17 +264,17 @@ function Index() {
                 "@type": "SearchAction",
                 "target": {
                   "@type": "EntryPoint",
-                  "urlTemplate": "https://6pack.co.nz/search?q={search_term_string}"
+                  "urlTemplate": "https://www.6pack.co.nz/search?q={search_term_string}"
                 },
                 "query-input": "required name=search_term_string"
               },
               {
                 "@type": "ReadAction",
-                "target": "https://6pack.co.nz/articles"
+                "target": "https://www.6pack.co.nz/articles"
               },
               {
                 "@type": "UseAction",
-                "target": "https://6pack.co.nz/calculators"
+                "target": "https://www.6pack.co.nz/calculators"
               }
             ]
           })}
@@ -290,7 +290,7 @@ function Index() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://6pack.co.nz"
+                "item": "https://www.6pack.co.nz"
               }
             ]
           })}
@@ -301,18 +301,18 @@ function Index() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": ["Organization", "LocalBusiness", "HealthAndBeautyBusiness"],
-            "@id": "https://6pack.co.nz/#entity",
+            "@id": "https://www.6pack.co.nz/#entity",
             "name": "6Pack NZ",
             "alternateName": ["6Pack", "6Pack New Zealand", "6Pack Fitness"],
             "description": "New Zealand's leading fitness platform offering free calculators, expert workout plans, and science-backed nutrition guides.",
-            "url": "https://6pack.co.nz",
+            "url": "https://www.6pack.co.nz",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://6pack.co.nz/og-image.jpg",
+              "url": "https://www.6pack.co.nz/og-image.jpg",
               "width": 1200,
               "height": 630
             },
-            "image": "https://6pack.co.nz/og-image.jpg",
+            "image": "https://www.6pack.co.nz/og-image.jpg",
             "founder": {
               "@type": "Person",
               "name": "6Pack NZ Team"
@@ -378,13 +378,13 @@ function Index() {
             "potentialAction": [
               {
                 "@type": "SearchAction",
-                "target": "https://6pack.co.nz/articles?search={search_term_string}",
+                "target": "https://www.6pack.co.nz/articles?search={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
             ],
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://6pack.co.nz"
+              "@id": "https://www.6pack.co.nz"
             },
             "sameAs": [
               "https://twitter.com/6pack_nz",
@@ -435,11 +435,11 @@ function Index() {
             "@type": "ImageGallery",
             "name": "6Pack NZ Fitness Platform Gallery",
             "description": "Visual showcase of New Zealand's premier fitness platform featuring calculators, workout guides, and expert content",
-            "url": "https://6pack.co.nz",
+            "url": "https://www.6pack.co.nz",
             "associatedMedia": [
               {
                 "@type": "ImageObject",
-                "contentUrl": "https://6pack.co.nz/og_image.png",
+                "contentUrl": "https://www.6pack.co.nz/og_image.png",
                 "width": 1200,
                 "height": 630,
                 "caption": "6Pack NZ - Official Fitness Platform Brand Image",
@@ -453,7 +453,7 @@ function Index() {
                   "@type": "Organization",
                   "name": "6Pack NZ"
                 },
-                "license": "https://6pack.co.nz/terms"
+                "license": "https://www.6pack.co.nz/terms"
               }
             ]
           })}
@@ -466,17 +466,17 @@ function Index() {
             "@type": "VideoObject",
             "name": "6Pack NZ Fitness Platform Overview",
             "description": "Discover New Zealand's premier fitness platform with free calculators, expert workout plans, and science-backed nutrition guides",
-            "thumbnailUrl": "https://6pack.co.nz/og_image.png",
+            "thumbnailUrl": "https://www.6pack.co.nz/og_image.png",
             "uploadDate": "2024-01-01",
             "duration": "PT2M30S",
-            "contentUrl": "https://6pack.co.nz",
-            "embedUrl": "https://6pack.co.nz",
+            "contentUrl": "https://www.6pack.co.nz",
+            "embedUrl": "https://www.6pack.co.nz",
             "publisher": {
               "@type": "Organization",
               "name": "6Pack NZ",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://6pack.co.nz/logo.png"
+                "url": "https://www.6pack.co.nz/logo.png"
               }
             }
           })}
