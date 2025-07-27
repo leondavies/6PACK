@@ -5,9 +5,14 @@
   <!-- Main Pages -->
   <url>
     <loc>https://6pack.co.nz/</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://6pack.co.nz/og-image.jpg</image:loc>
+      <image:title>6Pack NZ - New Zealand's Premier Fitness Platform</image:title>
+      <image:caption>6Pack NZ homepage featuring free fitness calculators, expert workout plans, and nutrition guides for New Zealanders</image:caption>
+    </image:image>
   </url>
   
   <!-- Article Pages -->
@@ -112,5 +117,11 @@
     <priority>0.7</priority>
   </url>
   
+  <url>
+    <loc>https://6pack.co.nz/gym-finder</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
   
 </urlset> 
