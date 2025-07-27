@@ -222,12 +222,12 @@ function MacroCalculator() {
         />
         <meta property="og:title" content="Free Macro Calculator New Zealand | 6Pack" />
         <meta property="og:description" content="Calculate your daily macronutrient needs with our free New Zealand macro calculator. Get personalised nutrition recommendations." />
-        <meta property="og:url" content="https://6pack.co.nz/calculators/macro" />
+        <meta property="og:url" content="https://www.6pack.co.nz/calculators/macro" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free Macro Calculator New Zealand | 6Pack" />
         <meta name="twitter:description" content="Calculate your daily macronutrient needs with our free NZ calculator." />
-        <link rel="canonical" href="https://6pack.co.nz/calculators/macro" />
+        <link rel="canonical" href="https://www.6pack.co.nz/calculators/macro" />
       </Helmet>
 
       <div className="min-h-screen bg-gray-50 py-12">

@@ -2,7 +2,7 @@
 
 export const siteConfig = {
   siteName: '6Pack',
-  siteUrl: 'https://6pack.co.nz',
+  siteUrl: 'https://www.6pack.co.nz',
   description: 'New Zealand\'s premier fitness resource hub. Expert training guides, nutrition advice, and science-backed fitness strategies.',
   keywords: 'fitness, gym, workout, nutrition, muscle building, weight loss, strength training, New Zealand',
   author: '6Pack Team',

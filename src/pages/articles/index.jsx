@@ -47,13 +47,13 @@ export default function ArticlesPage() {
         <meta property="og:title" content="Fitness Articles & Guides | Expert Training & Nutrition Content" />
         <meta property="og:description" content="Discover expert fitness articles, workout guides, and nutrition tips. Science-based content for muscle building, weight loss, and athletic performance." />
         <meta property="og:image" content="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=1200&h=630&fit=crop&fm=webp&q=85" />
-        <meta property="og:url" content="https://6pack.co.nz/articles" />
+        <meta property="og:url" content="https://www.6pack.co.nz/articles" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Fitness Articles & Guides | Expert Training & Nutrition Content" />
         <meta name="twitter:description" content="Discover expert fitness articles, workout guides, and nutrition tips." />
         <meta name="twitter:image" content="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=1200&h=630&fit=crop&fm=webp&q=85" />
-        <link rel="canonical" href="https://6pack.co.nz/articles" />
+        <link rel="canonical" href="https://www.6pack.co.nz/articles" />
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">

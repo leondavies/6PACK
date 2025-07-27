@@ -73,14 +73,14 @@ function Calculators() {
           property="og:description"
           content="Free fitness calculators for New Zealand. Calculate BMI, BMR, body fat percentage and more with our science-based tools."
         />
-        <meta property="og:url" content="https://6pack.co.nz/calculators" />
+        <meta property="og:url" content="https://www.6pack.co.nz/calculators" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=630&fit=crop&fm=webp&q=85" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free Fitness Calculators New Zealand | 6Pack" />
         <meta name="twitter:description" content="Free fitness calculators for NZ. Calculate BMI, BMR, body fat and more." />
         <meta name="twitter:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=630&fit=crop&fm=webp&q=85" />
-        <link rel="canonical" href="https://6pack.co.nz/calculators" />
+        <link rel="canonical" href="https://www.6pack.co.nz/calculators" />
       </Helmet>
 
       {/* Hero Section */}

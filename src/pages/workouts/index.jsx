@@ -58,12 +58,12 @@ function WorkoutsIndex() {
         <meta property="og:title" content="Complete Workout Programs | Home Fitness Routines" />
         <meta property="og:description" content="Transform your body with our complete workout programs. Expert fitness routines for chest, legs, and core - all levels welcome." />
         <meta property="og:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=600&fit=crop&fm=webp&q=85" />
-        <meta property="og:url" content="https://6pack.co.nz/workouts" />
+        <meta property="og:url" content="https://www.6pack.co.nz/workouts" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Complete Workout Programs | 6Pack NZ" />
         <meta name="twitter:description" content="Transform your body with our complete workout programs for all fitness levels." />
-        <link rel="canonical" href="https://6pack.co.nz/workouts" />
+        <link rel="canonical" href="https://www.6pack.co.nz/workouts" />
         
         {/* CollectionPage Schema */}
         <script type="application/ld+json">
@@ -72,20 +72,20 @@ function WorkoutsIndex() {
             "@type": "CollectionPage",
             "name": "Complete Workout Programs",
             "description": "Comprehensive workout programs for building muscle and strength at home",
-            "url": "https://6pack.co.nz/workouts",
+            "url": "https://www.6pack.co.nz/workouts",
             "publisher": {
               "@type": "Organization",
               "name": "6Pack",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://6pack.co.nz/logo.png"
+                "url": "https://www.6pack.co.nz/logo.png"
               }
             },
             "hasPart": workoutCategories.map(workout => ({
               "@type": "Article",
               "name": workout.title,
               "description": workout.description,
-              "url": `https://6pack.co.nz/workouts/${workout.slug}`,
+              "url": `https://www.6pack.co.nz/workouts/${workout.slug}`,
               "image": workout.image
             }))
           })}

@@ -310,12 +310,12 @@ function LegsWorkout() {
         <meta property="og:title" content="Ultimate Leg Workout Guide | Build Strong Legs at Home" />
         <meta property="og:description" content="Transform your legs with our complete workout guide. Build strength and muscle with proven exercises for all fitness levels." />
         <meta property="og:image" content="https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=1200&h=600&fit=crop&fm=webp&q=85" />
-        <meta property="og:url" content="https://6pack.co.nz/workouts/legs" />
+        <meta property="og:url" content="https://www.6pack.co.nz/workouts/legs" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Ultimate Leg Workout Guide | 6Pack NZ" />
         <meta name="twitter:description" content="Build powerful legs at home with our comprehensive workout guide." />
-        <link rel="canonical" href="https://6pack.co.nz/workouts/legs" />
+        <link rel="canonical" href="https://www.6pack.co.nz/workouts/legs" />
         
         {/* Article Schema */}
         <script type="application/ld+json">
@@ -334,14 +334,14 @@ function LegsWorkout() {
               "name": "6Pack",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://6pack.co.nz/logo.png"
+                "url": "https://www.6pack.co.nz/logo.png"
               }
             },
             "datePublished": "2024-01-15",
             "dateModified": "2024-01-15",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://6pack.co.nz/workouts/legs"
+              "@id": "https://www.6pack.co.nz/workouts/legs"
             },
             "articleSection": "Fitness",
             "keywords": "leg workout, squats, lunges, leg exercises, bodyweight training"

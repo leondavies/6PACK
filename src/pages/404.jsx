@@ -13,14 +13,14 @@ export default function NotFound() {
         {/* Open Graph */}
         <meta property="og:title" content="Page Not Found | 6Pack NZ" />
         <meta property="og:description" content="The page you're looking for doesn't exist. Explore our fitness calculators, workout guides, and gym finder." />
-        <meta property="og:image" content="https://6pack.co.nz/og-image.jpg" />
-        <meta property="og:url" content="https://6pack.co.nz/404" />
+        <meta property="og:image" content="https://www.6pack.co.nz/og-image.jpg" />
+        <meta property="og:url" content="https://www.6pack.co.nz/404" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Page Not Found | 6Pack NZ" />
         <meta name="twitter:description" content="The page you're looking for doesn't exist. Explore our fitness calculators, workout guides, and gym finder." />
-        <meta name="twitter:image" content="https://6pack.co.nz/og-image.jpg" />
+        <meta name="twitter:image" content="https://www.6pack.co.nz/og-image.jpg" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center px-4 sm:px-6 lg:px-8">
