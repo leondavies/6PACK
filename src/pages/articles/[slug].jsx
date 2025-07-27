@@ -110,7 +110,7 @@ export default function ArticlePage() {
         
         {/* Open Graph tags */}
         <meta property="og:title" content={article.title} />
-        <meta property="og:description" content={article.excerpt} />
+        <meta property="og:description" content={article.metaDescription} />
         <meta property="og:image" content={article.image.replace(/w=\d+&h=\d+/, 'w=1200&h=630')} />
         <meta property="og:image:alt" content={`${article.title} - 6Pack NZ`} />
         <meta property="og:image:width" content="1200" />
@@ -124,7 +124,7 @@ export default function ArticlePage() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@6pack_nz" />
         <meta name="twitter:title" content={article.title} />
-        <meta name="twitter:description" content={article.excerpt} />
+        <meta name="twitter:description" content={article.metaDescription} />
         <meta name="twitter:image" content={article.image.replace(/w=\d+&h=\d+/, 'w=1200&h=630')} />
         <meta name="twitter:image:alt" content={`${article.title} - 6Pack NZ`} />
         

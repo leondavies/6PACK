@@ -7,7 +7,7 @@ export const articles = [
     author: "Dr. Mike Mitchell",
     publishDate: "2025-01-15",
     readTime: "12 min",
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=400&fit=crop&fm=webp&q=85",
+    image: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=800&h=400&fit=crop&fm=webp&q=85",
     excerpt: "Discover the proven methods to maximize muscle growth with evidence-based training protocols, nutrition strategies, and recovery techniques.",
     content: `
 # The Complete Guide to Building Muscle: 7 Science-Backed Strategies
@@ -225,7 +225,7 @@ Remember, everyone's journey is different. What matters is that you start, stay 
     author: "Sarah Johnson",
     publishDate: "2025-01-14",
     readTime: "8 min",
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=400&fit=crop&fm=webp&q=85",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=400&fit=crop&fm=webp&q=85",
     excerpt: "Transform your fitness with HIIT workouts that burn fat, improve cardiovascular health, and save time.",
     content: `
 # High-Intensity Interval Training: Maximum Results in Minimum Time
@@ -6154,7 +6154,7 @@ export const fitnessCategories = [
     name: "Muscle Building",
     description: "Comprehensive guides on hypertrophy training, progressive overload, and muscle development strategies.",
     articleCount: 127,
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=400&fit=crop&fm=webp&q=85",
+    image: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&h=400&fit=crop&fm=webp&q=85",
     slug: "muscle-building",
     color: "primary"
   },
@@ -6213,7 +6213,7 @@ export const workoutPlans = [
     duration: "12 weeks",
     level: "Intermediate",
     daysPerWeek: 4,
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=300&fit=crop&fm=webp&q=85",
+    image: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=400&h=300&fit=crop&fm=webp&q=85",
     description: "Complete muscle building program with progressive overload and periodization.",
     featured: true
   },
