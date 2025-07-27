@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import { Scale, ArrowLeft, Info, Target, TrendingUp, Heart } from "lucide-react";
 import BlurIn from "../../components/blurText";
 import ShareResults from "../../components/ui/ShareResults";
@@ -159,6 +160,27 @@ function BMICalculator() {
 
   return (
     <>
+      <Helmet>
+        <title>Free BMI Calculator New Zealand | Body Mass Index NZ | 6Pack</title>
+        <meta
+          name="description"
+          content="Free BMI calculator for New Zealanders. Calculate your Body Mass Index to understand your weight status and get personalised health recommendations."
+        />
+        <meta
+          name="keywords"
+          content="BMI calculator NZ, body mass index New Zealand, BMI calculator free, weight status calculator NZ, health calculator New Zealand"
+        />
+        <meta property="og:title" content="Free BMI Calculator New Zealand | 6Pack" />
+        <meta property="og:description" content="Calculate your BMI with our free New Zealand BMI calculator. Get personalised health recommendations." />
+        <meta property="og:url" content="https://www.6pack.co.nz/calculators/bmi" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.6pack.co.nz/bmi-calculator-social.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Free BMI Calculator New Zealand | 6Pack" />
+        <meta name="twitter:description" content="Calculate your BMI with our free NZ calculator." />
+        <meta name="twitter:image" content="https://www.6pack.co.nz/bmi-calculator-social.jpg" />
+        <link rel="canonical" href="https://www.6pack.co.nz/calculators/bmi" />
+      </Helmet>
 
       <div className="min-h-screen bg-gray-50 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -346,7 +368,7 @@ function BMICalculator() {
               {/* Important Note */}
               <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
                 <p className="text-sm text-yellow-800">
-                  <strong>Important:</strong> BMI is a screening tool and doesn't account for muscle mass, bone density, or body composition. 
+                  <strong>Important:</strong> BMI is a screening tool and doesn&apos;t account for muscle mass, bone density, or body composition. 
                   Consult with a healthcare professional for personalised health advice.
                 </p>
               </div>
