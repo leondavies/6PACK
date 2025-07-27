@@ -29,12 +29,12 @@ function Index() {
           property="og:description"
           content="🏆 New Zealand's #1 fitness platform! FREE calculators (BMI, BMR, Macro) ✓ 100+ workout plans ✓ Expert nutrition guides ✓ Transform your body with science-backed fitness strategies from NZ's top trainers."
         />
-        <meta property="og:image" content="https://6pack.co.nz/og_image.png" />
+        <meta property="og:image" content="https://6pack.co.nz/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="6Pack NZ - New Zealand's Premier Fitness Platform with Free Calculators, Expert Workout Plans & Nutrition Guides" />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:secure_url" content="https://6pack.co.nz/og_image.png" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:secure_url" content="https://6pack.co.nz/og-image.jpg" />
         <meta property="og:url" content="https://6pack.co.nz" />
         <meta property="og:type" content="website" />
         
@@ -44,7 +44,7 @@ function Index() {
         <meta name="twitter:creator" content="@6pack_nz" />
         <meta name="twitter:title" content="6Pack NZ | Free Fitness Calculators & Expert Workout Plans" />
         <meta name="twitter:description" content="🏆 NZ's #1 fitness platform! FREE calculators ✓ 100+ workout plans ✓ Expert guides ✓ Transform your body with science-backed strategies." />
-        <meta name="twitter:image" content="https://6pack.co.nz/og_image.png" />
+        <meta name="twitter:image" content="https://6pack.co.nz/og-image.jpg" />
         <meta name="twitter:image:alt" content="6Pack NZ - Free fitness calculators, workout plans & nutrition guides for New Zealanders" />
         
         {/* Additional SEO meta tags */}
