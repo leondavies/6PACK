@@ -31,7 +31,7 @@ export default async function handler(req, res) {
     });
   }
 
-  const API_KEY = process.env.VITE_GOOGLE_PLACES_API_KEY;
+  const API_KEY = process.env.GOOGLE_PLACES_API_KEY;
   
   if (!API_KEY) {
     // Fallback to hardcoded NZ locations if no API key
