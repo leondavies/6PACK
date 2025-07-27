@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { ArrowRight, BookOpen, Target, TrendingUp, Users, Scale } from "lucide-react";
+import { ArrowRight, BookOpen, Target, TrendingUp, Users, Scale, MapPin } from "lucide-react";
 import BlurIn from "../components/blurText";
 import ImageWithFallback from "../components/ui/ImageWithFallback";
 import { articles, fitnessCategories } from "../data/products";
@@ -607,6 +607,75 @@ function Index() {
               View All Calculators
               <ArrowRight className="ml-2" size={16} />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Gym Finder Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Find Gyms Near You
+              </h2>
+              <p className="text-xl text-gray-600 mb-6 leading-relaxed">
+                Discover the best fitness centers across New Zealand. Search by location, filter by amenities, and find the perfect gym that matches your fitness goals.
+              </p>
+              
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center">
+                  <div className="bg-primary-100 w-8 h-8 rounded-full flex items-center justify-center mr-3">
+                    <MapPin className="w-4 h-4 text-primary-600" />
+                  </div>
+                  <span className="text-gray-700">Use your location or search by address</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="bg-primary-100 w-8 h-8 rounded-full flex items-center justify-center mr-3">
+                    <Target className="w-4 h-4 text-primary-600" />
+                  </div>
+                  <span className="text-gray-700">Filter by distance, amenities, and gym type</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="bg-primary-100 w-8 h-8 rounded-full flex items-center justify-center mr-3">
+                    <Users className="w-4 h-4 text-primary-600" />
+                  </div>
+                  <span className="text-gray-700">Find gyms from major NZ chains and local centers</span>
+                </div>
+              </div>
+
+              <Link
+                to="/gym-finder"
+                className="bg-primary-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-primary-700 transition-colors inline-flex items-center"
+              >
+                Find Gyms Near Me
+                <MapPin className="ml-2" size={20} />
+              </Link>
+            </div>
+
+            <div className="relative">
+              <div className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl p-8">
+                <img
+                  src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=400&fit=crop&fm=webp&q=85"
+                  alt="Modern gym interior with equipment"
+                  className="w-full h-64 object-cover rounded-xl shadow-lg"
+                />
+                <div className="mt-6 grid grid-cols-3 gap-4 text-center">
+                  <div>
+                    <div className="text-2xl font-bold text-primary-600">50+</div>
+                    <div className="text-sm text-gray-600">Gyms Listed</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-primary-600">7</div>
+                    <div className="text-sm text-gray-600">Major Cities</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-primary-600">24/7</div>
+                    <div className="text-sm text-gray-600">Many Open</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

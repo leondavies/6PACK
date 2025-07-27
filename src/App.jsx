@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import Home from "./pages";
 import Shop from "./pages/shop";
 import Subscription from "./pages/subscription";
@@ -16,6 +17,7 @@ import Workouts from "./pages/workouts";
 import ChestWorkout from "./pages/workouts/chest";
 import LegsWorkout from "./pages/workouts/legs";
 import CoreWorkout from "./pages/workouts/core";
+import GymFinder from "./pages/gym-finder";
 import Layout from "./components/layout";
 import { Toaster } from "sonner";
 
@@ -52,9 +54,11 @@ function App() {
           <Route path="/workouts/chest" element={<ChestWorkout />} />
           <Route path="/workouts/legs" element={<LegsWorkout />} />
           <Route path="/workouts/core" element={<CoreWorkout />} />
+          <Route path="/gym-finder" element={<GymFinder />} />
         </Routes>
         <Toaster position="top-right" />
       </Layout>
+      <Analytics />
     </Router>
   );
 }
