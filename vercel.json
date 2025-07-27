@@ -1,5 +1,14 @@
 {
+  "functions": {
+    "api/meta.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
   "rewrites": [
+    {
+      "source": "/calculators/bmi",
+      "destination": "/api/meta?page=bmi"
+    },
     {
       "source": "/(.*)",
       "destination": "/index.html"
