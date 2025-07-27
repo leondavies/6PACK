@@ -1,6 +1,18 @@
 {
   "rewrites": [
     {
+      "source": "/calculators/bmi",
+      "destination": "/calculators/bmi.html"
+    },
+    {
+      "source": "/calculators/bmr",
+      "destination": "/calculators/bmr.html"
+    },
+    {
+      "source": "/calculators/macro",
+      "destination": "/calculators/macro.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
