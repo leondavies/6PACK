@@ -1,0 +1,260 @@
+[
+  {
+    "id": 1,
+    "title": "The Complete Guide to Building Muscle: 7 Science-Backed Strategies",
+    "slug": "complete-guide-building-muscle-science-backed-strategies",
+    "metaTitle": "Complete Muscle Building Guide 2025 | 7 Science-Backed Strategies",
+    "metaDescription": "Learn how to build muscle fast with proven strategies. Complete guide covering training, nutrition, and recovery for maximum muscle growth.",
+    "excerpt": "Discover the proven methods to maximize muscle growth with evidence-based training protocols, nutrition strategies, and recovery techniques.",
+    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=400&fit=crop&fm=webp&q=85",
+    "author": "Dr. Mike Mitchell",
+    "publishDate": "2025-01-15",
+    "category": "Muscle Building",
+    "tags": [
+      "muscle building",
+      "strength training",
+      "hypertrophy",
+      "workout plans"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "High-Intensity Interval Training: Maximum Results in Minimum Time",
+    "slug": "hiit-training-maximum-results-minimum-time",
+    "metaTitle": "HIIT Training Guide 2025 | Maximum Results in Minimum Time",
+    "metaDescription": "Master HIIT workouts for fat loss and cardiovascular fitness. Complete guide with workout plans and scientific benefits.",
+    "excerpt": "Transform your fitness with HIIT workouts that burn fat, improve cardiovascular health, and save time.",
+    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=400&fit=crop&fm=webp&q=85",
+    "author": "Sarah Johnson",
+    "publishDate": "2025-01-14",
+    "category": "Cardio",
+    "tags": [
+      "HIIT",
+      "cardio",
+      "fat loss",
+      "time-efficient workouts"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Nutrition Timing: When to Eat for Optimal Performance and Recovery",
+    "slug": "nutrition-timing-optimal-performance-recovery",
+    "metaTitle": "Nutrition Timing Guide | When to Eat for Best Results 2025",
+    "metaDescription": "Learn optimal nutrition timing for workouts. Science-based guide to pre and post-workout nutrition for better results.",
+    "excerpt": "Master the science of nutrient timing to maximize your workout performance, muscle growth, and recovery.",
+    "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&h=400&fit=crop&fm=webp&q=85",
+    "author": "Dr. Lisa Chen",
+    "publishDate": "2025-01-13",
+    "category": "Nutrition",
+    "tags": [
+      "nutrition timing",
+      "pre-workout nutrition",
+      "post-workout meals",
+      "performance"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Deadlift Mastery: Perfect Your Form and Avoid Common Mistakes",
+    "slug": "deadlift-mastery-perfect-form-avoid-mistakes",
+    "metaTitle": "Deadlift Form Guide 2025 | Master Perfect Technique",
+    "metaDescription": "Perfect your deadlift form with our comprehensive guide. Learn proper technique, avoid injuries, and maximize strength gains.",
+    "excerpt": "Master the deadlift with proper form, progressive programming, and injury prevention strategies.",
+    "image": "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=800&h=400&fit=crop&fm=webp&q=85",
+    "author": "Coach Mark Stevens",
+    "publishDate": "2025-01-12",
+    "category": "Strength Training",
+    "tags": [
+      "deadlift",
+      "strength training",
+      "powerlifting",
+      "form technique"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Sleep for Muscle Growth: The Ultimate Recovery Guide",
+    "slug": "sleep-muscle-growth-ultimate-recovery-guide",
+    "metaTitle": "Sleep for Muscle Growth 2025 | Ultimate Recovery Guide",
+    "metaDescription": "Optimize your sleep for maximum muscle growth and recovery. Science-backed strategies to improve sleep quality and boost your gains.",
+    "excerpt": "Discover how optimising your sleep can dramatically improve muscle growth, recovery, and performance with science-backed strategies.",
+    "image": "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=800&h=400&fit=crop&fm=webp&q=85",
+    "author": "Dr. Sarah Mitchell",
+    "publishDate": "2025-01-16",
+    "category": "Recovery & Wellness",
+    "tags": [
+      "sleep",
+      "recovery",
+      "muscle growth",
+      "performance optimization"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Weight Loss for Women: A Science-Based Approach to Sustainable Results",
+    "slug": "weight-loss-women-science-based-sustainable-results",
+    "metaTitle": "Weight Loss for Women 2025 | Science-Based Sustainable Approach",
+    "metaDescription": "Master female-specific weight loss with hormone-friendly strategies. Sustainable methods that work with your body for lasting results.",
+    "excerpt": "Master female-specific weight loss strategies that work with your hormones, metabolism, and lifestyle for lasting results.",
+    "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=400&fit=crop&fm=webp&q=85",
+    "author": "Dr. Emma Thompson",
+    "publishDate": "2025-01-17",
+    "category": "Weight Loss",
+    "tags": [
+      "weight loss",
+      "women's health",
+      "hormones",
+      "sustainable diet"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Complete Beginner's Guide to Fitness: Start Your Journey the Right Way",
+    "slug": "complete-beginners-guide-fitness-start-journey-right-way",
+    "metaTitle": "Complete Beginner's Fitness Guide 2025 | Start Your Journey Right",
+    "metaDescription": "Everything beginners need to start their fitness journey successfully. Workout plans, nutrition basics, and motivation strategies that work.",
+    "excerpt": "Everything you need to know to start your fitness journey successfully - from goal setting to workout plans and nutrition basics.",
+    "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=400&fit=crop&fm=webp&q=85",
+    "author": "Coach James Wilson",
+    "publishDate": "2025-01-18",
+    "category": "Muscle Building",
+    "tags": [
+      "beginner fitness",
+      "workout plans",
+      "exercise basics",
+      "fitness motivation"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Effective Home Workouts: Get Fit Without a Gym",
+    "slug": "effective-home-workouts-get-fit-without-gym",
+    "metaTitle": "Effective Home Workouts 2025 | Get Fit Without a Gym",
+    "metaDescription": "Master effective home workouts with no equipment needed. Complete bodyweight routines and HIIT plans for all fitness levels.",
+    "excerpt": "Transform your living space into an effective fitness studio with equipment-free workouts that deliver real results.",
+    "image": "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=800&h=400&fit=crop&fm=webp&q=85",
+    "author": "Rachel Martinez",
+    "publishDate": "2025-01-19",
+    "category": "Cardio",
+    "tags": [
+      "home workouts",
+      "bodyweight exercises",
+      "no equipment",
+      "HIIT"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Injury Prevention: Keep Your Body Strong and Resilient",
+    "slug": "injury-prevention-keep-body-strong-resilient",
+    "metaTitle": "Injury Prevention Guide 2025 | Keep Your Body Strong and Resilient",
+    "metaDescription": "Prevent exercise injuries with evidence-based strategies. Movement assessments, prehab exercises, and recovery protocols for long-term fitness success.",
+    "excerpt": "Learn evidence-based strategies to prevent injuries, improve movement quality, and maintain long-term fitness success.",
+    "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=400&fit=crop&fm=webp&q=85",
+    "author": "Dr. Michael Chen",
+    "publishDate": "2025-01-20",
+    "category": "Recovery & Wellness",
+    "tags": [
+      "injury prevention",
+      "prehab",
+      "movement quality",
+      "recovery"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Exercise for Mental Health: The Science of Movement and Mood",
+    "slug": "exercise-mental-health-science-movement-mood",
+    "metaTitle": "Exercise for Mental Health 2025 | Science of Movement and Mood",
+    "metaDescription": "Discover how exercise can treat depression, anxiety, and stress. Evidence-based mental health exercise prescriptions and practical strategies.",
+    "excerpt": "Discover how exercise can be your most powerful tool for managing stress, anxiety, depression, and boosting overall mental wellbeing.",
+    "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&h=400&fit=crop&fm=webp&q=85",
+    "author": "Dr. Jennifer Adams",
+    "publishDate": "2025-01-21",
+    "category": "Recovery & Wellness",
+    "tags": [
+      "mental health",
+      "exercise therapy",
+      "stress relief",
+      "depression"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "NZ Protein Shake Showdown: We Tested 12 Popular Brands (Shocking Results)",
+    "slug": "nz-protein-shake-showdown-tested-12-brands-shocking-results",
+    "metaTitle": "NZ Protein Powder Test Results 2025 | 12 Brands Lab Tested",
+    "metaDescription": "Independent lab testing of 12 popular NZ protein powders reveals shocking results. Which $80 premium brand failed quality tests? Full comparison guide.",
+    "excerpt": "We lab-tested 12 popular protein powders sold in New Zealand for protein content, heavy metals, and taste. The results will surprise you - including which $80 'premium' brand failed quality tests.",
+    "image": "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=800&h=400&fit=crop&fm=webp&q=85",
+    "author": "Dr. Sarah Mitchell",
+    "publishDate": "2025-01-25",
+    "category": "Nutrition",
+    "tags": [
+      "protein powder",
+      "supplements",
+      "New Zealand",
+      "comparison",
+      "review",
+      "lab testing"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "The 5-Minute Metabolism Hack That Burns 300 Extra Calories Daily",
+    "slug": "5-minute-metabolism-hack-burns-300-calories-daily",
+    "metaTitle": "5-Minute Morning Metabolism Hack | Burn 300 Extra Calories Daily",
+    "metaDescription": "Scientifically-proven 5-minute morning routine boosts metabolism 15% all day. Used by NZ Olympic athletes. Burn 300+ extra calories daily.",
+    "excerpt": "This scientifically-proven morning routine takes just 5 minutes but can boost your metabolism by up to 15% all day. Used by NZ Olympic athletes.",
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=400&fit=crop&fm=webp&q=85",
+    "author": "Coach Mike Thompson",
+    "publishDate": "2025-01-24",
+    "category": "Weight Loss",
+    "tags": [
+      "metabolism",
+      "morning routine",
+      "weight loss",
+      "HIIT",
+      "calorie burn",
+      "EPOC"
+    ]
+  },
+  {
+    "id": 13,
+    "title": "New World vs Woolworths vs Pak'nSave: Which NZ Supermarket Has Best Gym Food?",
+    "slug": "new-world-vs-woolworths-vs-paknsave-best-nz-supermarket-gym-food",
+    "metaTitle": "New World vs Woolworths vs Pak'nSave: Best NZ Supermarket for Gym Food | 2025",
+    "metaDescription": "We compared 50 fitness foods across all three major NZ supermarkets. Find out which is cheapest for protein, best for quality, and ideal for meal prep.",
+    "excerpt": "We compared prices, quality, and selection of 50 fitness foods across all three major NZ supermarkets. The winner might surprise you.",
+    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=400&fit=crop&fm=webp&q=85",
+    "author": "Nutritionist Emma Jones",
+    "publishDate": "2025-01-23",
+    "category": "Nutrition",
+    "tags": [
+      "supermarket comparison",
+      "grocery shopping",
+      "meal prep",
+      "budget fitness",
+      "New Zealand"
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Why 90% of Kiwis Are Doing Push-Ups Wrong (And How to Fix It)",
+    "slug": "why-90-percent-kiwis-doing-push-ups-wrong-how-fix",
+    "metaTitle": "Perfect Push-Up Form Guide | Fix Common Mistakes | 2025 Study",
+    "metaDescription": "90% of people do push-ups wrong. Biomechanics study of 500 Kiwis reveals mistakes that reduce results 60%. Learn the perfect push-up technique.",
+    "excerpt": "A biomechanics study of 500 New Zealanders revealed shocking form mistakes that reduce results by 60%. Here's the 30-second fix.",
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=400&fit=crop&fm=webp&q=85",
+    "author": "Personal Trainer Jake Wilson",
+    "publishDate": "2025-01-22",
+    "category": "Training",
+    "tags": [
+      "push-ups",
+      "exercise form",
+      "strength training",
+      "biomechanics",
+      "injury prevention"
+    ]
+  }
+]

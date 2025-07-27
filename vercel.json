@@ -1,5 +1,54 @@
 {
+  "functions": {
+    "api/meta.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
   "rewrites": [
+    {
+      "source": "/calculators/bmi",
+      "destination": "/api/meta?page=calculator&type=bmi"
+    },
+    {
+      "source": "/calculators/bmr",
+      "destination": "/api/meta?page=calculator&type=bmr"
+    },
+    {
+      "source": "/calculators/body-fat",
+      "destination": "/api/meta?page=calculator&type=body-fat"
+    },
+    {
+      "source": "/calculators/ideal-weight",
+      "destination": "/api/meta?page=calculator&type=ideal-weight"
+    },
+    {
+      "source": "/calculators/one-rep-max",
+      "destination": "/api/meta?page=calculator&type=one-rep-max"
+    },
+    {
+      "source": "/calculators/macro",
+      "destination": "/api/meta?page=calculator&type=macro"
+    },
+    {
+      "source": "/articles/([^/]+)",
+      "destination": "/api/meta?page=article&slug=$1"
+    },
+    {
+      "source": "/workouts/chest",
+      "destination": "/api/meta?page=workout&type=chest"
+    },
+    {
+      "source": "/workouts/legs",
+      "destination": "/api/meta?page=workout&type=legs"
+    },
+    {
+      "source": "/workouts/core",
+      "destination": "/api/meta?page=workout&type=core"
+    },
+    {
+      "source": "/gym-finder",
+      "destination": "/api/meta?page=gym-finder"
+    },
     {
       "source": "/(.*)",
       "destination": "/index.html"
@@ -8,6 +57,15 @@
   "headers": [
     {
       "source": "/calculators/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/articles/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
