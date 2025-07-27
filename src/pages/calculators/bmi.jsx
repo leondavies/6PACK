@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { Helmet } from "react-helmet";
 import { Scale, ArrowLeft, Info, Target, TrendingUp, Heart } from "lucide-react";
 import BlurIn from "../../components/blurText";
 import ShareResults from "../../components/ui/ShareResults";
@@ -160,83 +159,6 @@ function BMICalculator() {
 
   return (
     <>
-      <Helmet>
-        <title>Free BMI Calculator New Zealand | Body Mass Index Calculator NZ | 6Pack</title>
-        <meta
-          name="description"
-          content="Free BMI calculator for New Zealanders. Calculate your Body Mass Index instantly, get personalised health recommendations, and understand your weight status. Metric & Imperial units supported."
-        />
-        <meta
-          name="keywords"
-          content="BMI calculator NZ, body mass index New Zealand, weight calculator, health assessment NZ, fitness calculator, BMI chart New Zealand, healthy weight NZ"
-        />
-        <meta property="og:title" content="Free BMI Calculator New Zealand | 6Pack" />
-        <meta property="og:description" content="Calculate your BMI instantly with our free New Zealand BMI calculator. Get health recommendations and weight status analysis." />
-        <meta property="og:image" content="https://www.6pack.co.nz/bmi-calculator-social.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="6Pack NZ BMI Calculator - Calculate your Body Mass Index instantly" />
-        <meta property="og:url" content="https://www.6pack.co.nz/calculators/bmi" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free BMI Calculator New Zealand | 6Pack" />
-        <meta name="twitter:description" content="Calculate your BMI instantly with our free New Zealand BMI calculator." />
-        <meta name="twitter:image" content="https://www.6pack.co.nz/bmi-calculator-social.jpg" />
-        <link rel="canonical" href="https://www.6pack.co.nz/calculators/bmi" />
-        
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebApplication",
-            "name": "BMI Calculator New Zealand",
-            "description": "Free BMI calculator for New Zealanders. Calculate your Body Mass Index instantly with health recommendations.",
-            "url": "https://www.6pack.co.nz/calculators/bmi",
-            "applicationCategory": "HealthApplication",
-            "operatingSystem": "Any",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "NZD"
-            },
-            "author": {
-              "@type": "Organization",
-              "name": "6Pack",
-              "url": "https://www.6pack.co.nz"
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "reviewCount": "1247"
-            }
-          })}
-        </script>
-        
-        {/* Calculator Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebApplication",
-            "name": "BMI Calculator New Zealand",
-            "description": "Free BMI calculator for New Zealanders with health recommendations",
-            "url": "https://www.6pack.co.nz/calculators/bmi",
-            "applicationCategory": "HealthApplication",
-            "operatingSystem": "Web Browser",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "NZD"
-            },
-            "featureList": [
-              "Free BMI calculation",
-              "Metric and Imperial units",
-              "Health recommendations",
-              "Instant results",
-              "Mobile friendly"
-            ]
-          })}
-        </script>
-      </Helmet>
 
       <div className="min-h-screen bg-gray-50 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
