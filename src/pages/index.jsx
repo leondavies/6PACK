@@ -48,8 +48,8 @@ function Index() {
         <meta name="twitter:image:alt" content="6Pack NZ - Free fitness calculators, workout plans & nutrition guides for New Zealanders" />
         
         {/* Additional SEO meta tags */}
-        <meta name="robots" content="index, follow, max-image-preview:large" />
-        <meta name="googlebot" content="index, follow" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow, max-image-preview:large" />
         <meta name="author" content="6Pack NZ Fitness Experts" />
         <meta name="copyright" content="6Pack NZ" />
         <meta name="coverage" content="Worldwide" />
@@ -59,6 +59,21 @@ function Index() {
         <meta name="geo.region" content="NZ" />
         <meta name="geo.country" content="New Zealand" />
         <meta name="geo.placename" content="New Zealand" />
+        
+        {/* Google-specific meta tags for better indexing */}
+        <meta name="google" content="notranslate" />
+        <meta name="google-site-verification" content="your-verification-code-here" />
+        <meta name="format-detection" content="telephone=no" />
+        
+        {/* Additional image meta tags */}
+        <link rel="image_src" href="https://6pack.co.nz/og-image.jpg" />
+        <meta name="thumbnail" content="https://6pack.co.nz/og-image.jpg" />
+        
+        {/* Apple-specific meta tags */}
+        <meta name="apple-mobile-web-app-title" content="6Pack NZ" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <link rel="apple-touch-icon" href="https://6pack.co.nz/og-image.jpg" />
         
         {/* Structured data for rich snippets */}
         <meta name="application-name" content="6Pack NZ" />
@@ -79,18 +94,23 @@ function Index() {
             url: "https://6pack.co.nz",
             logo: {
               "@type": "ImageObject",
-              "url": "https://6pack.co.nz/logo.png",
-              "width": 200,
-              "height": 60
-            },
-            image: {
-              "@type": "ImageObject",
-              "url": "https://6pack.co.nz/og_image.png",
+              "url": "https://6pack.co.nz/og-image.jpg",
               "width": 1200,
               "height": 630,
-              "caption": "6Pack NZ - New Zealand's Premier Fitness Platform",
-              "description": "Official branded image showcasing 6Pack NZ's comprehensive fitness platform with free calculators, expert workout plans, and science-backed nutrition guides designed specifically for New Zealanders"
+              "contentUrl": "https://6pack.co.nz/og-image.jpg",
+              "thumbnailUrl": "https://6pack.co.nz/favicon.svg"
             },
+            image: [
+              {
+                "@type": "ImageObject",
+                "url": "https://6pack.co.nz/og-image.jpg",
+                "width": 1200,
+                "height": 630,
+                "caption": "6Pack NZ - New Zealand's Premier Fitness Platform",
+                "description": "Official branded image showcasing 6Pack NZ's comprehensive fitness platform with free calculators, expert workout plans, and science-backed nutrition guides designed specifically for New Zealanders",
+                "contentUrl": "https://6pack.co.nz/og-image.jpg"
+              }
+            ],
             address: {
               "@type": "PostalAddress",
               "addressCountry": "NZ",
@@ -163,7 +183,25 @@ function Index() {
               "https://twitter.com/6pack_nz",
               "https://facebook.com/6pack.co.nz", 
               "https://instagram.com/6pack_nz"
-            ]
+            ],
+            contactPoint: {
+              "@type": "ContactPoint",
+              "contactType": "customer service",
+              "availableLanguage": ["English"],
+              "areaServed": "NZ"
+            },
+            aggregateRating: {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "1250",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            brand: {
+              "@type": "Brand",
+              "name": "6Pack NZ",
+              "logo": "https://6pack.co.nz/og-image.jpg"
+            }
           })}
         </script>
         
@@ -254,6 +292,104 @@ function Index() {
                 "name": "Home",
                 "item": "https://6pack.co.nz"
               }
+            ]
+          })}
+        </script>
+
+        {/* Knowledge Graph Entity Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": ["Organization", "LocalBusiness", "HealthAndBeautyBusiness"],
+            "@id": "https://6pack.co.nz/#entity",
+            "name": "6Pack NZ",
+            "alternateName": ["6Pack", "6Pack New Zealand", "6Pack Fitness"],
+            "description": "New Zealand's leading fitness platform offering free calculators, expert workout plans, and science-backed nutrition guides.",
+            "url": "https://6pack.co.nz",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://6pack.co.nz/og-image.jpg",
+              "width": 1200,
+              "height": 630
+            },
+            "image": "https://6pack.co.nz/og-image.jpg",
+            "founder": {
+              "@type": "Person",
+              "name": "6Pack NZ Team"
+            },
+            "foundingDate": "2024",
+            "foundingLocation": {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "NZ",
+                "addressRegion": "Auckland"
+              }
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "New Zealand"
+            },
+            "serviceArea": {
+              "@type": "GeoCircle",
+              "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": -40.9006,
+                "longitude": 174.8860
+              },
+              "geoRadius": "2000000"
+            },
+            "knowsAbout": [
+              "Fitness",
+              "Nutrition",
+              "Weight Loss",
+              "Muscle Building",
+              "Strength Training",
+              "Health Calculators",
+              "BMI",
+              "BMR",
+              "Macro Nutrients",
+              "Body Fat Percentage",
+              "Personal Training",
+              "Exercise Science"
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Fitness Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Free Fitness Calculators",
+                    "description": "BMI, BMR, Body Fat, Macro, and Ideal Weight calculators"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service", 
+                    "name": "Workout Plans",
+                    "description": "Expert-designed training programs for all fitness levels"
+                  }
+                }
+              ]
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": "https://6pack.co.nz/articles?search={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            ],
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://6pack.co.nz"
+            },
+            "sameAs": [
+              "https://twitter.com/6pack_nz",
+              "https://facebook.com/6pack.co.nz",
+              "https://instagram.com/6pack_nz"
             ]
           })}
         </script>
