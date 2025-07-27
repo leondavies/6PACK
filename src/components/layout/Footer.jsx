@@ -36,7 +36,7 @@ const Footer = () => {
               <a href="https://twitter.com/6pack_nz" className="bg-gray-800 hover:bg-gray-700 p-3 rounded-full transition-colors group">
                 <Twitter size={20} className="text-gray-400 group-hover:text-white" />
               </a>
-              <a href="mailto:hello@6pack.co.nz" className="bg-gray-800 hover:bg-gray-700 p-3 rounded-full transition-colors group">
+              <a href="mailto:info@6pack.co.nz" className="bg-gray-800 hover:bg-gray-700 p-3 rounded-full transition-colors group">
                 <Mail size={20} className="text-gray-400 group-hover:text-white" />
               </a>
             </div>
@@ -90,7 +90,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="mailto:hello@6pack.co.nz" className="text-gray-300 hover:text-white transition-colors text-lg group inline-flex items-center">
+                <a href="mailto:info@6pack.co.nz" className="text-gray-300 hover:text-white transition-colors text-lg group inline-flex items-center">
                   Contact Us
                   <span className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                 </a>

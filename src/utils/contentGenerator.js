@@ -242,7 +242,7 @@ export function generateBulkArticles(categories, articlesPerCategory = 50) {
         tags: generateTags(idea.topic, category),
         featured: Math.random() > 0.8,
         views: Math.floor(Math.random() * 20000) + 1000,
-        metaTitle: `${idea.title} | FitHub 2025`,
+        metaTitle: `${idea.title} | 6pack.co.nz`,
         metaDescription: generateMetaDescription(idea.topic, idea.title)
       };
       

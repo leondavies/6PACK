@@ -88,7 +88,7 @@ export default function ContentGenerator() {
   return (
     <>
       <Helmet>
-        <title>Content Generator | FitHub Admin</title>
+        <title>Content Generator | 6Pack.co.nz Admin</title>
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 

@@ -95,7 +95,7 @@ export function generateOrganizationSchema() {
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer service",
-      "email": "hello@fithub.nz"
+      "email": "info@6pack.co.nz"
     }
   };
 }
