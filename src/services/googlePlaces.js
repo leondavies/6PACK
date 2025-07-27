@@ -81,7 +81,7 @@ export function getMockGymsNearby(lat, lng) {
       coordinates: { lat: lat + 0.01, lng: lng + 0.01 },
       rating: 4.2,
       priceLevel: 2,
-      image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=300&fit=crop&fm=webp&q=85',
+              image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&fm=webp&q=85',
       isOpen: true,
       types: ['gym', 'health'],
       distance: calculateDistance(lat, lng, lat + 0.01, lng + 0.01)
