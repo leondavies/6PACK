@@ -294,12 +294,12 @@ function ChestWorkout() {
         <meta property="og:title" content="Complete Chest Workout Guide | Build Chest Muscle at Home" />
         <meta property="og:description" content="Transform your chest with our complete workout guide. Beginner to advanced exercises for building powerful chest muscles at home." />
         <meta property="og:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=600&fit=crop&fm=webp&q=85" />
-        <meta property="og:url" content="https://6pack.co.nz/workouts/chest" />
+        <meta property="og:url" content="https://www.6pack.co.nz/workouts/chest" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Complete Chest Workout Guide | 6Pack NZ" />
         <meta name="twitter:description" content="Build powerful chest muscles at home with our comprehensive workout guide." />
-        <link rel="canonical" href="https://6pack.co.nz/workouts/chest" />
+        <link rel="canonical" href="https://www.6pack.co.nz/workouts/chest" />
         
         {/* Article Schema */}
         <script type="application/ld+json">
@@ -318,14 +318,14 @@ function ChestWorkout() {
               "name": "6Pack",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://6pack.co.nz/logo.png"
+                "url": "https://www.6pack.co.nz/logo.png"
               }
             },
             "datePublished": "2024-01-15",
             "dateModified": "2024-01-15",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://6pack.co.nz/workouts/chest"
+              "@id": "https://www.6pack.co.nz/workouts/chest"
             },
             "articleSection": "Fitness",
             "keywords": "chest workout, push ups, chest exercises, bodyweight training"

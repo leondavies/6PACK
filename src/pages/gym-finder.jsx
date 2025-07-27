@@ -294,16 +294,16 @@ export default function GymFinder() {
         {/* Open Graph tags */}
         <meta property="og:title" content="Gym Finder | Find Gyms Near You in New Zealand" />
         <meta property="og:description" content="Find gyms near you in New Zealand. Search by location and discover the best fitness centers." />
-        <meta property="og:image" content="https://6pack.co.nz/og-image.jpg" />
-        <meta property="og:url" content="https://6pack.co.nz/gym-finder" />
+        <meta property="og:image" content="https://www.6pack.co.nz/og-image.jpg" />
+        <meta property="og:url" content="https://www.6pack.co.nz/gym-finder" />
         
         {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Gym Finder | Find Gyms Near You in New Zealand" />
         <meta name="twitter:description" content="Find gyms near you in New Zealand. Search by location and discover the best fitness centers." />
-        <meta name="twitter:image" content="https://6pack.co.nz/og-image.jpg" />
+        <meta name="twitter:image" content="https://www.6pack.co.nz/og-image.jpg" />
         
-        <link rel="canonical" href="https://6pack.co.nz/gym-finder" />
+        <link rel="canonical" href="https://www.6pack.co.nz/gym-finder" />
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">

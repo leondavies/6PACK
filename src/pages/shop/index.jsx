@@ -71,13 +71,13 @@ const ShopPage = () => {
         <meta property="og:title" content="Fitness Supplements & Equipment - 6Pack" />
         <meta property="og:description" content="Shop premium fitness supplements and equipment. Protein powders, pre-workouts, gym equipment from trusted New Zealand brands." />
         <meta property="og:image" content="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?w=1200&h=630&fit=crop&fm=webp&q=85" />
-        <meta property="og:url" content="https://6pack.co.nz/shop" />
+        <meta property="og:url" content="https://www.6pack.co.nz/shop" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Fitness Supplements & Equipment - 6Pack" />
         <meta name="twitter:description" content="Shop premium fitness supplements and equipment from trusted New Zealand brands." />
         <meta name="twitter:image" content="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?w=1200&h=630&fit=crop&fm=webp&q=85" />
-        <link rel="canonical" href="https://6pack.co.nz/shop" />
+        <link rel="canonical" href="https://www.6pack.co.nz/shop" />
       </Helmet>
 
       <div className="bg-gray-50 min-h-screen py-8">

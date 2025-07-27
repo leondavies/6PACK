@@ -90,14 +90,14 @@ export default function ArticlePage() {
       "name": "6Pack",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://6pack.co.nz/logo.png"
+        "url": "https://www.6pack.co.nz/logo.png"
       }
     },
     "datePublished": article.publishDate,
     "dateModified": article.publishDate,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://6pack.co.nz/articles/${article.slug}`
+      "@id": `https://www.6pack.co.nz/articles/${article.slug}`
     }
   };
 
@@ -112,16 +112,21 @@ export default function ArticlePage() {
         <meta property="og:title" content={article.title} />
         <meta property="og:description" content={article.excerpt} />
         <meta property="og:image" content={article.image.replace(/w=\d+&h=\d+/, 'w=1200&h=630')} />
+        <meta property="og:image:alt" content={`${article.title} - 6Pack NZ`} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://6pack.co.nz/articles/${article.slug}`} />
+        <meta property="og:site_name" content="6Pack NZ" />
+        <meta property="og:locale" content="en_NZ" />
+        <meta property="og:url" content={`https://www.6pack.co.nz/articles/${article.slug}`} />
         
         {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@6pack_nz" />
         <meta name="twitter:title" content={article.title} />
         <meta name="twitter:description" content={article.excerpt} />
         <meta name="twitter:image" content={article.image.replace(/w=\d+&h=\d+/, 'w=1200&h=630')} />
+        <meta name="twitter:image:alt" content={`${article.title} - 6Pack NZ`} />
         
         {/* Article specific meta tags */}
         <meta property="article:author" content={article.author} />
@@ -137,7 +142,7 @@ export default function ArticlePage() {
         </script>
         
         {/* Canonical URL */}
-        <link rel="canonical" href={`https://6pack.co.nz/articles/${article.slug}`} />
+        <link rel="canonical" href={`https://www.6pack.co.nz/articles/${article.slug}`} />
       </Helmet>
 
       <div className="min-h-screen bg-white">
@@ -253,7 +258,7 @@ export default function ArticlePage() {
                   <ArticleShare 
                     title={article.title}
                     excerpt={article.excerpt}
-                    url={`https://6pack.co.nz/articles/${article.slug}`}
+                    url={`https://www.6pack.co.nz/articles/${article.slug}`}
                   />
                 </div>
 

@@ -184,14 +184,14 @@ function OneRepMaxCalculator() {
         />
         <meta property="og:title" content="Free 1RM Calculator New Zealand | 6Pack" />
         <meta property="og:description" content="Calculate your one-rep max with our free New Zealand 1RM calculator. Get training percentages and strength programming tips." />
-        <meta property="og:url" content="https://6pack.co.nz/calculators/one-rep-max" />
+        <meta property="og:url" content="https://www.6pack.co.nz/calculators/one-rep-max" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=630&fit=crop&fm=webp&q=85" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free 1RM Calculator New Zealand | 6Pack" />
         <meta name="twitter:description" content="Calculate your one-rep max with our free NZ calculator." />
         <meta name="twitter:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=630&fit=crop&fm=webp&q=85" />
-        <link rel="canonical" href="https://6pack.co.nz/calculators/one-rep-max" />
+        <link rel="canonical" href="https://www.6pack.co.nz/calculators/one-rep-max" />
       </Helmet>
 
       <div className="min-h-screen bg-gray-50 py-12">

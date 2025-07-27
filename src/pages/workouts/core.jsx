@@ -310,12 +310,12 @@ function CoreWorkout() {
         <meta property="og:title" content="Ultimate Core Workout Guide | Build Six Pack Abs at Home" />
         <meta property="og:description" content="Transform your core with our complete ab workout guide. Build strength and definition with proven exercises for all fitness levels." />
         <meta property="og:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=600&fit=crop&fm=webp&q=85" />
-        <meta property="og:url" content="https://6pack.co.nz/workouts/core" />
+        <meta property="og:url" content="https://www.6pack.co.nz/workouts/core" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Ultimate Core Workout Guide | 6Pack NZ" />
         <meta name="twitter:description" content="Build six-pack abs and core strength at home with our comprehensive workout guide." />
-        <link rel="canonical" href="https://6pack.co.nz/workouts/core" />
+        <link rel="canonical" href="https://www.6pack.co.nz/workouts/core" />
         
         {/* Article Schema */}
         <script type="application/ld+json">
@@ -334,14 +334,14 @@ function CoreWorkout() {
               "name": "6Pack",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://6pack.co.nz/logo.png"
+                "url": "https://www.6pack.co.nz/logo.png"
               }
             },
             "datePublished": "2024-01-15",
             "dateModified": "2024-01-15",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://6pack.co.nz/workouts/core"
+              "@id": "https://www.6pack.co.nz/workouts/core"
             },
             "articleSection": "Fitness",
             "keywords": "core workout, abs exercises, six pack, plank, core training"
