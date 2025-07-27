@@ -57,6 +57,9 @@ export default async function handler(req, res) {
     });
   }
 
+  console.log(`API Key available: ${API_KEY.substring(0, 8)}...`);
+  console.log(`Request params: lat=${latitude}, lng=${longitude}, radius=${searchRadius}`);
+
   try {
     const baseUrl = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json';
     const params = new URLSearchParams({
@@ -66,22 +69,32 @@ export default async function handler(req, res) {
       key: API_KEY
     });
 
-    const response = await fetch(`${baseUrl}?${params}`);
+    const fullUrl = `${baseUrl}?${params}`;
+    console.log(`Making request to: ${fullUrl.replace(API_KEY, 'API_KEY_HIDDEN')}`);
+    
+    const response = await fetch(fullUrl);
+    
+    console.log(`Response status: ${response.status}`);
     
     if (!response.ok) {
-      throw new Error(`Google Places API error: ${response.status}`);
+      const errorText = await response.text();
+      console.error(`HTTP Error: ${response.status} - ${errorText}`);
+      throw new Error(`Google Places API HTTP error: ${response.status}`);
     }
 
     const data = await response.json();
+    console.log(`API Response status: ${data.status}`);
     
     if (data.status !== 'OK') {
       if (data.status === 'ZERO_RESULTS') {
+        console.log('No gyms found in the area');
         return res.status(200).json({ 
           results: [],
           status: 'ZERO_RESULTS'
         });
       }
-      throw new Error(`Google Places API error: ${data.status}`);
+      console.error(`Google Places API error: ${data.status} - ${data.error_message || 'No error message'}`);
+      throw new Error(`Google Places API error: ${data.status} - ${data.error_message || 'Unknown error'}`);
     }
 
     // Transform and sanitize the response
