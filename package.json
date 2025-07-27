@@ -5,8 +5,6 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "dev:api": "node dev-server.js",
-    "dev:full": "concurrently \"npm run dev\" \"npm run dev:api\"",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -18,11 +16,7 @@
     "@vercel/analytics": "^1.5.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "concurrently": "^9.2.0",
-    "cors": "^2.8.5",
-    "express": "^5.1.0",
     "framer-motion": "^11.9.0",
-    "http-proxy-middleware": "^3.0.5",
     "lucide-react": "^0.525.0",
     "marked": "^16.1.1",
     "react": "^18.3.1",
