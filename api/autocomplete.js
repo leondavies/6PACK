@@ -56,16 +56,32 @@ export default async function handler(req, res) {
       types: 'geocode'
     });
 
+    console.log(`Autocomplete request: ${input.substring(0, 20)}...`);
+    
     const response = await fetch(`${baseUrl}?${params}`);
     
+    console.log(`Autocomplete response status: ${response.status}`);
+    
     if (!response.ok) {
-      throw new Error(`Google Places Autocomplete API error: ${response.status}`);
+      const errorText = await response.text();
+      console.error(`Autocomplete HTTP Error: ${response.status} - ${errorText}`);
+      throw new Error(`Google Places Autocomplete API HTTP error: ${response.status}`);
     }
 
     const data = await response.json();
+    console.log(`Autocomplete API status: ${data.status}`);
     
     if (data.status !== 'OK' && data.status !== 'ZERO_RESULTS') {
       console.error(`Google Places Autocomplete API error: ${data.status} - ${data.error_message || 'No error message'}`);
+      
+      // Handle rate limiting gracefully
+      if (data.status === 'OVER_QUERY_LIMIT') {
+        return res.status(429).json({ 
+          error: 'Rate limit exceeded',
+          details: 'Too many requests. Please try again in a moment.'
+        });
+      }
+      
       return res.status(500).json({ 
         error: 'Failed to get autocomplete suggestions',
         details: data.error_message || data.status

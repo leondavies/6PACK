@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import { MapPin, Search, Filter, Star, Clock, Phone, Globe, Navigation, Sliders } from 'lucide-react';
 import { searchGymsNearby, getMockGymsNearby, geocodeAddress, calculateDistance, getAutocompleteSuggestions } from '../services/googlePlaces';
@@ -17,6 +17,22 @@ export default function GymFinder() {
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [selectedSuggestionIndex, setSelectedSuggestionIndex] = useState(-1);
+  const debounceTimeoutRef = useRef(null);
+  const abortControllerRef = useRef(null);
+
+  // Cleanup function
+  useEffect(() => {
+    return () => {
+      // Clear timeout on unmount
+      if (debounceTimeoutRef.current) {
+        clearTimeout(debounceTimeoutRef.current);
+      }
+      // Cancel any pending requests
+      if (abortControllerRef.current) {
+        abortControllerRef.current.abort();
+      }
+    };
+  }, []);
 
   // Get user's current location
   const getCurrentLocation = () => {
@@ -93,25 +109,53 @@ export default function GymFinder() {
     }
   };
 
-  // Handle autocomplete input changes
-  const handleAddressChange = async (value) => {
-    setSearchAddress(value);
-    setSelectedSuggestionIndex(-1);
-    
-    if (value.trim().length >= 2) {
-      try {
-        const autocompleteSuggestions = await getAutocompleteSuggestions(value);
+  // Debounced autocomplete function
+  const debouncedGetSuggestions = useCallback(async (value) => {
+    // Cancel previous request if it exists
+    if (abortControllerRef.current) {
+      abortControllerRef.current.abort();
+    }
+
+    if (value.trim().length < 2) {
+      setSuggestions([]);
+      setShowSuggestions(false);
+      return;
+    }
+
+    try {
+      // Create new abort controller for this request
+      abortControllerRef.current = new AbortController();
+      
+      const autocompleteSuggestions = await getAutocompleteSuggestions(value);
+      
+      // Only update if this request wasn't aborted
+      if (!abortControllerRef.current.signal.aborted) {
         setSuggestions(autocompleteSuggestions);
         setShowSuggestions(autocompleteSuggestions.length > 0);
-      } catch (error) {
+      }
+    } catch (error) {
+      if (error.name !== 'AbortError') {
         console.error('Error getting autocomplete suggestions:', error);
         setSuggestions([]);
         setShowSuggestions(false);
       }
-    } else {
-      setSuggestions([]);
-      setShowSuggestions(false);
     }
+  }, []);
+
+  // Handle autocomplete input changes with debouncing
+  const handleAddressChange = (value) => {
+    setSearchAddress(value);
+    setSelectedSuggestionIndex(-1);
+    
+    // Clear previous timeout
+    if (debounceTimeoutRef.current) {
+      clearTimeout(debounceTimeoutRef.current);
+    }
+    
+    // Set new timeout for debounced API call
+    debounceTimeoutRef.current = setTimeout(() => {
+      debouncedGetSuggestions(value);
+    }, 300); // 300ms delay
   };
 
   // Handle suggestion selection
