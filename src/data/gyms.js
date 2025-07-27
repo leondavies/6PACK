@@ -27,7 +27,7 @@ export const gyms = [
     membershipTypes: ["Basic", "Premium"],
     priceRange: "$$",
     rating: 4.2,
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=300&fit=crop&fm=webp&q=85"
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&fm=webp&q=85"
   },
   {
     id: 2,
@@ -145,7 +145,7 @@ export const gyms = [
     membershipTypes: ["Basic", "Premium"],
     priceRange: "$$",
     rating: 4.3,
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=300&fit=crop&fm=webp&q=85"
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&fm=webp&q=85"
   },
   {
     id: 6,
@@ -265,7 +265,7 @@ export const gyms = [
     membershipTypes: ["Basic", "Premium"],
     priceRange: "$$",
     rating: 4.1,
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=300&fit=crop&fm=webp&q=85"
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&fm=webp&q=85"
   },
 
   // Tauranga Gyms
@@ -358,7 +358,7 @@ export const gyms = [
     membershipTypes: ["Basic", "Premium"],
     priceRange: "$$",
     rating: 4.2,
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=300&fit=crop&fm=webp&q=85"
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&fm=webp&q=85"
   }
 ];
 

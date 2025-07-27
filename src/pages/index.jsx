@@ -792,7 +792,7 @@ function Index() {
             <div className="relative">
               <div className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl p-8">
                 <img
-                  src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=400&fit=crop&fm=webp&q=85"
+                  src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&h=400&fit=crop&fm=webp&q=85"
                   alt="Modern gym interior with equipment"
                   className="w-full h-64 object-cover rounded-xl shadow-lg"
                 />
