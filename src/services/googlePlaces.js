@@ -41,8 +41,16 @@ export async function searchGymsNearby(lat, lng, radius = 10000) {
     }));
   } catch (error) {
     console.error('Error fetching gyms from Google Places:', error);
-    // Fallback to mock data if API fails
-    return getMockGymsNearby(lat, lng);
+    console.error('API Error Details:', error.message);
+    
+    // Only fallback to mock data in development
+    if (import.meta.env.DEV) {
+      console.log('Development mode: Using mock data due to API error');
+      return getMockGymsNearby(lat, lng);
+    }
+    
+    // In production, throw the error so we can debug
+    throw new Error(`Failed to fetch gyms: ${error.message}`);
   }
 }
 

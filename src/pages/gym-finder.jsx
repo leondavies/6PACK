@@ -72,15 +72,8 @@ export default function GymFinder() {
       // Convert radius from km to meters for Google Places API
       const radiusInMeters = radius * 1000;
       
-      let nearbyGyms;
-      try {
-        // Try to use Google Places API first
-        nearbyGyms = await searchGymsNearby(lat, lng, radiusInMeters);
-      } catch (apiError) {
-        console.warn('Google Places API unavailable, using mock data:', apiError);
-        // Fallback to mock data if Google Places API is not configured
-        nearbyGyms = await getMockGymsNearby(lat, lng, radius);
-      }
+      // Use Google Places API - let errors bubble up for debugging
+      const nearbyGyms = await searchGymsNearby(lat, lng, radiusInMeters);
       
       // Add distance to each gym
       const gymsWithDistance = nearbyGyms.map(gym => ({
@@ -91,7 +84,7 @@ export default function GymFinder() {
       setGyms(gymsWithDistance);
     } catch (error) {
       console.error('Error finding nearby gyms:', error);
-      setLocationError('Unable to find gyms in this area. Please try another location.');
+      setLocationError(`API Error: ${error.message}. Please check console for details.`);
     } finally {
       setLoading(false);
     }

@@ -47,11 +47,13 @@ export default async function handler(req, res) {
     });
   }
 
-  const API_KEY = process.env.VITE_GOOGLE_PLACES_API_KEY;
+  const API_KEY = process.env.GOOGLE_PLACES_API_KEY;
   
   if (!API_KEY) {
+    console.error('Google Places API key not found in environment variables');
     return res.status(500).json({ 
-      error: 'Google Places API key not configured' 
+      error: 'Google Places API key not configured',
+      debug: 'Make sure GOOGLE_PLACES_API_KEY is set in Vercel environment variables'
     });
   }
 
@@ -111,7 +113,8 @@ export default async function handler(req, res) {
     console.error('Error fetching gyms from Google Places:', error);
     res.status(500).json({ 
       error: 'Failed to fetch gym data',
-      message: error.message 
+      message: error.message,
+      debug: `Request failed for lat: ${latitude}, lng: ${longitude}, radius: ${searchRadius}`
     });
   }
 }
