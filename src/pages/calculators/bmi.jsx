@@ -172,7 +172,7 @@ function BMICalculator() {
         />
         <meta property="og:title" content="Free BMI Calculator New Zealand | 6Pack" />
         <meta property="og:description" content="Calculate your BMI instantly with our free New Zealand BMI calculator. Get health recommendations and weight status analysis." />
-        <meta property="og:image" content="https://www.6pack.co.nz/api/og?title=Free BMI Calculator&subtitle=Calculate Your Body Mass Index&category=Calculator" />
+        <meta property="og:image" content="https://www.6pack.co.nz/bmi-calculator-social.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="6Pack NZ BMI Calculator - Calculate your Body Mass Index instantly" />
@@ -181,7 +181,7 @@ function BMICalculator() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free BMI Calculator New Zealand | 6Pack" />
         <meta name="twitter:description" content="Calculate your BMI instantly with our free New Zealand BMI calculator." />
-        <meta name="twitter:image" content="https://www.6pack.co.nz/api/og?title=Free BMI Calculator&subtitle=Calculate Your Body Mass Index&category=Calculator" />
+        <meta name="twitter:image" content="https://www.6pack.co.nz/bmi-calculator-social.jpg" />
         <link rel="canonical" href="https://www.6pack.co.nz/calculators/bmi" />
         
         {/* Structured Data */}
