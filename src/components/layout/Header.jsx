@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ShoppingCart, User, Menu, X, Calculator, BookOpen, Dumbbell } from "lucide-react";
+import { ShoppingCart, User, Menu, X, Calculator, BookOpen, Dumbbell, MapPin } from "lucide-react";
 import useCart from "../../hooks/useCart";
 
 const Header = () => {
@@ -96,6 +96,17 @@ const Header = () => {
               <Dumbbell size={16} />
               <span>Workouts</span>
             </Link>
+            <Link
+              to="/gym-finder"
+              className={`px-4 py-2 rounded-full font-medium transition-all duration-300 flex items-center space-x-2 ${
+                isActive("/gym-finder") 
+                  ? "bg-gray-900 text-white shadow-lg" 
+                  : "text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+              }`}
+            >
+              <MapPin size={16} />
+              <span>Gym Finder</span>
+            </Link>
           </nav>
 
           {/* Right side - Mobile Menu Button */}
@@ -173,6 +184,21 @@ const Header = () => {
                 <Dumbbell size={20} className={isActive("/workouts") ? "text-white" : "text-orange-600"} />
               </div>
               <span className="text-lg font-semibold">Workouts</span>
+            </Link>
+            
+            <Link
+              to="/gym-finder"
+              onClick={closeMobileMenu}
+              className={`flex items-center space-x-4 px-5 py-4 rounded-2xl transition-all duration-300 group ${
+                isActive("/gym-finder") 
+                  ? "bg-gradient-to-r from-gray-900 to-gray-700 text-white shadow-lg" 
+                  : "text-gray-700 hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 hover:shadow-md"
+              }`}
+            >
+              <div className={`p-2 rounded-xl ${isActive("/gym-finder") ? "bg-white/20" : "bg-purple-100 group-hover:bg-purple-200"}`}>
+                <MapPin size={20} className={isActive("/gym-finder") ? "text-white" : "text-purple-600"} />
+              </div>
+              <span className="text-lg font-semibold">Gym Finder</span>
             </Link>
 
           </div>
