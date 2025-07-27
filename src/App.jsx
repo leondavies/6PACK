@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import Home from "./pages";
 import Shop from "./pages/shop";
 import Subscription from "./pages/subscription";
@@ -57,6 +58,7 @@ function App() {
         </Routes>
         <Toaster position="top-right" />
       </Layout>
+      <Analytics />
     </Router>
   );
 }

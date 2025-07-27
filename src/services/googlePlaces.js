@@ -12,13 +12,6 @@ export async function searchGymsNearby(lat, lng, radius = 10000) {
   try {
     const response = await fetch(`/api/gyms/nearby?${params}`);
     
-    // Check if we're in development and getting HTML (Vite serving files)
-    const contentType = response.headers.get('content-type');
-    if (contentType && contentType.includes('text/html')) {
-      console.log('Development mode: Using mock data (API proxy not available)');
-      return getMockGymsNearby(lat, lng);
-    }
-    
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
       throw new Error(errorData.error || `API error: ${response.status}`);
@@ -101,13 +94,6 @@ export async function geocodeAddress(address) {
 
   try {
     const response = await fetch(`/api/geocode?${params}`);
-    
-    // Check if we're in development and getting HTML (Vite serving files)
-    const contentType = response.headers.get('content-type');
-    if (contentType && contentType.includes('text/html')) {
-      console.log('Development mode: Using fallback geocoding');
-      throw new Error('API not available in development');
-    }
     
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
