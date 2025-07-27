@@ -153,3 +153,37 @@ export async function geocodeAddress(address) {
     }
   }
 }
+
+// Get autocomplete suggestions for addresses
+export async function getAutocompleteSuggestions(input) {
+  if (!input || input.trim().length < 2) {
+    return [];
+  }
+
+  const params = new URLSearchParams({
+    input: input.trim()
+  });
+
+  try {
+    const response = await fetch(`/api/autocomplete?${params}`);
+    
+    // Check if we're in development and getting HTML/text instead of JSON
+    const contentType = response.headers.get('content-type');
+    if (contentType && !contentType.includes('application/json')) {
+      console.log('Development: Autocomplete API proxy not available');
+      return [];
+    }
+    
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      throw new Error(errorData.error || `Autocomplete error: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data.suggestions || [];
+  } catch (error) {
+    console.error('Error fetching autocomplete suggestions:', error);
+    // Return empty array on error - autocomplete is not critical
+    return [];
+  }
+}
