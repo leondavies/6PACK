@@ -501,6 +501,31 @@ export default function GymFinder() {
             </div>
           )}
 
+          {/* Gym Promotion Section */}
+          <div className="bg-gradient-to-r from-primary-50 to-green-50 border border-primary-200 rounded-lg p-6 mb-8">
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0">
+                <div className="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center">
+                  <Star className="w-6 h-6 text-white" />
+                </div>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Want Your Gym Featured First?
+                </h3>
+                <p className="text-gray-700 mb-4">
+                  Get your fitness center sponsored placement at the top of search results and reach more potential members across New Zealand.
+                </p>
+                <a
+                  href="mailto:info@6pack.co.nz?subject=Gym Sponsorship Inquiry - 6Pack NZ&body=Hi,%0A%0AI'm interested in sponsored placement for my gym on 6pack.co.nz.%0A%0AGym Name:%0ALocation:%0AWebsite:%0A%0APlease send me more information about sponsorship opportunities.%0A%0AThanks!"
+                  className="inline-flex items-center px-4 py-2 bg-primary-600 text-white text-sm font-medium rounded-lg hover:bg-primary-700 transition-colors"
+                >
+                  Get Sponsored Placement
+                </a>
+              </div>
+            </div>
+          </div>
+
           {/* Gym Results Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {getFilteredAndSortedGyms().map(gym => (
