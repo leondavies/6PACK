@@ -1,6 +1,17 @@
 // Google Places API service for finding gyms
 // Uses proxy endpoints to avoid CORS issues
 
+// Helper function to get photo URL from Google Places photo reference
+export function getPhotoUrl(photoReference, maxWidth = 400) {
+  if (!photoReference) {
+    // Fallback to a default gym image
+    return 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&fm=webp&q=85';
+  }
+  
+  // Use our proxy endpoint to avoid CORS issues
+  return `/api/gyms/photo?reference=${photoReference}&maxwidth=${maxWidth}`;
+}
+
 // Search for gyms near a location using Google Places API via proxy
 export async function searchGymsNearby(lat, lng, radius = 10000) {
   const params = new URLSearchParams({
