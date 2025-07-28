@@ -70,26 +70,35 @@ export default async function handler(req, res) {
     }
 
     // Transform the Google Places data to match our expected format
-    const transformedResults = data.results.map(place => ({
-      id: place.place_id,
-      name: place.name,
-      address: place.vicinity || place.formatted_address || 'Address not available',
-      coordinates: {
-        lat: place.geometry.location.lat,
-        lng: place.geometry.location.lng
-      },
-      rating: place.rating || 0,
-      totalRatings: place.user_ratings_total || 0,
-      priceLevel: place.price_level || null,
-      openNow: place.opening_hours?.open_now || null,
-      types: place.types || [],
-      photos: place.photos ? place.photos.slice(0, 3).map(photo => ({
-        reference: photo.photo_reference,
-        width: photo.width,
-        height: photo.height
-      })) : [],
-      businessStatus: place.business_status || 'OPERATIONAL'
-    })).filter(gym => 
+    const transformedResults = data.results.map(place => {
+      // Get the first photo reference for the main image
+      const firstPhoto = place.photos && place.photos.length > 0 ? place.photos[0] : null;
+      const imageUrl = firstPhoto 
+        ? `/api/gyms/photo?reference=${firstPhoto.photo_reference}&maxwidth=400`
+        : 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&fm=webp&q=85';
+
+      return {
+        id: place.place_id,
+        name: place.name,
+        address: place.vicinity || place.formatted_address || 'Address not available',
+        coordinates: {
+          lat: place.geometry.location.lat,
+          lng: place.geometry.location.lng
+        },
+        rating: place.rating || 0,
+        totalRatings: place.user_ratings_total || 0,
+        priceLevel: place.price_level || null,
+        openNow: place.opening_hours?.open_now || null,
+        types: place.types || [],
+        image: imageUrl, // Add the image URL that the frontend expects
+        photos: place.photos ? place.photos.slice(0, 3).map(photo => ({
+          reference: photo.photo_reference,
+          width: photo.width,
+          height: photo.height
+        })) : [],
+        businessStatus: place.business_status || 'OPERATIONAL'
+      };
+    }).filter(gym => 
       // Filter out permanently closed gyms
       gym.businessStatus !== 'CLOSED_PERMANENTLY'
     );
