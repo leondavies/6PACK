@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node scripts/generateStaticPages.js && vite build",
+    "build:static": "node scripts/generateStaticPages.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
