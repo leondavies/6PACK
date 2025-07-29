@@ -60,6 +60,7 @@
     <priority>0.8</priority>
   </url>
   
+  <!-- Individual Calculator Pages -->
   <url>
     <loc>https://www.6pack.co.nz/calculators/bmi</loc>
     <lastmod>2025-07-29</lastmod>
@@ -102,6 +103,162 @@
     <priority>0.8</priority>
   </url>
   
+  <!-- Individual Article Pages -->
+  <url>
+    <loc>https://www.6pack.co.nz/articles/complete-guide-building-muscle-science-backed-strategies</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=1200&h=630&fit=crop&fm=webp&q=85</image:loc>
+      <image:title>The Complete Guide to Building Muscle: 7 Science-Backed Strategies</image:title>
+      <image:caption>Discover the proven methods to maximize muscle growth with evidence-based training protocols, nutrition strategies, and recovery techniques.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.6pack.co.nz/articles/hiit-training-maximum-results-minimum-time</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=630&fit=crop&fm=webp&q=85</image:loc>
+      <image:title>High-Intensity Interval Training: Maximum Results in Minimum Time</image:title>
+      <image:caption>Transform your fitness with HIIT workouts that burn fat, improve cardiovascular health, and save time.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.6pack.co.nz/articles/nutrition-timing-optimal-performance-recovery</loc>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1200&h=630&fit=crop&fm=webp&q=85</image:loc>
+      <image:title>Nutrition Timing: When to Eat for Optimal Performance and Recovery</image:title>
+      <image:caption>Master the science of nutrient timing to maximize your workout performance, muscle growth, and recovery.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.6pack.co.nz/articles/deadlift-mastery-perfect-form-avoid-mistakes</loc>
+    <lastmod>2025-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=1200&h=630&fit=crop&fm=webp&q=85</image:loc>
+      <image:title>Deadlift Mastery: Perfect Your Form and Avoid Common Mistakes</image:title>
+      <image:caption>Master the deadlift with proper form, progressive programming, and injury prevention strategies.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.6pack.co.nz/articles/sleep-muscle-growth-ultimate-recovery-guide</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=1200&h=630&fit=crop&fm=webp&q=85</image:loc>
+      <image:title>Sleep for Muscle Growth: The Ultimate Recovery Guide</image:title>
+      <image:caption>Discover how optimising your sleep can dramatically improve muscle growth, recovery, and performance with science-backed strategies.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.6pack.co.nz/articles/weight-loss-women-science-based-sustainable-results</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&h=630&fit=crop&fm=webp&q=85</image:loc>
+      <image:title>Weight Loss for Women: A Science-Based Approach to Sustainable Results</image:title>
+      <image:caption>Master female-specific weight loss strategies that work with your hormones, metabolism, and lifestyle for lasting results.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.6pack.co.nz/articles/complete-beginners-guide-fitness-start-journey-right-way</loc>
+    <lastmod>2025-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&h=630&fit=crop&fm=webp&q=85</image:loc>
+      <image:title>Complete Beginner's Guide to Fitness: Start Your Journey the Right Way</image:title>
+      <image:caption>Everything you need to know to start your fitness journey successfully - from goal setting to workout plans and nutrition basics.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.6pack.co.nz/articles/effective-home-workouts-get-fit-without-gym</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=1200&h=630&fit=crop&fm=webp&q=85</image:loc>
+      <image:title>Effective Home Workouts: Get Fit Without a Gym</image:title>
+      <image:caption>Transform your living space into an effective fitness studio with equipment-free workouts that deliver real results.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.6pack.co.nz/articles/injury-prevention-keep-body-strong-resilient</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&h=630&fit=crop&fm=webp&q=85</image:loc>
+      <image:title>Injury Prevention: Keep Your Body Strong and Resilient</image:title>
+      <image:caption>Learn evidence-based strategies to prevent injuries, improve movement quality, and maintain long-term fitness success.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.6pack.co.nz/articles/exercise-mental-health-science-movement-mood</loc>
+    <lastmod>2025-01-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&h=630&fit=crop&fm=webp&q=85</image:loc>
+      <image:title>Exercise for Mental Health: The Science of Movement and Mood</image:title>
+      <image:caption>Discover how exercise can be your most powerful tool for managing stress, anxiety, depression, and boosting overall mental wellbeing.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.6pack.co.nz/articles/nz-protein-shake-showdown-tested-12-brands-shocking-results</loc>
+    <lastmod>2025-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=1200&h=630&fit=crop&fm=webp&q=85</image:loc>
+      <image:title>NZ Protein Shake Showdown: We Tested 12 Popular Brands (Shocking Results)</image:title>
+      <image:caption>We lab-tested 12 popular protein powders sold in New Zealand for protein content, heavy metals, and taste. The results will surprise you - including which $80 'premium' brand failed quality tests.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.6pack.co.nz/articles/5-minute-metabolism-hack-burns-300-calories-daily</loc>
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=630&fit=crop&fm=webp&q=85</image:loc>
+      <image:title>The 5-Minute Metabolism Hack That Burns 300 Extra Calories Daily</image:title>
+      <image:caption>This scientifically-proven morning routine takes just 5 minutes but can boost your metabolism by up to 15% all day. Used by NZ Olympic athletes.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.6pack.co.nz/articles/new-world-vs-woolworths-vs-paknsave-best-nz-supermarket-gym-food</loc>
+    <lastmod>2025-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=630&fit=crop&fm=webp&q=85</image:loc>
+      <image:title>New World vs Woolworths vs Pak'nSave: Which NZ Supermarket Has Best Gym Food?</image:title>
+      <image:caption>We compared prices, quality, and selection of 50 fitness foods across all three major NZ supermarkets. The winner might surprise you.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.6pack.co.nz/articles/why-90-percent-kiwis-doing-push-ups-wrong-how-fix</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=630&fit=crop&fm=webp&q=85</image:loc>
+      <image:title>Why 90% of Kiwis Are Doing Push-Ups Wrong (And How to Fix It)</image:title>
+      <image:caption>A biomechanics study of 500 New Zealanders revealed shocking form mistakes that reduce results by 60%. Here's the 30-second fix.</image:caption>
+    </image:image>
+  </url>
+  
   <!-- Other Pages -->
   <url>
     <loc>https://www.6pack.co.nz/shop</loc>
@@ -119,9 +276,9 @@
   
   <url>
     <loc>https://www.6pack.co.nz/gym-finder</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
-</urlset> 
+</urlset>

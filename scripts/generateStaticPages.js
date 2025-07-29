@@ -176,6 +176,163 @@ function generateStaticPages() {
   });
 }
 
+// Generate complete XML sitemap with all pages
+function generateXmlSitemap() {
+  const currentDate = new Date().toISOString().split('T')[0];
+  
+  let sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Main Pages -->
+  <url>
+    <loc>https://www.6pack.co.nz/</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.6pack.co.nz/og-image.jpg</image:loc>
+      <image:title>6Pack NZ - New Zealand's Premier Fitness Platform</image:title>
+      <image:caption>6Pack NZ homepage featuring free fitness calculators, expert workout plans, and nutrition guides for New Zealanders</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Article Pages -->
+  <url>
+    <loc>https://www.6pack.co.nz/articles</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Calculator Pages -->
+  <url>
+    <loc>https://www.6pack.co.nz/calculators</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Workout Pages -->
+  <url>
+    <loc>https://www.6pack.co.nz/workouts</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.6pack.co.nz/workouts/chest</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.6pack.co.nz/workouts/legs</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.6pack.co.nz/workouts/core</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Individual Calculator Pages -->
+  <url>
+    <loc>https://www.6pack.co.nz/calculators/bmi</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.6pack.co.nz/calculators/bmr</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.6pack.co.nz/calculators/body-fat</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.6pack.co.nz/calculators/ideal-weight</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.6pack.co.nz/calculators/macro</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.6pack.co.nz/calculators/one-rep-max</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Individual Article Pages -->`;
+
+  // Add all articles to sitemap
+  articles.forEach(article => {
+    sitemapContent += `
+  <url>
+    <loc>https://www.6pack.co.nz/articles/${article.slug}</loc>
+    <lastmod>${article.publishDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>${article.image.replace(/w=\d+&h=\d+/, 'w=1200&h=630')}</image:loc>
+      <image:title>${article.title}</image:title>
+      <image:caption>${article.excerpt}</image:caption>
+    </image:image>
+  </url>`;
+  });
+
+  sitemapContent += `
+  
+  <!-- Other Pages -->
+  <url>
+    <loc>https://www.6pack.co.nz/shop</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.6pack.co.nz/subscription</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.6pack.co.nz/gym-finder</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+</urlset>`;
+
+  fs.writeFileSync('./public/sitemap.xml', sitemapContent);
+  console.log('✅ Generated complete XML sitemap with all articles');
+}
+
 // Update vercel.json with all routes
 function updateVercelConfig() {
   const rewrites = [];
@@ -216,5 +373,6 @@ function updateVercelConfig() {
 // Run generation
 console.log('Generating static pages for SEO...');
 generateStaticPages();
+generateXmlSitemap();
 updateVercelConfig();
 console.log('✅ Static page generation complete!');
