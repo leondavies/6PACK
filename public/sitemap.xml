@@ -5,7 +5,7 @@
   <!-- Main Pages -->
   <url>
     <loc>https://www.6pack.co.nz/</loc>
-    <lastmod>2025-01-29</lastmod>
+    <lastmod>2025-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -18,7 +18,7 @@
   <!-- Article Pages -->
   <url>
     <loc>https://www.6pack.co.nz/articles</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-07-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -26,7 +26,7 @@
   <!-- Calculator Pages -->
   <url>
     <loc>https://www.6pack.co.nz/calculators</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -34,70 +34,70 @@
   <!-- Workout Pages -->
   <url>
     <loc>https://www.6pack.co.nz/workouts</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
     <loc>https://www.6pack.co.nz/workouts/chest</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://www.6pack.co.nz/workouts/legs</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://www.6pack.co.nz/workouts/core</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://www.6pack.co.nz/calculators/bmi</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://www.6pack.co.nz/calculators/bmr</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://www.6pack.co.nz/calculators/body-fat</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://www.6pack.co.nz/calculators/ideal-weight</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://www.6pack.co.nz/calculators/macro</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://www.6pack.co.nz/calculators/one-rep-max</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -105,14 +105,14 @@
   <!-- Other Pages -->
   <url>
     <loc>https://www.6pack.co.nz/shop</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://www.6pack.co.nz/subscription</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -19,5 +19,6 @@ Allow: *.gif
 Allow: *.webp
 Allow: *.svg
 
-# Sitemap location
-Sitemap: https://www.6pack.co.nz/sitemap.xml 
+# Sitemap locations
+Sitemap: https://www.6pack.co.nz/sitemap.xml
+Sitemap: https://www.6pack.co.nz/sitemap.html 

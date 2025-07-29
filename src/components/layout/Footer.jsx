@@ -113,6 +113,9 @@ const Footer = () => {
             © 2025 6Pack.co.nz. All rights reserved. Transform your fitness journey. 🚀
           </p>
           <div className="flex space-x-8 mt-4 md:mt-0">
+            <a href="/sitemap.html" className="text-gray-400 hover:text-white text-lg transition-colors">
+              Sitemap
+            </a>
             <a href="#" className="text-gray-400 hover:text-white text-lg transition-colors">
               Privacy Policy
             </a>
