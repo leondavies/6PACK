@@ -62,7 +62,7 @@ export default function ArticlesPage() {
           {/* Hero Background Image */}
           <div className="absolute inset-0">
             <img
-              src="https://www.6pack.co.nz/og-image.jpg"
+              src="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=1600&h=900&fit=crop&fm=webp&q=85"
               alt="Fitness Knowledge Hub"
               className="w-full h-full object-cover opacity-30"
             />
