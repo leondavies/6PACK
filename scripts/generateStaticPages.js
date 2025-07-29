@@ -117,6 +117,13 @@ function generateStaticPages() {
       image: 'https://www.6pack.co.nz/og-image.jpg',
       url: '/calculators/macro',
       type: 'website'
+    },
+    {
+      title: 'Free 1RM Calculator New Zealand | One Rep Max Calculator NZ',
+      description: 'Calculate your one-rep max using proven formulas with our free New Zealand 1RM calculator. Get training percentages and strength programming recommendations for Kiwis.',
+      image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&h=630&fit=crop&fm=webp&q=85',
+      url: '/calculators/one-rep-max',
+      type: 'website'
     }
   ];
 
@@ -356,7 +363,8 @@ function updateVercelConfig() {
     { source: "/calculators/bmi", destination: "/calculators/bmi.html" },
     { source: "/calculators/bmr", destination: "/calculators/bmr.html" },
     { source: "/calculators/body-fat", destination: "/calculators/body-fat.html" },
-    { source: "/calculators/macro", destination: "/calculators/macro.html" }
+    { source: "/calculators/macro", destination: "/calculators/macro.html" },
+    { source: "/calculators/one-rep-max", destination: "/calculators/one-rep-max.html" }
   );
   
   // Article routes
