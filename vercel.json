@@ -17,6 +17,10 @@
       "destination": "/calculators/macro.html"
     },
     {
+      "source": "/calculators/one-rep-max",
+      "destination": "/calculators/one-rep-max.html"
+    },
+    {
       "source": "/articles/complete-guide-building-muscle-science-backed-strategies",
       "destination": "/articles/complete-guide-building-muscle-science-backed-strategies.html"
     },
