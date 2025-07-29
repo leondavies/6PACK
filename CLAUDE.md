@@ -5,9 +5,30 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Development Commands
 
 - **Development server**: `npm run dev` - Starts Vite dev server with hot reload
-- **Build**: `npm run build` - Creates production build in `dist/` folder
+- **Build**: `npm run build` - Generates SEO static pages and creates production build
 - **Linting**: `npm run lint` - Runs ESLint on all JavaScript files
 - **Preview**: `npm run preview` - Serves production build locally
+- **SEO Generation**: `node scripts/generateStaticPages.js` - Generates static HTML for social media crawlers
+
+## CRITICAL: SEO Static Page Generation
+
+**ALWAYS run after adding new articles or calculators:**
+```bash
+node scripts/generateStaticPages.js
+```
+
+This script:
+- Generates static HTML files with proper meta tags for social media crawlers
+- Creates Open Graph images, descriptions, and structured data
+- Updates vercel.json with routing for all pages
+- Ensures Facebook/Twitter/LinkedIn show correct images and descriptions
+
+**The build command automatically runs this script**, but run manually when:
+- Adding new articles to `src/data/products.js`
+- Creating new calculator pages
+- Updating article meta information
+
+**Why this matters**: Social media crawlers (Facebook, Twitter) don't execute JavaScript, so they can't see React Helmet meta tags. Static HTML files ensure proper social sharing.
 
 ## Project Architecture
 
