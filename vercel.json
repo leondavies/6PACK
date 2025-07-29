@@ -1,5 +1,18 @@
 {
+  "functions": {
+    "api/meta.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
   "rewrites": [
+    {
+      "source": "/calculators/bmi",
+      "destination": "/api/meta"
+    },
+    {
+      "source": "/gym-finder", 
+      "destination": "/api/meta"
+    },
     {
       "source": "/(.*)",
       "destination": "/index.html"
