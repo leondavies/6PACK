@@ -5,6 +5,82 @@
       "destination": "/calculators/bmi.html"
     },
     {
+      "source": "/calculators/bmr",
+      "destination": "/calculators/bmr.html"
+    },
+    {
+      "source": "/calculators/body-fat",
+      "destination": "/calculators/body-fat.html"
+    },
+    {
+      "source": "/calculators/macro",
+      "destination": "/calculators/macro.html"
+    },
+    {
+      "source": "/articles/complete-guide-building-muscle-science-backed-strategies",
+      "destination": "/articles/complete-guide-building-muscle-science-backed-strategies.html"
+    },
+    {
+      "source": "/articles/hiit-training-maximum-results-minimum-time",
+      "destination": "/articles/hiit-training-maximum-results-minimum-time.html"
+    },
+    {
+      "source": "/articles/nutrition-timing-optimal-performance-recovery",
+      "destination": "/articles/nutrition-timing-optimal-performance-recovery.html"
+    },
+    {
+      "source": "/articles/deadlift-mastery-perfect-form-avoid-mistakes",
+      "destination": "/articles/deadlift-mastery-perfect-form-avoid-mistakes.html"
+    },
+    {
+      "source": "/articles/sleep-muscle-growth-ultimate-recovery-guide",
+      "destination": "/articles/sleep-muscle-growth-ultimate-recovery-guide.html"
+    },
+    {
+      "source": "/articles/weight-loss-women-science-based-sustainable-results",
+      "destination": "/articles/weight-loss-women-science-based-sustainable-results.html"
+    },
+    {
+      "source": "/articles/complete-beginners-guide-fitness-start-journey-right-way",
+      "destination": "/articles/complete-beginners-guide-fitness-start-journey-right-way.html"
+    },
+    {
+      "source": "/articles/effective-home-workouts-get-fit-without-gym",
+      "destination": "/articles/effective-home-workouts-get-fit-without-gym.html"
+    },
+    {
+      "source": "/articles/injury-prevention-keep-body-strong-resilient",
+      "destination": "/articles/injury-prevention-keep-body-strong-resilient.html"
+    },
+    {
+      "source": "/articles/exercise-mental-health-science-movement-mood",
+      "destination": "/articles/exercise-mental-health-science-movement-mood.html"
+    },
+    {
+      "source": "/articles/nz-protein-shake-showdown-tested-12-brands-shocking-results",
+      "destination": "/articles/nz-protein-shake-showdown-tested-12-brands-shocking-results.html"
+    },
+    {
+      "source": "/articles/5-minute-metabolism-hack-burns-300-calories-daily",
+      "destination": "/articles/5-minute-metabolism-hack-burns-300-calories-daily.html"
+    },
+    {
+      "source": "/articles/new-world-vs-woolworths-vs-paknsave-best-nz-supermarket-gym-food",
+      "destination": "/articles/new-world-vs-woolworths-vs-paknsave-best-nz-supermarket-gym-food.html"
+    },
+    {
+      "source": "/articles/why-90-percent-kiwis-doing-push-ups-wrong-how-fix",
+      "destination": "/articles/why-90-percent-kiwis-doing-push-ups-wrong-how-fix.html"
+    },
+    {
+      "source": "/gym-finder",
+      "destination": "/gym-finder.html"
+    },
+    {
+      "source": "/calculators",
+      "destination": "/calculators.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
