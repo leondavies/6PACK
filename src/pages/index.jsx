@@ -604,6 +604,38 @@ function Index() {
         </div>
       </section>
 
+      {/* Introduction Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-gray-900 mb-8">
+              New Zealand's Premier Fitness Resource Hub
+            </h2>
+            <div className="text-lg text-gray-700 leading-relaxed space-y-6">
+              <p>
+                Welcome to 6Pack NZ, where science meets fitness in New Zealand's most comprehensive health and wellness platform. 
+                Whether you're a beginner starting your fitness journey in Auckland, Wellington, or anywhere across the country, 
+                or an experienced athlete looking to optimize your performance, we provide the tools, knowledge, and guidance you need to succeed.
+              </p>
+              <p>
+                Our platform features free, scientifically-validated fitness calculators including BMI, BMR, macro, and body fat percentage tools 
+                specifically calibrated for New Zealand populations. These aren't just numbers – they're your personalized roadmap to better health, 
+                helping thousands of Kiwis understand their bodies and make informed decisions about their fitness goals.
+              </p>
+              <p>
+                Beyond calculators, we offer expert-written articles covering everything from muscle building and weight loss to sports nutrition 
+                and injury prevention. Our content is created by certified fitness professionals, registered dietitians, and exercise physiologists 
+                who understand the unique needs of New Zealanders, from managing fitness during our varied climate to finding healthy local food options.
+              </p>
+              <p>
+                Join thousands of New Zealanders who trust 6Pack NZ for evidence-based fitness guidance. Start with our free calculators, 
+                explore our comprehensive workout plans, and discover nutrition strategies that fit your lifestyle. Your transformation begins here.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Fitness Calculators Section */}
       <section className="relative bg-gradient-to-r from-gray-900 to-gray-700 text-white overflow-hidden py-20">
         {/* Background Image */}
