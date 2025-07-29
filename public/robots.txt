@@ -20,4 +20,4 @@ Allow: *.webp
 Allow: *.svg
 
 # Sitemap location
-Sitemap: https://6pack.co.nz/sitemap.xml 
+Sitemap: https://www.6pack.co.nz/sitemap.xml 
