@@ -176,6 +176,16 @@ function generateStaticPages() {
   });
 }
 
+// Escape XML entities
+function escapeXml(text) {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 // Generate complete XML sitemap with all pages
 function generateXmlSitemap() {
   const currentDate = new Date().toISOString().split('T')[0];
@@ -192,7 +202,7 @@ function generateXmlSitemap() {
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.6pack.co.nz/og-image.jpg</image:loc>
-      <image:title>6Pack NZ - New Zealand's Premier Fitness Platform</image:title>
+      <image:title>6Pack NZ - New Zealand&apos;s Premier Fitness Platform</image:title>
       <image:caption>6Pack NZ homepage featuring free fitness calculators, expert workout plans, and nutrition guides for New Zealanders</image:caption>
     </image:image>
   </url>
@@ -289,6 +299,10 @@ function generateXmlSitemap() {
 
   // Add all articles to sitemap
   articles.forEach(article => {
+    const imageUrl = escapeXml(article.image.replace(/w=\d+&h=\d+/, 'w=1200&h=630'));
+    const title = escapeXml(article.title);
+    const excerpt = escapeXml(article.excerpt);
+    
     sitemapContent += `
   <url>
     <loc>https://www.6pack.co.nz/articles/${article.slug}</loc>
@@ -296,9 +310,9 @@ function generateXmlSitemap() {
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>${article.image.replace(/w=\d+&h=\d+/, 'w=1200&h=630')}</image:loc>
-      <image:title>${article.title}</image:title>
-      <image:caption>${article.excerpt}</image:caption>
+      <image:loc>${imageUrl}</image:loc>
+      <image:title>${title}</image:title>
+      <image:caption>${excerpt}</image:caption>
     </image:image>
   </url>`;
   });
