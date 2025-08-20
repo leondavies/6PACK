@@ -1,15 +1,18 @@
+'use client';
+
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ShoppingCart, User, Menu, X, Calculator, BookOpen, Dumbbell, MapPin } from "lucide-react";
 import useCart from "../../hooks/useCart";
 
 const Header = () => {
-  const location = useLocation();
+  const pathname = usePathname();
   const { getCartItemCount } = useCart();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const isActive = (path) => location.pathname === path || location.pathname.startsWith(path + '/');
+  const isActive = (path) => pathname === path || pathname.startsWith(path + '/');
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -31,7 +34,7 @@ const Header = () => {
   // Close mobile menu when route changes
   useEffect(() => {
     setIsMobileMenuOpen(false);
-  }, [location]);
+  }, [pathname]);
 
   return (
     <header className={`fixed top-0 w-full z-40 transition-all duration-300 ${
@@ -43,7 +46,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-1">
-            <Link to="/" className="flex items-center space-x-2 group">
+            <Link href="/" className="flex items-center space-x-2 group">
               <div className="text-3xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent group-hover:from-gray-700 group-hover:to-gray-900 transition-all duration-300">
                 6Pack
               </div>
@@ -54,7 +57,7 @@ const Header = () => {
           {/* Navigation - Centered */}
           <nav className="hidden lg:flex space-x-2">
             <Link
-              to="/"
+              href="/"
               className={`px-4 py-2 rounded-full font-medium transition-all duration-300 ${
                 isActive("/") 
                   ? "bg-gray-900 text-white shadow-lg" 
@@ -64,7 +67,7 @@ const Header = () => {
               Home
             </Link>
             <Link
-              to="/articles"
+              href="/articles"
               className={`px-4 py-2 rounded-full font-medium transition-all duration-300 flex items-center space-x-2 ${
                 isActive("/articles") 
                   ? "bg-gray-900 text-white shadow-lg" 
@@ -75,7 +78,7 @@ const Header = () => {
               <span>Articles</span>
             </Link>
             <Link
-              to="/calculators"
+              href="/calculators"
               className={`px-4 py-2 rounded-full font-medium transition-all duration-300 flex items-center space-x-2 ${
                 isActive("/calculators") 
                   ? "bg-gray-900 text-white shadow-lg" 
@@ -86,7 +89,7 @@ const Header = () => {
               <span>Calculators</span>
             </Link>
             <Link
-              to="/workouts"
+              href="/workouts"
               className={`px-4 py-2 rounded-full font-medium transition-all duration-300 flex items-center space-x-2 ${
                 isActive("/workouts") 
                   ? "bg-gray-900 text-white shadow-lg" 
@@ -97,7 +100,7 @@ const Header = () => {
               <span>Workouts</span>
             </Link>
             <Link
-              to="/gym-finder"
+              href="/gym-finder"
               className={`px-4 py-2 rounded-full font-medium transition-all duration-300 flex items-center space-x-2 ${
                 isActive("/gym-finder") 
                   ? "bg-gray-900 text-white shadow-lg" 
@@ -130,7 +133,7 @@ const Header = () => {
         }`}>
           <div className="px-6 py-8 space-y-3">
             <Link
-              to="/"
+              href="/"
               onClick={closeMobileMenu}
               className={`flex items-center space-x-4 px-5 py-4 rounded-2xl transition-all duration-300 group ${
                 isActive("/") 
@@ -142,7 +145,7 @@ const Header = () => {
             </Link>
             
             <Link
-              to="/articles"
+              href="/articles"
               onClick={closeMobileMenu}
               className={`flex items-center space-x-4 px-5 py-4 rounded-2xl transition-all duration-300 group ${
                 isActive("/articles") 
@@ -157,7 +160,7 @@ const Header = () => {
             </Link>
             
             <Link
-              to="/calculators"
+              href="/calculators"
               onClick={closeMobileMenu}
               className={`flex items-center space-x-4 px-5 py-4 rounded-2xl transition-all duration-300 group ${
                 isActive("/calculators") 
@@ -172,7 +175,7 @@ const Header = () => {
             </Link>
             
             <Link
-              to="/workouts"
+              href="/workouts"
               onClick={closeMobileMenu}
               className={`flex items-center space-x-4 px-5 py-4 rounded-2xl transition-all duration-300 group ${
                 isActive("/workouts") 
@@ -187,7 +190,7 @@ const Header = () => {
             </Link>
             
             <Link
-              to="/gym-finder"
+              href="/gym-finder"
               onClick={closeMobileMenu}
               className={`flex items-center space-x-4 px-5 py-4 rounded-2xl transition-all duration-300 group ${
                 isActive("/gym-finder") 

@@ -1,92 +1,88 @@
 {
   "rewrites": [
     {
-      "source": "/calculators/bmi",
-      "destination": "/calculators/bmi.html"
-    },
-    {
-      "source": "/calculators/bmr",
-      "destination": "/calculators/bmr.html"
-    },
-    {
-      "source": "/calculators/body-fat",
-      "destination": "/calculators/body-fat.html"
-    },
-    {
-      "source": "/calculators/macro",
-      "destination": "/calculators/macro.html"
-    },
-    {
-      "source": "/calculators/one-rep-max",
-      "destination": "/calculators/one-rep-max.html"
-    },
-    {
       "source": "/articles/complete-guide-building-muscle-science-backed-strategies",
-      "destination": "/articles/complete-guide-building-muscle-science-backed-strategies.html"
+      "destination": "/articles/complete-guide-building-muscle-science-backed-strategies/index.html"
     },
     {
       "source": "/articles/hiit-training-maximum-results-minimum-time",
-      "destination": "/articles/hiit-training-maximum-results-minimum-time.html"
+      "destination": "/articles/hiit-training-maximum-results-minimum-time/index.html"
     },
     {
       "source": "/articles/nutrition-timing-optimal-performance-recovery",
-      "destination": "/articles/nutrition-timing-optimal-performance-recovery.html"
+      "destination": "/articles/nutrition-timing-optimal-performance-recovery/index.html"
     },
     {
       "source": "/articles/deadlift-mastery-perfect-form-avoid-mistakes",
-      "destination": "/articles/deadlift-mastery-perfect-form-avoid-mistakes.html"
+      "destination": "/articles/deadlift-mastery-perfect-form-avoid-mistakes/index.html"
     },
     {
       "source": "/articles/sleep-muscle-growth-ultimate-recovery-guide",
-      "destination": "/articles/sleep-muscle-growth-ultimate-recovery-guide.html"
+      "destination": "/articles/sleep-muscle-growth-ultimate-recovery-guide/index.html"
     },
     {
       "source": "/articles/weight-loss-women-science-based-sustainable-results",
-      "destination": "/articles/weight-loss-women-science-based-sustainable-results.html"
+      "destination": "/articles/weight-loss-women-science-based-sustainable-results/index.html"
     },
     {
       "source": "/articles/complete-beginners-guide-fitness-start-journey-right-way",
-      "destination": "/articles/complete-beginners-guide-fitness-start-journey-right-way.html"
+      "destination": "/articles/complete-beginners-guide-fitness-start-journey-right-way/index.html"
     },
     {
       "source": "/articles/effective-home-workouts-get-fit-without-gym",
-      "destination": "/articles/effective-home-workouts-get-fit-without-gym.html"
+      "destination": "/articles/effective-home-workouts-get-fit-without-gym/index.html"
     },
     {
       "source": "/articles/injury-prevention-keep-body-strong-resilient",
-      "destination": "/articles/injury-prevention-keep-body-strong-resilient.html"
+      "destination": "/articles/injury-prevention-keep-body-strong-resilient/index.html"
     },
     {
       "source": "/articles/exercise-mental-health-science-movement-mood",
-      "destination": "/articles/exercise-mental-health-science-movement-mood.html"
+      "destination": "/articles/exercise-mental-health-science-movement-mood/index.html"
     },
     {
       "source": "/articles/nz-protein-shake-showdown-tested-12-brands-shocking-results",
-      "destination": "/articles/nz-protein-shake-showdown-tested-12-brands-shocking-results.html"
+      "destination": "/articles/nz-protein-shake-showdown-tested-12-brands-shocking-results/index.html"
     },
     {
       "source": "/articles/5-minute-metabolism-hack-burns-300-calories-daily",
-      "destination": "/articles/5-minute-metabolism-hack-burns-300-calories-daily.html"
+      "destination": "/articles/5-minute-metabolism-hack-burns-300-calories-daily/index.html"
     },
     {
       "source": "/articles/new-world-vs-woolworths-vs-paknsave-best-nz-supermarket-gym-food",
-      "destination": "/articles/new-world-vs-woolworths-vs-paknsave-best-nz-supermarket-gym-food.html"
+      "destination": "/articles/new-world-vs-woolworths-vs-paknsave-best-nz-supermarket-gym-food/index.html"
     },
     {
       "source": "/articles/why-90-percent-kiwis-doing-push-ups-wrong-how-fix",
-      "destination": "/articles/why-90-percent-kiwis-doing-push-ups-wrong-how-fix.html"
+      "destination": "/articles/why-90-percent-kiwis-doing-push-ups-wrong-how-fix/index.html"
     },
     {
-      "source": "/gym-finder",
-      "destination": "/gym-finder.html"
+      "source": "/calculators/bmi",
+      "destination": "/calculators/bmi/index.html"
     },
     {
-      "source": "/calculators",
-      "destination": "/calculators.html"
+      "source": "/calculators/bmr",
+      "destination": "/calculators/bmr/index.html"
+    },
+    {
+      "source": "/calculators/macro",
+      "destination": "/calculators/macro/index.html"
+    },
+    {
+      "source": "/calculators/body-fat",
+      "destination": "/calculators/body-fat/index.html"
+    },
+    {
+      "source": "/calculators/one-rep-max",
+      "destination": "/calculators/one-rep-max/index.html"
+    },
+    {
+      "source": "/calculators/ideal-weight",
+      "destination": "/calculators/ideal-weight/index.html"
     },
     {
       "source": "/(.*)",
-      "destination": "/index.html"
+      "destination": "/$1"
     }
   ]
 }
