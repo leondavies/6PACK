@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+'use client';
+
+import Link from "next/link";
 import { Facebook, Instagram, Twitter, Mail, ArrowUp } from "lucide-react";
 
 const Footer = () => {
@@ -47,25 +49,25 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-6 text-white">Fitness Hub</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/articles" className="text-gray-300 hover:text-white transition-colors text-lg group inline-flex items-center">
+                <Link href="/articles" className="text-gray-300 hover:text-white transition-colors text-lg group inline-flex items-center">
                   Articles
                   <span className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                 </Link>
               </li>
               <li>
-                <Link to="/workouts" className="text-gray-300 hover:text-white transition-colors text-lg group inline-flex items-center">
+                <Link href="/workouts" className="text-gray-300 hover:text-white transition-colors text-lg group inline-flex items-center">
                   Workouts
                   <span className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                 </Link>
               </li>
               <li>
-                <Link to="/calculators" className="text-gray-300 hover:text-white transition-colors text-lg group inline-flex items-center">
+                <Link href="/calculators" className="text-gray-300 hover:text-white transition-colors text-lg group inline-flex items-center">
                   Calculators
                   <span className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                 </Link>
               </li>
               <li>
-                <Link to="/subscription" className="text-gray-300 hover:text-white transition-colors text-lg group inline-flex items-center">
+                <Link href="/subscription" className="text-gray-300 hover:text-white transition-colors text-lg group inline-flex items-center">
                   Coaching Programs
                   <span className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                 </Link>
@@ -78,13 +80,13 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-6 text-white">Tools & Support</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/calculators/bmi" className="text-gray-300 hover:text-white transition-colors text-lg group inline-flex items-center">
+                <Link href="/calculators/bmi" className="text-gray-300 hover:text-white transition-colors text-lg group inline-flex items-center">
                   BMI Calculator
                   <span className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                 </Link>
               </li>
               <li>
-                <Link to="/calculators/macro" className="text-gray-300 hover:text-white transition-colors text-lg group inline-flex items-center">
+                <Link href="/calculators/macro" className="text-gray-300 hover:text-white transition-colors text-lg group inline-flex items-center">
                   Macro Calculator
                   <span className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                 </Link>

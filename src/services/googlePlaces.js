@@ -92,7 +92,18 @@ export function getMockGymsNearby(lat, lng) {
       coordinates: { lat: lat + 0.01, lng: lng + 0.01 },
       rating: 4.2,
       priceLevel: 2,
-              image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&fm=webp&q=85',
+      image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&fm=webp&q=85',
+      hours: {
+        mon: '6:00 AM - 10:00 PM',
+        tue: '6:00 AM - 10:00 PM', 
+        wed: '6:00 AM - 10:00 PM',
+        thu: '6:00 AM - 10:00 PM',
+        fri: '6:00 AM - 10:00 PM',
+        sat: '7:00 AM - 8:00 PM',
+        sun: '7:00 AM - 8:00 PM'
+      },
+      phone: '+64 9 123 4567',
+      website: 'https://cityfitness.co.nz',
       isOpen: true,
       types: ['gym', 'health'],
       distance: calculateDistance(lat, lng, lat + 0.01, lng + 0.01)
@@ -105,6 +116,17 @@ export function getMockGymsNearby(lat, lng) {
       rating: 4.5,
       priceLevel: 3,
       image: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=400&h=300&fit=crop&fm=webp&q=85',
+      hours: {
+        mon: '24 hours',
+        tue: '24 hours',
+        wed: '24 hours', 
+        thu: '24 hours',
+        fri: '24 hours',
+        sat: '24 hours',
+        sun: '24 hours'
+      },
+      phone: '+64 9 987 6543',
+      website: 'https://anytimefitness.co.nz',
       isOpen: true,
       types: ['gym', 'health'],
       distance: calculateDistance(lat, lng, lat - 0.01, lng - 0.01)

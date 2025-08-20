@@ -1,18 +1,17 @@
 {
-  "name": "vite-project",
+  "name": "6pack-nextjs",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "node scripts/generateStaticPages.js && vite build",
-    "build:static": "node scripts/generateStaticPages.js",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.1.1",
-    "@stripe/stripe-js": "^7.6.1",
     "@tailwindcss/typography": "^0.5.16",
     "@vercel/analytics": "^1.5.0",
     "class-variance-authority": "^0.7.0",
@@ -20,33 +19,23 @@
     "framer-motion": "^11.9.0",
     "lucide-react": "^0.525.0",
     "marked": "^16.1.1",
+    "next": "^14.2.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-helmet": "^6.1.0",
     "react-hook-form": "^7.61.1",
-    "react-router-dom": "^6.26.2",
-    "react-select": "^5.10.2",
     "sonner": "^2.0.6",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
-    "vanilla-tilt": "^1.8.1",
     "zod": "^4.0.10"
   },
   "devDependencies": {
-    "@eslint/js": "^9.9.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.20",
-    "eslint": "^9.9.0",
-    "eslint-plugin-react": "^7.35.0",
-    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
-    "eslint-plugin-react-refresh": "^0.4.9",
-    "globals": "^15.9.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.5",
     "lighthouse": "^12.8.0",
     "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.13",
-    "terser": "^5.43.1",
-    "vite": "^5.4.1"
+    "tailwindcss": "^3.4.13"
   }
 }
