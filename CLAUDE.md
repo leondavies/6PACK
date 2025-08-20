@@ -1,269 +1,388 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Claude Code (claude.ai/code) when working with the 6Pack NZ fitness platform codebase.
 
 ## Development Commands
 
-- **Development server**: `npm run dev` - Starts Vite dev server with hot reload
-- **Build**: `npm run build` - Generates SEO static pages and creates production build
-- **Linting**: `npm run lint` - Runs ESLint on all JavaScript files
-- **Preview**: `npm run preview` - Serves production build locally
-- **SEO Generation**: `node scripts/generateStaticPages.js` - Generates static HTML for social media crawlers
-
-## CRITICAL: SEO Static Page Generation
-
-**ALWAYS run after adding new articles or calculators:**
-```bash
-node scripts/generateStaticPages.js
-```
-
-This script:
-- Generates static HTML files with proper meta tags for social media crawlers
-- Creates Open Graph images, descriptions, and structured data
-- Updates vercel.json with routing for all pages
-- Ensures Facebook/Twitter/LinkedIn show correct images and descriptions
-
-**The build command automatically runs this script**, but run manually when:
-- Adding new articles to `src/data/products.js`
-- Creating new calculator pages
-- Updating article meta information
-
-**Why this matters**: Social media crawlers (Facebook, Twitter) don't execute JavaScript, so they can't see React Helmet meta tags. Static HTML files ensure proper social sharing.
+- **Development server**: `npm run dev` - Starts Next.js development server with hot reload
+- **Build**: `npm run build` - Creates optimized production build with static export
+- **Start**: `npm start` - Serves production build locally  
+- **Linting**: `npm run lint` - Runs ESLint on all TypeScript/JavaScript files
+- **Export**: `npm run export` - Exports static site (automatically included in build)
 
 ## Project Architecture
 
-This is a React fitness/nutrition website built with Vite, featuring:
+6Pack NZ is a **Next.js 14 App Router** fitness platform with static export, featuring comprehensive SEO optimization and fitness content management.
 
 ### Core Technologies
-- **React 18** with functional components and hooks
-- **React Router DOM** for client-side routing
-- **Vite** as build tool and dev server
-- **Tailwind CSS** for styling with custom fitness theme
-- **Framer Motion** for animations
+- **Next.js 14** with App Router and static export (`output: 'export'`)
+- **React 18** with functional components, hooks, and Server Components
+- **Tailwind CSS** with custom fitness design system and typography plugin
+- **Framer Motion** for smooth animations and page transitions
+- **TypeScript/JavaScript** with ES modules (`"type": "module"`)
+- **Vercel Analytics** for performance monitoring
 
 ### Application Structure
 
-**Routing**: All routes defined in `src/App.jsx` with automatic scroll-to-top behavior. Main sections:
-- `/` - Home page
-- `/shop` - E-commerce section 
-- `/calculators/*` - Fitness calculators (BMI, BMR, body fat, etc.)
-- `/workouts/*` - Workout routines by muscle group
-- `/articles/*` - Fitness/nutrition articles
-- `/subscription` - Subscription service
+**App Router Architecture** (`src/app/`):
+- `/` - Homepage with hero, calculators, articles showcase
+- `/articles/` - Articles listing with filtering and search
+- `/articles/[slug]/` - Dynamic article pages with SEO optimization
+- `/calculators/` - Fitness calculator hub
+  - `/calculators/bmi/` - BMI calculator with results sharing
+  - `/calculators/bmr/` - BMR/TDEE calculator 
+  - `/calculators/macro/` - Macro calculator with goal-based recommendations
+  - `/calculators/body-fat/` - Body fat percentage calculator
+  - `/calculators/one-rep-max/` - 1RM strength calculator
+  - `/calculators/ideal-weight/` - Ideal weight calculator
+- `/workouts/` - Workout plans listing
+- `/workouts/[slug]/` - Dynamic workout pages
+- `/gym-finder/` - Interactive gym finder with Google Places API
+- `/shop/` - E-commerce section
+- `/api/` - Server-side API routes for external services
 
-**Layout System**: Uses `src/components/layout.jsx` wrapper with:
-- Google Tag Manager integration in Helmet
-- Fixed header with `pt-20` main content offset
-- Responsive Footer component
+**Layout System**:
+- Global layout (`src/app/layout.jsx`) with comprehensive metadata
+- Nested layouts for specific sections (calculators, articles)
+- Fixed header with responsive navigation
+- Footer with sitemap and social links
 
-**State Management**: 
-- Custom `useCart` hook for e-commerce functionality with localStorage persistence
-- No global state manager - uses React hooks and context patterns
+### SEO Architecture (Advanced Implementation)
 
-**Data Layer**:
-- `src/data/products.js` contains large dataset of articles and products
-- Articles have slug-based routing with markdown content
-- Cart functionality supports quantity management and shipping calculations
+**Next.js Metadata API**: All pages use Next.js 14's built-in metadata system for optimal SEO
+- Global metadata in `src/app/layout.jsx`
+- Page-specific metadata exports for dynamic content
+- Automatic sitemap generation (`src/app/sitemap.js`)
+- Robots.txt generation (`src/app/robots.js`)
 
-### Styling Architecture
+**Enhanced SEO Utils** (`src/utils/seo-enhanced.js`):
+- Comprehensive meta tag generation with NZ-specific targeting
+- Structured data (JSON-LD) for rich snippets
+- Social media optimization (Open Graph, Twitter Cards)
+- Local SEO optimization for New Zealand market
 
-**Tailwind Configuration**:
-- Custom fitness color palette: `primary` (green), `secondary` (neutral), `accent` (orange)
-- Custom font family: `font-fitness` using Inter
-- Typography plugin enabled for article content
+**SEO Components** (`src/components/SEO.jsx`):
+- Reusable SEO components for different content types
+- ArticleSEO with reading time and author markup
+- CalculatorSEO with SoftwareApplication schema
+- WorkoutSEO with ExercisePlan schema
+- GymFinderSEO with WebApplication schema
 
-**Component Patterns**:
-- Layout components in `src/components/layout/`
-- UI components in `src/components/ui/`
-- Page components organized by feature in `src/pages/`
+**Site Configuration**:
+- Site URL: `https://www.6pack.co.nz`
+- Optimized for New Zealand market with local keywords
+- Social media integration (Twitter, Facebook, Instagram)
+- Google Places API integration for gym finder
 
-### Key Business Logic
+### Data Architecture
+
+**Content Management** (`src/data/products.js`):
+- **Articles Array**: Comprehensive fitness articles with markdown content
+  - Full article content stored inline with frontmatter-style metadata
+  - SEO-optimized with meta titles, descriptions, and keywords
+  - Featured article system for homepage promotion
+  - Category-based organization (Muscle Building, Weight Loss, etc.)
+  - Author attribution and publish date tracking
+  - Read time calculations and view counters
+
+**Article Structure**:
+```javascript
+{
+  id: 15,
+  title: "Article Title",
+  slug: "url-friendly-slug", 
+  category: "Weight Loss",
+  author: "Dr. Sarah Chen",
+  publishDate: "2025-08-20",
+  readTime: "11 min",
+  image: "https://images.unsplash.com/...",
+  excerpt: "Article summary for listings",
+  content: `# Full Markdown Content...`,
+  tags: ["keyword1", "keyword2"],
+  featured: true,
+  views: 1247,
+  metaTitle: "SEO-optimized title",
+  metaDescription: "SEO description"
+}
+```
+
+**Dynamic Content**:
+- Fitness categories with article counts
+- Workout plans with difficulty levels and equipment requirements
+- Gym data with Google Places integration
+- Supplement/product catalog
+
+### Component Architecture
+
+**Layout Components** (`src/components/layout/`):
+- `Header.jsx` - Navigation with mobile responsiveness
+- `Footer.jsx` - Site footer with links and social media
+
+**UI Components** (`src/components/ui/`):
+- `ImageWithFallback.jsx` - Optimized image loading with error handling
+- `ShareResults.jsx` - Social sharing for calculator results
+- `TableOfContents.jsx` - Article navigation
+- `ProgressIndicator.jsx` - Reading progress tracking
+- `ArticleShare.jsx` - Article social sharing
+
+**Specialized Components**:
+- `SEO.jsx` - Structured data generation for different page types
+- `blurText.jsx` - Animated text effects with Framer Motion
+- `ClientArticle.jsx` - Client-side article rendering with hydration
+
+### API Routes (Server-Side)
+
+**Google Places Integration** (`src/app/api/`):
+- `/api/gyms/nearby` - Find gyms near coordinates
+- `/api/gyms/photo` - Fetch gym photos from Google Places
+- `/api/geocode` - Convert addresses to coordinates  
+- `/api/autocomplete` - Address autocomplete suggestions
+
+**CORS Configuration**: All API routes include proper CORS headers for cross-origin requests
+
+### Styling System
+
+**Tailwind Configuration** (`tailwind.config.js`):
+- **Custom Color Palette**:
+  - `primary` - Green theme (fitness/health)
+  - `secondary` - Neutral grays
+  - `accent` - Orange highlights
+- **Typography Plugin**: Enhanced article typography with prose classes
+- **Custom Font**: Inter (`font-fitness`) for clean, modern aesthetic
+
+**Design Patterns**:
+- Mobile-first responsive design
+- Card-based layouts for content
+- Gradient backgrounds for hero sections
+- Consistent spacing with Tailwind scale
+- Accessibility-focused interactive elements
+
+### Business Logic
 
 **E-commerce Features**:
-- Shopping cart with localStorage persistence
-- Free shipping threshold at $99
-- Quantity management and totals calculation
+- Shopping cart with localStorage persistence (`src/hooks/useCart.js`)
+- Product catalog for supplements and equipment
+- Free shipping threshold calculations
 
-**Calculator Tools**: Multiple fitness calculators with form validation using react-hook-form and Zod schemas
+**Calculator Tools**:
+- Form validation using react-hook-form and Zod schemas
+- Real-time calculations with instant feedback
+- Result sharing via URL parameters
+- Progress tracking and recommendations
 
-**Content System**: Articles with markdown content, SEO optimization, and dynamic slug routing
+**Content Features**:
+- Article reading time estimation
+- View count tracking
+- Social sharing optimization
+- Table of contents generation
+- Related article suggestions
 
-## Development Notes
+### Build & Deployment Configuration
 
-- Uses ESLint with React-specific rules and React 18.3 settings
-- Vite config includes PostCSS with Tailwind and Autoprefixer
-- History API fallback enabled for SPA routing
-- Sonner toast notifications integrated
-- Google Analytics tracking via GTM
+**Next.js Config** (`next.config.js`):
+```javascript
+{
+  output: 'export',           // Static site generation
+  trailingSlash: true,        // URL trailing slash handling
+  images: { unoptimized: true }, // Static export compatibility
+  env: {                      // Environment variables
+    GOOGLE_PLACES_API_KEY: process.env.GOOGLE_PLACES_API_KEY,
+  }
+}
+```
 
-## CRITICAL: Meta Tags Requirements
+**Static Export**: Configured for deployment on CDN/static hosting with pre-rendered HTML
 
-**NEVER create or edit a page without comprehensive meta tags for SEO and social sharing.**
+**Performance Optimizations**:
+- Image optimization with fallbacks
+- Code splitting via Next.js
+- CSS-in-JS with Tailwind purging
+- Preconnect for external resources
 
-### Required Meta Tags for ALL Pages
+## CRITICAL: SEO & Meta Tags Implementation
 
+**Next.js Metadata API Usage** (NO React Helmet):
+All pages use Next.js 14's built-in metadata system. Example:
+
+```javascript
+export const metadata = {
+  title: 'Page Title | 6Pack NZ',
+  description: 'SEO-optimized description with NZ keywords',
+  openGraph: {
+    title: 'Social Media Title',
+    description: 'Social media description', 
+    images: [{
+      url: 'https://www.6pack.co.nz/og-image.jpg',
+      width: 1200,
+      height: 630,
+    }],
+    url: 'https://www.6pack.co.nz/page-url',
+  },
+  twitter: {
+    card: 'summary_large_image',
+  },
+  alternates: {
+    canonical: 'https://www.6pack.co.nz/page-url',
+  }
+}
+```
+
+**SEO Requirements for ALL Pages**:
+- Site URL: `https://www.6pack.co.nz` (with www)
+- Open Graph images: 1200x630 pixels
+- NZ-specific keywords and localization
+- Structured data for rich snippets
+- Mobile-optimized meta tags
+
+**SEO Components Usage**:
 ```jsx
-<Helmet>
-  {/* Basic SEO */}
-  <title>Descriptive Page Title | 6Pack NZ</title>
-  <meta name="description" content="Compelling 150-160 character description with NZ keywords" />
-  <meta name="keywords" content="relevant, keywords, new zealand, fitness" />
-  
-  {/* Open Graph for Facebook/LinkedIn */}
-  <meta property="og:title" content="Page Title" />
-  <meta property="og:description" content="Page description" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-id?w=1200&h=630&fit=crop&fm=webp&q=85" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:url" content="https://6pack.co.nz/page-url" />
-  <meta property="og:type" content="website" />
-  
-  {/* Twitter Cards */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Page Title" />
-  <meta name="twitter:description" content="Page description" />
-  <meta name="twitter:image" content="https://images.unsplash.com/photo-id?w=1200&h=630&fit=crop&fm=webp&q=85" />
-  
-  {/* Canonical URL */}
-  <link rel="canonical" href="https://6pack.co.nz/page-url" />
-</Helmet>
+import { ArticleSEO, CalculatorSEO } from '../components/SEO';
+
+// In article pages
+<ArticleSEO article={article} content={content} breadcrumbs={breadcrumbs} />
+
+// In calculator pages  
+<CalculatorSEO calculator={calculatorData} breadcrumbs={breadcrumbs} />
 ```
 
-### Image Requirements for Social Sharing
+## CRITICAL: Article Content Requirements
 
-- **Dimensions:** Always use 1200x630 pixels for Open Graph images
-- **Format:** Use Unsplash URLs with `w=1200&h=630&fit=crop&fm=webp&q=85`
-- **Content:** Choose fitness-relevant images that represent the page content
-- **Always include:** `og:image:width` and `og:image:height` meta tags
+**TLDR Section Positioning**: TLDR must appear **at the end** before conclusion, NOT at the beginning. This matches all existing articles.
 
-### NZ-Specific SEO Guidelines
-
-- Include "New Zealand", "NZ", or "Kiwi" in titles and descriptions where relevant
-- Target local regions: "Auckland", "Wellington", "Canterbury", "Christchurch"
-- Use local context: "gym NZ", "fitness New Zealand", "workout plans NZ"
-
-### Article Pages Special Requirements
-
-```jsx
-// For dynamic article images, ensure proper social media dimensions
-<meta property="og:image" content={article.image.replace(/w=\d+&h=\d+/, 'w=1200&h=630')} />
-
-// Include article-specific meta tags
-<meta property="article:author" content={article.author} />
-<meta property="article:published_time" content={article.publishDate} />
-<meta property="article:section" content={article.category} />
-```
-
-### Page Type Specific Images
-
-- **Calculator pages:** Fitness tracking/measurement themed images
-- **Workout pages:** Exercise/gym equipment images  
-- **Articles:** Reading/learning themed fitness images
-- **Shop pages:** Supplements/equipment images
-- **General pages:** High-quality gym/fitness lifestyle images
-
-### JSON-LD Structured Data
-
-Always include structured data for better search engine understanding:
-
-```jsx
-<script type="application/ld+json">
-  {JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "WebPage", // or "Article" for articles
-    "name": "Page Name",
-    "description": "Page description",
-    "url": "https://6pack.co.nz/page-url"
-  })}
-</script>
-```
-
-### Testing Meta Tags
-
-Before deploying, always test:
-1. Facebook Sharing Debugger: https://developers.facebook.com/tools/debug/
-2. Twitter Card Validator: https://cards-dev.twitter.com/validator
-3. LinkedIn Post Inspector: https://www.linkedin.com/post-inspector/
-
-### Common Mistakes to Avoid
-
-❌ **DON'T:**
-- Skip meta descriptions
-- Use generic titles like "Page - 6Pack"
-- Forget to include NZ-specific keywords
-- Use images smaller than 1200x630
-- Copy identical meta tags across pages
-
-✅ **DO:**
-- Write unique, descriptive titles for each page
-- Include compelling meta descriptions
-- Use proper social media image dimensions
-- Test social sharing before deploying
-- Include structured data where relevant
-
-## CRITICAL: Article TLDR Requirements
-
-**Every article MUST include a TLDR section immediately after the title and before the first content paragraph.**
-
-### TLDR Format Requirements
-
-```markdown
-## TLDR
-
-• **Key point 1**: Brief explanation with specific actionable advice
-• **Key point 2**: Include numbers/specifics where possible (e.g., "2-3 times per week")
-• **Key point 3**: Focus on practical implementation, not theory
-• **Key point 4**: Use bold for the main concept, regular text for details
-• **Key point 5**: 3-5 bullet points maximum for scannability
-```
-
-### TLDR Writing Guidelines
-
-**Content Requirements:**
-- 3-5 bullet points maximum
-- Each point starts with **bold key concept**
-- Include specific numbers, timeframes, or measurements
-- Focus on actionable takeaways readers can implement immediately
-- Use simple, direct language (avoid jargon)
-
-**Formatting Rules:**
-- Always use `##` heading level for "TLDR"
-- Use bullet points (`•`) not dashes or numbers
-- Bold the key concept, regular text for explanation
-- Place immediately after article title, before first paragraph
-- Add blank line before and after TLDR section
-
-**Examples of Good vs Bad TLDR Points:**
-
-❌ **Bad:** "Exercise is important for health"
-✅ **Good:** "**Aim for 150 minutes moderate exercise weekly**: Equivalent to 30 minutes, 5 days per week for optimal health benefits"
-
-❌ **Bad:** "Nutrition timing matters"
-✅ **Good:** "**Eat 20-40g protein within 2 hours post-workout**: Maximizes muscle protein synthesis and recovery"
-
-### Why TLDR Sections Are Critical
-
-1. **User Experience**: 80% of users scan before reading - TLDR captures them
-2. **Mobile Optimization**: Quick access to key info on smaller screens  
-3. **Social Sharing**: People share content with clear, digestible takeaways
-4. **SEO Benefits**: Featured snippets often pull from well-formatted summary content
-5. **Retention**: Readers remember 3-5 key points better than long paragraphs
-
-### Article Structure Template
-
+**Required Article Structure**:
 ```markdown
 # Article Title
 
-Brief intro paragraph setting context and hook.
+Introduction and hook paragraph.
+
+## Main Content Sections
+[Detailed content...]
 
 ## TLDR
+• **Key point 1**: Actionable advice with specifics
+• **Key point 2**: Include numbers and timeframes  
+• **Key point 3**: Practical implementation focus
 
-• **Key takeaway 1**: Specific actionable advice
-• **Key takeaway 2**: Include numbers and timeframes
-• **Key takeaway 3**: Focus on practical implementation
-
-## Main Content Section 1
-[Detailed content...]
+## Conclusion
+Final thoughts and call-to-action.
 ```
 
-**Remember**: TLDR is not optional - it's a critical user experience feature that improves engagement, sharing, and retention.
+**Content Guidelines**:
+- Include NZ-specific examples and context
+- Use scientific backing with study references
+- Provide actionable takeaways
+- Optimize for social media sharing
+- Include proper meta tags and descriptions
+
+## CRITICAL: User Requirements for New Articles
+
+**When the user requests a new article, they want:**
+
+### **Social Media Optimization Focus**
+- **Primary goal**: Create content perfect for Facebook sharing that grabs attention
+- **Controversial angles**: Use attention-grabbing hooks like "7 Lies", "Shocking Truth", "What They Don't Tell You"
+- **Shareable format**: Content that provokes discussion and encourages sharing
+- **Engagement triggers**: Include statements people will want to comment on or debate
+
+### **Content Quality Standards**
+- **Ultra-high quality**: Never settle for generic content - always "ultrathink" the approach
+- **Unique angles**: Check existing articles to ensure no overlap in topics or approaches
+- **Science-backed**: Include real research, studies, and statistics to support claims
+- **Actionable advice**: Every section should provide practical takeaways readers can implement
+
+### **New Zealand Focus**
+- **Local relevance**: Include NZ-specific challenges, examples, and cultural context
+- **Kiwi lifestyle**: Address unique aspects of living in New Zealand (weather, food culture, gym costs, etc.)
+- **Local terminology**: Use appropriate NZ terms and references where relevant
+
+### **Format Requirements**
+- **Attention-grabbing titles**: Use formats like "X Lies About...", "Shocking Truth About...", "Why X% of People..."
+- **Compelling intros**: Start with warnings, shocking statistics, or controversial statements
+- **Scannable content**: Use bold text, bullet points, and clear headings for easy reading
+- **Perfect length**: Long enough to be comprehensive but short enough to maintain engagement
+
+### **Content Creation Process**
+1. **First**: Check existing articles in `src/data/products.js` to avoid topic overlap
+2. **Research**: Find a unique, controversial, or myth-busting angle
+3. **Structure**: Follow the established article format with TLDR at the end
+4. **Optimize**: Include comprehensive SEO metadata and social sharing optimization
+5. **Test**: Consider how it will perform when shared on Facebook/social media
+
+### **Examples of Successful Approaches**
+- **Myth-busting**: "7 Fat Loss Lies Keeping You Overweight"
+- **Controversial comparisons**: "New World vs Woolworths vs Pak'nSave: Best NZ Supermarket Gym Food"
+- **Shocking revelations**: "Why 90% of Kiwis Are Doing Push-Ups Wrong"
+- **Surprising findings**: "5-Minute Metabolism Hack That Burns 300 Extra Calories Daily"
+
+**Remember**: The user values content that will generate engagement, shares, and discussion on social media while providing genuine value to New Zealand fitness enthusiasts.
+
+## Development Best Practices
+
+**File Organization**:
+- Components in `src/components/` with logical grouping
+- Pages follow App Router conventions in `src/app/`
+- Utilities in `src/utils/` for reusable functions
+- Data management in `src/data/` for content
+
+**Code Standards**:
+- ES modules throughout (`"type": "module"`)
+- React functional components with hooks
+- TypeScript/JavaScript with proper imports
+- Tailwind for all styling (no CSS modules)
+
+**Content Management**:
+- All articles stored in `src/data/products.js`
+- Use existing article structure for consistency
+- Update featured articles on homepage
+- Maintain SEO metadata for all content
+
+**API Integration**:
+- Google Places API for gym finder functionality
+- Proper error handling and CORS configuration
+- Environment variable management
+- Rate limiting considerations
+
+## Environment Variables
+
+Required environment variables:
+```bash
+GOOGLE_PLACES_API_KEY=your_google_places_api_key
+```
+
+## Common Tasks
+
+**Adding New Articles**:
+1. Add article object to `src/data/products.js` articles array
+2. Follow existing structure with all required fields
+3. Include comprehensive SEO metadata
+4. Position TLDR at end before conclusion
+5. Test social sharing with Facebook debugger
+
+**Adding New Calculators**:
+1. Create new directory in `src/app/calculators/[name]/`
+2. Add `page.jsx` with calculator logic and `layout.jsx` with metadata
+3. Include CalculatorSEO component
+4. Add form validation with react-hook-form and Zod
+5. Implement result sharing functionality
+
+**SEO Testing**:
+- Facebook Sharing Debugger: https://developers.facebook.com/tools/debug/
+- Google Rich Results Test: https://search.google.com/test/rich-results
+- Twitter Card Validator: https://cards-dev.twitter.com/validator
+
+## Current Project Status
+
+- **Tech Stack**: Next.js 14 App Router with static export
+- **SEO**: Fully optimized with comprehensive metadata and structured data
+- **Content**: 15+ high-quality fitness articles with consistent formatting
+- **Features**: 6 fitness calculators, gym finder, workout plans
+- **Performance**: Optimized for speed and Core Web Vitals
+- **Deployment**: Static export ready for CDN deployment
+
+**Recent Updates**:
+- Migrated from Vite to Next.js 14 App Router
+- Implemented comprehensive SEO optimization
+- Added structured data for rich snippets
+- Optimized for New Zealand market
+- Fixed hydration issues with date formatting
+- Removed redundant static page generation (Next.js handles this natively)

@@ -219,7 +219,11 @@ export default function ArticlesPage() {
                     {article.author}
                   </div>
                   <time className="text-sm text-gray-500">
-                    {new Date(article.publishDate).toLocaleDateString()}
+                    {new Date(article.publishDate).toLocaleDateString('en-NZ', {
+                      day: '2-digit',
+                      month: '2-digit', 
+                      year: 'numeric'
+                    })}
                   </time>
                 </div>
                 
