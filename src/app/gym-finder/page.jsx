@@ -440,13 +440,6 @@ export default function GymFinderPage() {
                 >
                   Get Sponsored Placement
                 </a>
-                <a
-                  href="tel:+64212345678"
-                  className="inline-flex items-center px-4 py-2 border border-primary-600 text-primary-600 text-sm font-medium rounded-lg hover:bg-primary-50 transition-colors"
-                >
-                  <Phone className="w-4 h-4 mr-1" />
-                  Call Us
-                </a>
               </div>
             </div>
           </div>
