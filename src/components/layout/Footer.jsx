@@ -67,8 +67,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/subscription" className="text-gray-300 hover:text-white transition-colors text-lg group inline-flex items-center">
-                  Coaching Programs
+                <Link href="/gym-finder" className="text-gray-300 hover:text-white transition-colors text-lg group inline-flex items-center">
+                  Gym Finder
                   <span className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                 </Link>
               </li>
@@ -92,10 +92,10 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="mailto:info@6pack.co.nz" className="text-gray-300 hover:text-white transition-colors text-lg group inline-flex items-center">
+                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors text-lg group inline-flex items-center">
                   Contact Us
                   <span className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
-                </a>
+                </Link>
               </li>
               <li>
                 <button 
@@ -114,19 +114,22 @@ const Footer = () => {
           <p className="text-gray-400 text-lg font-medium">
             © 2025 6Pack.co.nz. All rights reserved. Transform your fitness journey. 🚀
           </p>
-          <div className="flex space-x-8 mt-4 md:mt-0">
-            <a href="/sitemap.html" className="text-gray-400 hover:text-white text-lg transition-colors">
-              Sitemap
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-lg transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-lg transition-colors">
-              Terms of Service
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-lg transition-colors">
+          <div className="flex flex-wrap gap-4 md:gap-8 mt-4 md:mt-0">
+            <Link href="/about" className="text-gray-400 hover:text-white text-lg transition-colors">
+              About
+            </Link>
+            <Link href="/contact" className="text-gray-400 hover:text-white text-lg transition-colors">
+              Contact
+            </Link>
+            <Link href="/privacy" className="text-gray-400 hover:text-white text-lg transition-colors">
+              Privacy
+            </Link>
+            <Link href="/terms" className="text-gray-400 hover:text-white text-lg transition-colors">
+              Terms
+            </Link>
+            <Link href="/disclaimer" className="text-gray-400 hover:text-white text-lg transition-colors">
               Disclaimer
-            </a>
+            </Link>
           </div>
         </div>
       </div>

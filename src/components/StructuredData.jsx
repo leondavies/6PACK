@@ -166,7 +166,7 @@ export const organizationSchema = {
     {
       "@type": "ContactPoint",
       contactType: "technical support",
-      email: "support@6pack.co.nz",
+      email: "info@6pack.co.nz",
       availableLanguage: ["English"],
       areaServed: "NZ"
     }

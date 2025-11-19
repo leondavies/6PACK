@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { Apple, ArrowLeft, Info, Target, TrendingUp, Activity } from "lucide-react";
 import BlurIn from "../../../components/blurText";
 import ShareResults from "../../../components/ui/ShareResults";
+import MedicalDisclaimer from "../../../components/MedicalDisclaimer";
 
 function MacroCalculatorContent() {
   const searchParams = useSearchParams();
@@ -503,6 +504,11 @@ function MacroCalculatorContent() {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Medical Disclaimer */}
+          <div className="mt-8">
+            <MedicalDisclaimer calculatorType="Macro calculator" />
           </div>
         </div>
       </div>

@@ -7,6 +7,7 @@ import { Scale, ArrowLeft, Info, Target, TrendingUp, Heart } from "lucide-react"
 import BlurIn from "../../../components/blurText";
 import ShareResults from "../../../components/ui/ShareResults";
 import { CalculatorSEO } from "../../../components/SEO";
+import MedicalDisclaimer from "../../../components/MedicalDisclaimer";
 
 function BMICalculatorContent() {
   const searchParams = useSearchParams();
@@ -369,12 +370,17 @@ function BMICalculatorContent() {
             <div>
               <h4 className="font-semibold text-blue-900 mb-2">Important Note</h4>
               <p className="text-blue-800 text-sm">
-                BMI is a screening tool and doesn't directly measure body fat. It may not be accurate for athletes 
-                with high muscle mass, pregnant women, or elderly individuals. Consult a healthcare provider for 
+                BMI is a screening tool and doesn't directly measure body fat. It may not be accurate for athletes
+                with high muscle mass, pregnant women, or elderly individuals. Consult a healthcare provider for
                 personalized health assessment.
               </p>
             </div>
           </div>
+        </div>
+
+        {/* Medical Disclaimer */}
+        <div className="mt-8">
+          <MedicalDisclaimer calculatorType="BMI calculator" />
         </div>
       </div>
       </div>

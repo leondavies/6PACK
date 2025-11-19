@@ -5,9 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  env: {
-    GOOGLE_PLACES_API_KEY: process.env.GOOGLE_PLACES_API_KEY,
-  },
+  // Note: API routes access environment variables via process.env directly
+  // No need to expose them in the env config which could leak to client-side code
 }
 
 export default nextConfig
