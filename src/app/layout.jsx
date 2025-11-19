@@ -143,7 +143,81 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-        
+
+        {/* Global Structured Data - Organization */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: '6Pack NZ',
+              legalName: '6Pack New Zealand',
+              url: 'https://www.6pack.co.nz',
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://www.6pack.co.nz/og-image.jpg',
+                width: 1200,
+                height: 630
+              },
+              description: 'New Zealand\'s premier fitness and training platform offering expert-backed content, personalised coaching, and science-based strategies for transformation.',
+              foundingDate: '2024',
+              address: {
+                '@type': 'PostalAddress',
+                addressCountry: 'NZ',
+                addressRegion: 'New Zealand'
+              },
+              contactPoint: {
+                '@type': 'ContactPoint',
+                email: 'info@6pack.co.nz',
+                contactType: 'Customer Service',
+                areaServed: 'NZ'
+              },
+              sameAs: [
+                'https://twitter.com/6pack_nz',
+                'https://facebook.com/6pack.co.nz',
+                'https://instagram.com/6pack_nz'
+              ],
+              areaServed: {
+                '@type': 'Country',
+                name: 'New Zealand'
+              }
+            })
+          }}
+        />
+
+        {/* Global Structured Data - WebSite */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: '6Pack NZ',
+              alternateName: '6Pack New Zealand',
+              url: 'https://www.6pack.co.nz',
+              description: 'New Zealand\'s #1 fitness platform with FREE calculators, expert workout plans, and science-backed nutrition guides.',
+              publisher: {
+                '@type': 'Organization',
+                name: '6Pack NZ',
+                logo: {
+                  '@type': 'ImageObject',
+                  url: 'https://www.6pack.co.nz/og-image.jpg'
+                }
+              },
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: {
+                  '@type': 'EntryPoint',
+                  urlTemplate: 'https://www.6pack.co.nz/articles?search={search_term_string}'
+                },
+                'query-input': 'required name=search_term_string'
+              },
+              inLanguage: 'en-NZ'
+            })
+          }}
+        />
+
         {/* Optimize rendering */}
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="theme-color" content="#22c55e" />

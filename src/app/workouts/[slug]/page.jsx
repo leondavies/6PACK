@@ -989,7 +989,7 @@ export default function WorkoutPage({ params }) {
 
   return (
     <>
-      {/* Structured Data */}
+      {/* Structured Data - Article */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -1001,14 +1001,14 @@ export default function WorkoutPage({ params }) {
             "image": workout.image,
             "author": {
               "@type": "Organization",
-              "name": "6Pack"
+              "name": "6Pack NZ"
             },
             "publisher": {
-              "@type": "Organization", 
-              "name": "6Pack",
+              "@type": "Organization",
+              "name": "6Pack NZ",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.6pack.co.nz/logo.png"
+                "url": "https://www.6pack.co.nz/og-image.jpg"
               }
             },
             "datePublished": "2024-01-15",
@@ -1019,6 +1019,37 @@ export default function WorkoutPage({ params }) {
             },
             "articleSection": "Fitness",
             "keywords": `${params.slug} workout, ${params.slug} exercises, bodyweight training`
+          }),
+        }}
+      />
+
+      {/* Structured Data - Breadcrumbs */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.6pack.co.nz"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Workouts",
+                "item": "https://www.6pack.co.nz/workouts"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": workout.title,
+                "item": `https://www.6pack.co.nz/workouts/${params.slug}`
+              }
+            ]
           }),
         }}
       />

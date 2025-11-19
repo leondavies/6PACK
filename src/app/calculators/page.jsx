@@ -83,7 +83,89 @@ const calculators = [
 
 export default function CalculatorsPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      {/* Structured Data - ItemList */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "6Pack NZ Fitness Calculators",
+            "description": "Free fitness calculators for health and wellness goals",
+            "numberOfItems": 6,
+            "itemListElement": calculators.map((calc, index) => ({
+              "@type": "SoftwareApplication",
+              "position": index + 1,
+              "name": calc.title,
+              "description": calc.description,
+              "url": `https://www.6pack.co.nz/calculators/${calc.id}`,
+              "applicationCategory": "HealthApplication",
+              "operatingSystem": "Web Browser",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "NZD"
+              }
+            }))
+          })
+        }}
+      />
+
+      {/* Structured Data - FAQPage */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Are the fitness calculators free to use?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes! All 6Pack NZ fitness calculators are completely free to use with no sign-up required. We offer BMI, BMR, body fat, macro, 1RM, and ideal weight calculators at no cost."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How accurate are the fitness calculators?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our calculators use scientifically validated formulas and peer-reviewed research. While they provide accurate estimates, individual results may vary. For precise measurements, consult with a healthcare or fitness professional."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which calculator should I use first?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Start with the BMI calculator to understand your weight status, then use the BMR calculator to determine your calorie needs. For nutrition planning, the macro calculator is essential. Body fat calculator helps track composition changes."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do I need to create an account to use the calculators?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No account is needed! All calculators are accessible instantly without any registration. Simply enter your information and get immediate results. You can also share your results via URL."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I use these calculators on my mobile phone?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes! All 6Pack NZ calculators are fully mobile-responsive and work on smartphones, tablets, and desktop computers. They're optimized for ease of use on any device."
+                }
+              }
+            ]
+          })
+        }}
+      />
+
+      <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="relative bg-gradient-to-r from-gray-900 to-gray-700 text-white overflow-hidden">
         <div className="absolute inset-0">
@@ -218,5 +300,6 @@ export default function CalculatorsPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

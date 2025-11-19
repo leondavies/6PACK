@@ -169,14 +169,15 @@ export function CalculatorSEO({
             price: '0',
             priceCurrency: 'NZD',
             availability: 'https://schema.org/InStock'
-          },
-          aggregateRating: {
-            '@type': 'AggregateRating',
-            ratingValue: '4.8',
-            ratingCount: '250',
-            bestRating: '5',
-            worstRating: '1'
           }
+          // AggregateRating removed - should only be added when real user reviews are implemented
+          // aggregateRating: {
+          //   '@type': 'AggregateRating',
+          //   ratingValue: '4.8',
+          //   ratingCount: '250',
+          //   bestRating: '5',
+          //   worstRating: '1'
+          // }
         }
       }}
       breadcrumbs={breadcrumbs}

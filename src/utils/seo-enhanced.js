@@ -336,14 +336,15 @@ export function generateToolSchema({
       price: '0',
       priceCurrency: 'NZD',
       availability: 'https://schema.org/InStock'
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      ratingCount: '150',
-      bestRating: '5',
-      worstRating: '1'
     }
+    // AggregateRating removed - should only be added when real user reviews exist
+    // aggregateRating: {
+    //   '@type': 'AggregateRating',
+    //   ratingValue: '4.8',
+    //   ratingCount: '150',
+    //   bestRating: '5',
+    //   worstRating: '1'
+    // }
   };
 }
 
