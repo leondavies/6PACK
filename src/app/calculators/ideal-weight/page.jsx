@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { TrendingUp, ArrowLeft, Info, Target, Users, Activity } from "lucide-react";
 import BlurIn from "../../../components/blurText";
 import ShareResults from "../../../components/ui/ShareResults";
+import MedicalDisclaimer from "../../../components/MedicalDisclaimer";
 
 function IdealWeightCalculatorContent() {
   const searchParams = useSearchParams();
@@ -450,6 +451,11 @@ function IdealWeightCalculatorContent() {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Medical Disclaimer */}
+          <div className="mt-8">
+            <MedicalDisclaimer calculatorType="Ideal Weight calculator" />
           </div>
         </div>
       </div>

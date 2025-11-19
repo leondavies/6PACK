@@ -1,9 +1,18 @@
 import { NextResponse } from 'next/server';
 
 export async function GET(request) {
-  // Set CORS headers
+  // Set CORS headers - restrict to own domain for security
+  const allowedOrigins = [
+    'https://www.6pack.co.nz',
+    'https://6pack.co.nz',
+    'http://localhost:3000',
+  ];
+
+  const origin = request.headers.get('origin');
+  const corsOrigin = allowedOrigins.includes(origin) ? origin : allowedOrigins[0];
+
   const headers = {
-    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Origin': corsOrigin,
     'Access-Control-Allow-Methods': 'GET, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type',
   };
@@ -108,11 +117,20 @@ export async function GET(request) {
   }
 }
 
-export async function OPTIONS() {
+export async function OPTIONS(request) {
+  const allowedOrigins = [
+    'https://www.6pack.co.nz',
+    'https://6pack.co.nz',
+    'http://localhost:3000',
+  ];
+
+  const origin = request.headers.get('origin');
+  const corsOrigin = allowedOrigins.includes(origin) ? origin : allowedOrigins[0];
+
   return new Response(null, {
     status: 200,
     headers: {
-      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Origin': corsOrigin,
       'Access-Control-Allow-Methods': 'GET, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type',
     },

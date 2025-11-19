@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { Dumbbell, ArrowLeft, Info, Target, TrendingUp, Activity } from "lucide-react";
 import BlurIn from "../../../components/blurText";
 import ShareResults from "../../../components/ui/ShareResults";
+import MedicalDisclaimer from "../../../components/MedicalDisclaimer";
 
 function OneRepMaxCalculatorContent() {
   const searchParams = useSearchParams();
@@ -483,6 +484,11 @@ function OneRepMaxCalculatorContent() {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Medical Disclaimer */}
+          <div className="mt-8">
+            <MedicalDisclaimer calculatorType="1RM calculator" />
           </div>
         </div>
       </div>

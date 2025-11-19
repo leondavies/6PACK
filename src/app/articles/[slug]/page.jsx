@@ -6,6 +6,7 @@ import { articles } from '../../../data/products';
 import ArticleShare from '../../../components/ui/ArticleShare';
 import TableOfContents from '../../../components/ui/TableOfContents';
 import ClientArticle from '../../../components/ClientArticle';
+import AuthorBio from '../../../components/AuthorBio';
 
 export async function generateStaticParams() {
   return articles.map((article) => ({
@@ -233,11 +234,14 @@ export default function ArticlePage({ params }) {
             {/* Main Content */}
             <div className="lg:col-span-3 order-1 lg:order-1">
               <article className="prose prose-lg prose-gray max-w-none">
-                <div 
+                <div
                   dangerouslySetInnerHTML={{ __html: processedContent }}
                   className="article-content"
                 />
               </article>
+
+              {/* Author Bio */}
+              <AuthorBio authorName={article.author} />
 
               {/* Tags */}
               <div className="mt-8 pt-8 border-t border-gray-200">
