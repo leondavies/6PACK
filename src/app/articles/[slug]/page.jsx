@@ -107,7 +107,7 @@ export default function ArticlePage({ params }) {
 
   return (
     <ClientArticle>
-      {/* Structured Data */}
+      {/* Structured Data - Article */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -128,10 +128,10 @@ export default function ArticlePage({ params }) {
             },
             publisher: {
               "@type": "Organization",
-              name: "6Pack",
+              name: "6Pack NZ",
               logo: {
                 "@type": "ImageObject",
-                url: "https://www.6pack.co.nz/logo.png",
+                url: "https://www.6pack.co.nz/og-image.jpg",
               },
             },
             datePublished: article.publishDate,
@@ -140,6 +140,37 @@ export default function ArticlePage({ params }) {
               "@type": "WebPage",
               "@id": `https://www.6pack.co.nz/articles/${article.slug}`,
             },
+          }),
+        }}
+      />
+
+      {/* Structured Data - Breadcrumbs */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.6pack.co.nz"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Articles",
+                "item": "https://www.6pack.co.nz/articles"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": article.title,
+                "item": `https://www.6pack.co.nz/articles/${article.slug}`
+              }
+            ]
           }),
         }}
       />

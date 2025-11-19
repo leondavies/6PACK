@@ -66,6 +66,24 @@ export default function sitemap() {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/workouts/chest`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/workouts/legs`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/workouts/core`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/gym-finder`,
       lastModified: new Date(),
       changeFrequency: 'weekly',

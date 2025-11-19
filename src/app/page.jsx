@@ -116,12 +116,7 @@ function HomePage() {
                 "price": "0",
                 "priceCurrency": "NZD"
               },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "ratingCount": "2500",
-                "bestRating": "5"
-              },
+              // AggregateRating removed - will be added when real user reviews are implemented
               "author": {
                 "@type": "Organization",
                 "name": "6Pack NZ"

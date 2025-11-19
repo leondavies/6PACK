@@ -16,11 +16,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with th
 
 ### Core Technologies
 - **Next.js 14** with App Router and static export (`output: 'export'`)
-- **React 18** with functional components, hooks, and Server Components
+- **React 18** with functional components, hooks, Server Components, and Client Components (`'use client'`)
 - **Tailwind CSS** with custom fitness design system and typography plugin
 - **Framer Motion** for smooth animations and page transitions
 - **TypeScript/JavaScript** with ES modules (`"type": "module"`)
 - **Vercel Analytics** for performance monitoring
+- **Google Tag Manager** (GTM-P7M9CTMZ) for tracking and analytics
+- **marked** library for markdown parsing and rendering
+- **react-hook-form** with **Zod** for form validation
+- **Sonner** for toast notifications
 
 ### Application Structure
 
@@ -46,6 +50,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with th
 - Nested layouts for specific sections (calculators, articles)
 - Fixed header with responsive navigation
 - Footer with sitemap and social links
+- Performance optimizations: preconnect, DNS prefetch for external resources
+- Accessibility features: skip-to-content link, semantic HTML
+
+**Static Generation**:
+- Dynamic routes use `generateStaticParams()` for static page generation at build time
+- Article pages (`/articles/[slug]`) pre-render all articles from `src/data/products.js`
+- Calculator pages are statically generated with client-side interactivity
+- Sitemap automatically generated from articles and routes (`src/app/sitemap.js`)
 
 ### SEO Architecture (Advanced Implementation)
 
@@ -162,20 +174,25 @@ This file provides guidance to Claude Code (claude.ai/code) when working with th
 **E-commerce Features**:
 - Shopping cart with localStorage persistence (`src/hooks/useCart.js`)
 - Product catalog for supplements and equipment
-- Free shipping threshold calculations
+- Free shipping threshold: $99 NZD (calculated in `getShippingCost()`)
+- Standard shipping cost: $9.99 NZD
 
 **Calculator Tools**:
 - Form validation using react-hook-form and Zod schemas
 - Real-time calculations with instant feedback
-- Result sharing via URL parameters
-- Progress tracking and recommendations
+- Result sharing via URL parameters (e.g., `/calculators/bmi/?height=180&weight=75&unit=metric&bmi=23.1`)
+- Client-side components using `'use client'` directive for interactivity
+- Suspense boundaries for URL parameter handling with `useSearchParams()`
+- Progress tracking and personalized recommendations based on results
 
 **Content Features**:
-- Article reading time estimation
-- View count tracking
-- Social sharing optimization
-- Table of contents generation
-- Related article suggestions
+- Article reading time estimation (calculated from word count: `Math.ceil(content.split(' ').length / 200)`)
+- View count tracking for each article
+- Social sharing optimization with Open Graph and Twitter Cards
+- Table of contents generation from markdown headings
+- Related article suggestions based on category
+- Markdown rendering with `marked` library
+- Client-side hydration for interactive elements (`ClientArticle.jsx`)
 
 ### Build & Deployment Configuration
 
@@ -241,8 +258,29 @@ import { ArticleSEO, CalculatorSEO } from '../components/SEO';
 // In article pages
 <ArticleSEO article={article} content={content} breadcrumbs={breadcrumbs} />
 
-// In calculator pages  
+// In calculator pages
 <CalculatorSEO calculator={calculatorData} breadcrumbs={breadcrumbs} />
+```
+
+**Dynamic Page Metadata Pattern**:
+For dynamic routes, export both `generateStaticParams` and `generateMetadata`:
+```jsx
+// Generate static paths at build time
+export async function generateStaticParams() {
+  return articles.map((article) => ({
+    slug: article.slug,
+  }));
+}
+
+// Generate metadata for each page
+export async function generateMetadata({ params }) {
+  const article = articles.find(a => a.slug === params.slug);
+  return {
+    title: `${article.title} | 6Pack NZ`,
+    description: article.excerpt,
+    openGraph: { /* ... */ },
+  };
+}
 ```
 
 ## CRITICAL: Article Content Requirements
@@ -327,8 +365,11 @@ Final thoughts and call-to-action.
 **Code Standards**:
 - ES modules throughout (`"type": "module"`)
 - React functional components with hooks
+- Use `'use client'` directive for components requiring client-side interactivity (useState, useEffect, useSearchParams, etc.)
+- Server Components by default (no directive needed)
 - TypeScript/JavaScript with proper imports
 - Tailwind for all styling (no CSS modules)
+- Lucide React for icons
 
 **Content Management**:
 - All articles stored in `src/data/products.js`
@@ -338,9 +379,23 @@ Final thoughts and call-to-action.
 
 **API Integration**:
 - Google Places API for gym finder functionality
+- API routes in `src/app/api/` directory (server-side only)
+- All API routes return JSON with proper CORS headers
 - Proper error handling and CORS configuration
-- Environment variable management
+- Environment variable management via `next.config.js` env property
 - Rate limiting considerations
+
+**Client vs Server Components**:
+- **Client Components** (need `'use client'`):
+  - Components using hooks: `useState`, `useEffect`, `useSearchParams`, `useRouter`
+  - Event handlers: `onClick`, `onChange`, `onSubmit`
+  - Browser APIs: `localStorage`, `window`, `document`
+  - Third-party libraries requiring browser environment
+- **Server Components** (default, no directive):
+  - Static content rendering
+  - Data fetching at build time
+  - SEO metadata generation
+  - Layout components without interactivity
 
 ## Environment Variables
 
@@ -361,9 +416,21 @@ GOOGLE_PLACES_API_KEY=your_google_places_api_key
 **Adding New Calculators**:
 1. Create new directory in `src/app/calculators/[name]/`
 2. Add `page.jsx` with calculator logic and `layout.jsx` with metadata
-3. Include CalculatorSEO component
-4. Add form validation with react-hook-form and Zod
-5. Implement result sharing functionality
+3. Wrap components using `useSearchParams()` in a Suspense boundary:
+   ```jsx
+   import { Suspense } from 'react';
+
+   export default function Page() {
+     return (
+       <Suspense fallback={<div>Loading...</div>}>
+         <CalculatorContent /> {/* Component using useSearchParams */}
+       </Suspense>
+     );
+   }
+   ```
+4. Include CalculatorSEO component
+5. Add form validation with react-hook-form and Zod
+6. Implement result sharing functionality via URL parameters
 
 **SEO Testing**:
 - Facebook Sharing Debugger: https://developers.facebook.com/tools/debug/
@@ -374,8 +441,8 @@ GOOGLE_PLACES_API_KEY=your_google_places_api_key
 
 - **Tech Stack**: Next.js 14 App Router with static export
 - **SEO**: Fully optimized with comprehensive metadata and structured data
-- **Content**: 15+ high-quality fitness articles with consistent formatting
-- **Features**: 6 fitness calculators, gym finder, workout plans
+- **Content**: 29 high-quality fitness articles with consistent formatting
+- **Features**: 6 fitness calculators (BMI, BMR, Macro, Body Fat, 1RM, Ideal Weight), gym finder, workout plans
 - **Performance**: Optimized for speed and Core Web Vitals
 - **Deployment**: Static export ready for CDN deployment
 
