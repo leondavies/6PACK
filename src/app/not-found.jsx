@@ -98,8 +98,8 @@ export default function NotFound() {
           <div className="mt-8 text-sm text-gray-500">
             <p>
               Still can't find what you're looking for?{' '}
-              <a 
-                href="mailto:support@6pack.co.nz" 
+              <a
+                href="mailto:info@6pack.co.nz"
                 className="text-primary-600 hover:text-primary-500 font-medium"
               >
                 Contact our support team
