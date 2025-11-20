@@ -41,8 +41,8 @@ export default function ContactPage() {
                 <MessageCircle className="text-blue-600 mr-4 flex-shrink-0" size={32} />
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Support</h3>
-                  <a href="mailto:support@6pack.co.nz" className="text-blue-600 hover:underline text-lg">
-                    support@6pack.co.nz
+                  <a href="mailto:info@6pack.co.nz" className="text-blue-600 hover:underline text-lg">
+                    info@6pack.co.nz
                   </a>
                   <p className="text-gray-600 mt-2">Technical issues and calculator problems</p>
                 </div>
@@ -52,8 +52,8 @@ export default function ContactPage() {
                 <Mail className="text-purple-600 mr-4 flex-shrink-0" size={32} />
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Privacy & Legal</h3>
-                  <a href="mailto:privacy@6pack.co.nz" className="text-purple-600 hover:underline text-lg">
-                    privacy@6pack.co.nz
+                  <a href="mailto:info@6pack.co.nz" className="text-purple-600 hover:underline text-lg">
+                    info@6pack.co.nz
                   </a>
                   <p className="text-gray-600 mt-2">Privacy concerns and data requests</p>
                 </div>
@@ -85,7 +85,7 @@ export default function ContactPage() {
               <div className="space-y-4">
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Calculator Issues</h3>
-                  <p className="text-gray-600">If a calculator isn't working, try clearing your browser cache or using a different browser. Contact support@6pack.co.nz if problems persist.</p>
+                  <p className="text-gray-600">If a calculator isn't working, try clearing your browser cache or using a different browser. Contact info@6pack.co.nz if problems persist.</p>
                 </div>
 
                 <div className="bg-gray-50 p-6 rounded-lg">

@@ -63,8 +63,8 @@ export default function Error({
           <div className="mt-6 text-sm text-gray-500">
             <p>
               If this problem persists, please{' '}
-              <a 
-                href="mailto:support@6pack.co.nz" 
+              <a
+                href="mailto:info@6pack.co.nz"
                 className="text-primary-600 hover:text-primary-500"
               >
                 contact our support team

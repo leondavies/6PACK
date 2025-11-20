@@ -7,7 +7,7 @@ const authorData = {
     bio: 'Dr. Chen has over 15 years of experience in exercise physiology and sports nutrition. She holds a PhD in Sport Science and has worked with elite athletes and everyday fitness enthusiasts across New Zealand.',
     credentials: ['PhD Sport Science', 'CSCS Certified', 'Registered Nutritionist'],
     articlesCount: 8,
-    image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=400&fit=crop'
+    image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=400&fit=crop&fm=webp&q=85'
   },
   'Mike Thompson': {
     name: 'Mike Thompson',
@@ -15,7 +15,7 @@ const authorData = {
     bio: 'Mike is a certified personal trainer with 10+ years helping Kiwis achieve their fitness goals. He specializes in strength training, body recomposition, and sustainable nutrition strategies.',
     credentials: ['Level 4 Personal Trainer', 'Precision Nutrition Certified', 'Olympic Weightlifting Coach'],
     articlesCount: 6,
-    image: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=400&h=400&fit=crop'
+    image: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=400&h=400&fit=crop&fm=webp&q=85'
   },
   'Emma Williams': {
     name: 'Emma Williams',
@@ -23,7 +23,7 @@ const authorData = {
     bio: 'Emma combines evidence-based exercise science with practical training experience. She has helped hundreds of New Zealanders improve their fitness through smart programming and nutrition.',
     credentials: ['MSc Exercise Physiology', 'NASM CPT', 'Metabolic Conditioning Specialist'],
     articlesCount: 5,
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop'
+    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&fm=webp&q=85'
   },
   'David Lee': {
     name: 'David Lee',
@@ -31,7 +31,7 @@ const authorData = {
     bio: 'David is a registered dietitian specializing in sports nutrition and body composition. He works with athletes and fitness enthusiasts to optimize their nutrition for performance and health.',
     credentials: ['Registered Dietitian', 'Sports Nutrition Specialist', 'Body Composition Expert'],
     articlesCount: 4,
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop'
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&fm=webp&q=85'
   },
   'Rachel Park': {
     name: 'Rachel Park',
@@ -39,7 +39,7 @@ const authorData = {
     bio: 'Rachel has dedicated her career to helping people move better and get stronger. With a background in biomechanics, she brings a scientific approach to training and injury prevention.',
     credentials: ['CSCS Certified', 'FMS Level 2', 'Biomechanics Specialist'],
     articlesCount: 7,
-    image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop'
+    image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop&fm=webp&q=85'
   }
 };
 
@@ -50,7 +50,7 @@ const AuthorBio = ({ authorName }) => {
     bio: 'The 6Pack NZ team consists of certified trainers, registered nutritionists, and exercise scientists dedicated to providing evidence-based fitness guidance for New Zealanders.',
     credentials: ['Certified Professionals', 'Science-Backed Content', 'New Zealand Focused'],
     articlesCount: 15,
-    image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=400&fit=crop'
+    image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=400&fit=crop&fm=webp&q=85'
   };
 
   return (
