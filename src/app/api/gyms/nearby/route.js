@@ -85,8 +85,9 @@ export async function GET(request) {
     const transformedResults = data.results.map(place => {
       // Get the first photo reference for the main image
       const firstPhoto = place.photos && place.photos.length > 0 ? place.photos[0] : null;
-      const imageUrl = firstPhoto 
-        ? `/api/gyms/photo?reference=${firstPhoto.photo_reference}&maxwidth=400`
+      const photoReference = firstPhoto?.photo_reference;
+      const imageUrl = photoReference
+        ? `/api/gyms/photo?reference=${photoReference}&maxwidth=400`
         : 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&fm=webp&q=85';
 
       // Create basic hours structure from opening_hours if available
