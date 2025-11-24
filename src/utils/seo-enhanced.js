@@ -170,11 +170,6 @@ export function generateStructuredData({
     publisher: {
       '@type': 'Organization',
       name: '6Pack NZ'
-    },
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: `${siteConfig.siteUrl}/search?q={search_term_string}`,
-      'query-input': 'required name=search_term_string'
     }
   });
 
