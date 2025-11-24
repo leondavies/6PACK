@@ -23,7 +23,7 @@ export const metadata = {
     images: ["https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&h=630&fit=crop&fm=webp&q=85"],
   },
   alternates: {
-    canonical: "https://www.6pack.co.nz/calculators/body-fat",
+    canonical: "https://www.6pack.co.nz/calculators/body-fat/",
   },
 }
 

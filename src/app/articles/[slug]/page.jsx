@@ -38,7 +38,7 @@ export async function generateMetadata({ params }) {
           alt: article.title,
         },
       ],
-      url: `https://www.6pack.co.nz/articles/${article.slug}`,
+      url: `https://www.6pack.co.nz/articles/${article.slug}/`,
       type: 'article',
       authors: [article.author],
       publishedTime: article.publishDate,
@@ -50,7 +50,7 @@ export async function generateMetadata({ params }) {
       images: [article.image.replace(/w=\d+&h=\d+/, 'w=1200&h=630')],
     },
     alternates: {
-      canonical: `https://www.6pack.co.nz/articles/${article.slug}`,
+      canonical: `https://www.6pack.co.nz/articles/${article.slug}/`,
     },
   };
 }
@@ -139,7 +139,7 @@ export default function ArticlePage({ params }) {
             dateModified: article.publishDate,
             mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": `https://www.6pack.co.nz/articles/${article.slug}`,
+              "@id": `https://www.6pack.co.nz/articles/${article.slug}/`,
             },
           }),
         }}

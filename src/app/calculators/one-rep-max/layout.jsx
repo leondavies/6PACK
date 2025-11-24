@@ -23,7 +23,7 @@ export const metadata = {
     images: ["https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=1200&h=630&fit=crop&fm=webp&q=85"],
   },
   alternates: {
-    canonical: "https://www.6pack.co.nz/calculators/one-rep-max",
+    canonical: "https://www.6pack.co.nz/calculators/one-rep-max/",
   },
 }
 

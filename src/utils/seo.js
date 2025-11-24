@@ -110,14 +110,6 @@ export function generateWebsiteSchema() {
     "publisher": {
       "@type": "Organization",
       "name": siteConfig.siteName
-    },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": `${siteConfig.siteUrl}/search?q={search_term_string}`
-      },
-      "query-input": "required name=search_term_string"
     }
   };
 }

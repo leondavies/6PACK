@@ -965,7 +965,7 @@ export async function generateMetadata({ params }) {
           alt: `${params.slug} workout guide`,
         },
       ],
-      url: `https://www.6pack.co.nz/workouts/${params.slug}`,
+      url: `https://www.6pack.co.nz/workouts/${params.slug}/`,
       type: 'article',
     },
     twitter: {
@@ -975,7 +975,7 @@ export async function generateMetadata({ params }) {
       images: [workout.image],
     },
     alternates: {
-      canonical: `https://www.6pack.co.nz/workouts/${params.slug}`,
+      canonical: `https://www.6pack.co.nz/workouts/${params.slug}/`,
     },
   };
 }

@@ -48,7 +48,7 @@ export const metadata = {
     images: ["https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&h=630&fit=crop&fm=webp&q=85"],
   },
   alternates: {
-    canonical: "https://www.6pack.co.nz/gym-finder",
+    canonical: "https://www.6pack.co.nz/gym-finder/",
   },
 };
 

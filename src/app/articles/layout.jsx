@@ -48,7 +48,7 @@ export const metadata = {
     images: ["https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=1200&h=630&fit=crop&fm=webp&q=85"],
   },
   alternates: {
-    canonical: "https://www.6pack.co.nz/articles",
+    canonical: "https://www.6pack.co.nz/articles/",
   },
 }
 

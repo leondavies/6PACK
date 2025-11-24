@@ -23,7 +23,7 @@ export const metadata = {
     images: ["https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=630&fit=crop&fm=webp&q=85"],
   },
   alternates: {
-    canonical: "https://www.6pack.co.nz/calculators/bmi",
+    canonical: "https://www.6pack.co.nz/calculators/bmi/",
   },
 }
 

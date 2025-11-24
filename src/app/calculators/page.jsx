@@ -26,7 +26,7 @@ export const metadata = {
     images: ["https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop&fm=webp&q=85"],
   },
   alternates: {
-    canonical: "https://www.6pack.co.nz/calculators",
+    canonical: "https://www.6pack.co.nz/calculators/",
   },
 }
 
