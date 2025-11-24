@@ -23,7 +23,7 @@ export const metadata = {
     images: ["https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1200&h=630&fit=crop&fm=webp&q=85"],
   },
   alternates: {
-    canonical: "https://www.6pack.co.nz/calculators/macro",
+    canonical: "https://www.6pack.co.nz/calculators/macro/",
   },
 }
 
