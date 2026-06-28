@@ -8,6 +8,9 @@ export const metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: 'https://www.6pack.co.nz/privacy/',
+  },
 };
 
 export default function PrivacyPage() {

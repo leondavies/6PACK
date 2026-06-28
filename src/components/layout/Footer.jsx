@@ -25,8 +25,8 @@ const Footer = () => {
               <span className="text-lg text-gray-400 font-semibold">.co.nz</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md text-lg leading-relaxed">
-              New Zealand&apos;s premier fitness and training platform. Expert-backed content, 
-              personalised coaching, and science-based strategies for your transformation.
+              New Zealand fitness and nutrition platform. Free calculators, science-backed
+              workout and nutrition guides, and a NZ gym finder.
             </p>
             <div className="flex space-x-4">
               <a href="https://facebook.com/6pack.co.nz" className="bg-gray-800 hover:bg-gray-700 p-3 rounded-full transition-colors group">

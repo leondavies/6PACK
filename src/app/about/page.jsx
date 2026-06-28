@@ -3,7 +3,10 @@ import { ArrowLeft, Heart, Target, Users, Award } from 'lucide-react';
 
 export const metadata = {
   title: 'About Us | 6Pack NZ',
-  description: 'Learn about 6Pack NZ - New Zealand\'s premier fitness and training platform dedicated to helping Kiwis achieve their fitness goals.',
+  description: 'Learn about 6Pack NZ - a New Zealand fitness and nutrition platform offering free calculators, science-backed guides, and a NZ gym finder.',
+  alternates: {
+    canonical: 'https://www.6pack.co.nz/about/',
+  },
 };
 
 export default function AboutPage() {

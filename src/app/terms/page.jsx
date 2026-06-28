@@ -4,6 +4,9 @@ import { ArrowLeft, FileText } from 'lucide-react';
 export const metadata = {
   title: 'Terms of Service | 6Pack NZ',
   description: 'Terms and conditions for using the 6Pack NZ fitness platform, calculators, and services.',
+  alternates: {
+    canonical: 'https://www.6pack.co.nz/terms/',
+  },
 };
 
 export default function TermsPage() {

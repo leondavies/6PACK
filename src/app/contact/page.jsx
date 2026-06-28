@@ -4,6 +4,9 @@ import { ArrowLeft, Mail, MapPin, MessageCircle, Clock } from 'lucide-react';
 export const metadata = {
   title: 'Contact Us | 6Pack NZ',
   description: 'Get in touch with 6Pack NZ. We are here to help with your fitness questions, feedback, and support requests.',
+  alternates: {
+    canonical: 'https://www.6pack.co.nz/contact/',
+  },
 };
 
 export default function ContactPage() {

@@ -4,6 +4,9 @@ import { ArrowLeft, AlertTriangle } from 'lucide-react';
 export const metadata = {
   title: 'Disclaimer | 6Pack NZ',
   description: 'Important health and fitness disclaimers for using 6Pack NZ calculators and following our advice.',
+  alternates: {
+    canonical: 'https://www.6pack.co.nz/disclaimer/',
+  },
 };
 
 export default function DisclaimerPage() {

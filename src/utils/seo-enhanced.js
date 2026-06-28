@@ -3,7 +3,7 @@
 export const siteConfig = {
   siteName: '6Pack NZ',
   siteUrl: 'https://www.6pack.co.nz',
-  description: 'New Zealand\'s premier fitness and training platform. Expert-backed content, personalised coaching, and science-based strategies for your transformation.',
+  description: 'New Zealand fitness and nutrition platform. Free calculators, science-backed workout and nutrition guides, and a NZ gym finder.',
   author: '6Pack NZ Team',
   social: {
     twitter: '@6pack_nz',

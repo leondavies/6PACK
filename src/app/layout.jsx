@@ -8,10 +8,10 @@ import '../index.css'
 export const metadata = {
   metadataBase: new URL('https://www.6pack.co.nz'),
   title: {
-    default: '6Pack NZ - New Zealand\'s Premier Fitness & Nutrition Platform | Free Calculators & Expert Guides',
+    default: '6Pack NZ - New Zealand Fitness & Nutrition Platform | Free Calculators & Expert Guides',
     template: '%s | 6Pack NZ'
   },
-  description: 'Transform your body with New Zealand\'s #1 fitness platform. FREE BMI, BMR & macro calculators ✓ 100+ expert workout plans ✓ Science-backed nutrition guides ✓ Join 50,000+ Kiwis achieving their fitness goals.',
+  description: 'Free fitness tools for New Zealanders: BMI, BMR, macro, body fat, 1RM and ideal weight calculators, plus science-backed workout and nutrition guides and a NZ gym finder.',
   keywords: [
     'fitness New Zealand',
     'BMI calculator NZ',
@@ -57,8 +57,8 @@ export const metadata = {
     locale: 'en_NZ',
     url: 'https://www.6pack.co.nz',
     siteName: '6Pack NZ',
-    title: '6Pack NZ - New Zealand\'s Premier Fitness & Nutrition Platform',
-    description: '🏆 Transform your body with NZ\'s #1 fitness platform! FREE calculators (BMI, BMR, Macro) ✓ 100+ workout plans ✓ Expert nutrition guides ✓ Join 50,000+ Kiwis achieving their fitness goals.',
+    title: '6Pack NZ - New Zealand Fitness & Nutrition Platform',
+    description: 'Free BMI, BMR & macro calculators, science-backed workout and nutrition guides, and a New Zealand gym finder. Practical fitness for Kiwis.',
     images: [
       {
         url: '/og-image.jpg',
@@ -73,43 +73,19 @@ export const metadata = {
     card: 'summary_large_image',
     site: '@6pack_nz',
     creator: '@6pack_nz',
-    title: '6Pack NZ - New Zealand\'s Premier Fitness Platform',
-    description: '🏆 Transform your body with NZ\'s #1 fitness platform! FREE calculators ✓ 100+ workout plans ✓ Expert nutrition guides',
+    title: '6Pack NZ - New Zealand Fitness Platform',
+    description: 'Free BMI, BMR & macro calculators, science-backed workout and nutrition guides, and a NZ gym finder.',
     images: ['/og-image.jpg'],
   },
-  verification: {
-    google: 'QrPmrJ7fQj4j8Qj4j8Qj4j8Qj4j8Qj4j8Qj4j',
-    yandex: 'yandex-verification-code',
-    yahoo: 'yahoo-verification-code',
-    other: {
-      me: ['mailto:info@6pack.co.nz', 'https://www.6pack.co.nz'],
-    },
-  },
+  // To verify the site in Google Search Console, add your verification token below.
+  // Get it from https://search.google.com/search-console (HTML tag method).
+  // verification: { google: 'your-google-site-verification-token' },
   alternates: {
     canonical: 'https://www.6pack.co.nz',
     languages: {
       'en-NZ': 'https://www.6pack.co.nz',
       'en': 'https://www.6pack.co.nz',
     },
-  },
-  other: {
-    'revisit-after': '7 days',
-    'distribution': 'global',
-    'rating': 'general',
-    'coverage': 'worldwide',
-    'target': 'fitness enthusiasts, health conscious individuals, personal trainers, gym members',
-    'audience': 'New Zealand fitness community',
-    'subject': 'Fitness, Nutrition, Health, Exercise, Wellness',
-    'abstract': 'Comprehensive fitness platform offering free calculators, expert workout plans, and science-backed nutrition guidance for New Zealanders.',
-    'topic': 'Health and Fitness',
-    'summary': 'New Zealand\'s premier fitness resource providing free tools and expert guidance for achieving your fitness goals.',
-    'Classification': 'Health & Fitness',
-    'owner': '6Pack NZ',
-    'reply-to': 'info@6pack.co.nz',
-    'category': 'Fitness and Health',
-    'coverage': 'New Zealand',
-    'distribution': 'Global',
-    'rating': 'General',
   },
 }
 
@@ -128,9 +104,6 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         <link rel="dns-prefetch" href="//images.unsplash.com" />
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
-        
-        {/* Preload critical resources */}
-        <link rel="preload" href="/og-image.jpg" as="image" type="image/jpeg" />
 
         {/* Google Tag Manager - Loaded via CookieConsent component after user consent */}
 
@@ -150,7 +123,7 @@ export default function RootLayout({ children }) {
                 width: 1200,
                 height: 630
               },
-              description: 'New Zealand\'s premier fitness and training platform offering expert-backed content, personalised coaching, and science-based strategies for transformation.',
+              description: 'New Zealand fitness and nutrition platform offering free calculators, science-backed workout and nutrition guides, and a gym finder.',
               foundingDate: '2024',
               address: {
                 '@type': 'PostalAddress',
@@ -186,7 +159,7 @@ export default function RootLayout({ children }) {
               name: '6Pack NZ',
               alternateName: '6Pack New Zealand',
               url: 'https://www.6pack.co.nz',
-              description: 'New Zealand\'s #1 fitness platform with FREE calculators, expert workout plans, and science-backed nutrition guides.',
+              description: 'New Zealand fitness platform with free calculators, workout plans, and science-backed nutrition guides.',
               publisher: {
                 '@type': 'Organization',
                 name: '6Pack NZ',

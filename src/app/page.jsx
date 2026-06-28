@@ -8,16 +8,16 @@ import { generateFAQSchema, generateHowToSchema } from "../utils/seo-enhanced";
 
 // Enhanced metadata for Next.js App Router + our SEO system
 export const metadata = {
-  title: "Free Fitness Calculators & Expert Workout Plans | 6Pack NZ - New Zealand's #1 Fitness Platform",
-  description: "🏆 Transform your body with New Zealand's premier fitness platform! Get FREE BMI, BMR & macro calculators ✓ 100+ expert workout plans ✓ Science-backed nutrition guides ✓ Join 50,000+ Kiwis achieving their fitness goals. Start your transformation today!",
+  title: "Free Fitness Calculators & Expert Workout Plans | 6Pack NZ",
+  description: "Free BMI, BMR, macro, body fat & 1RM calculators for New Zealanders, plus science-backed workout and nutrition guides and a NZ gym finder. Start today.",
   openGraph: {
     title: "Free Fitness Calculators & Expert Workout Plans | 6Pack NZ",
-    description: "🏆 Transform your body with New Zealand's premier fitness platform! FREE calculators (BMI, BMR, Macro) ✓ 100+ workout plans ✓ Science-backed nutrition guides ✓ Join 50,000+ Kiwis achieving their fitness goals.",
+    description: "Free BMI, BMR & macro calculators, science-backed workout and nutrition guides, and a New Zealand gym finder. Practical fitness for Kiwis.",
     images: [{
       url: "https://www.6pack.co.nz/og-image.jpg",
       width: 1200,
       height: 630,
-      alt: "6Pack NZ - New Zealand's Premier Fitness Platform",
+      alt: "6Pack NZ - New Zealand Fitness Platform",
     }],
     url: "https://www.6pack.co.nz",
     type: "website",
