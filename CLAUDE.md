@@ -5,17 +5,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with th
 ## Development Commands
 
 - **Development server**: `npm run dev` - Starts Next.js development server with hot reload
-- **Build**: `npm run build` - Creates optimized production build with static export
+- **Build**: `npm run build` - Creates optimized production build (server-rendered + SSG, deployed on Vercel)
 - **Start**: `npm start` - Serves production build locally  
 - **Linting**: `npm run lint` - Runs ESLint on all TypeScript/JavaScript files
 - **Export**: `npm run export` - Exports static site (automatically included in build)
 
 ## Project Architecture
 
-6Pack NZ is a **Next.js 14 App Router** fitness platform with static export, featuring comprehensive SEO optimization and fitness content management.
+6Pack NZ is a **Next.js 14 App Router** fitness platform deployed on Vercel (server-rendered with SSG/ISR), featuring comprehensive SEO optimization and fitness content management.
 
 ### Core Technologies
-- **Next.js 14** with App Router and static export (`output: 'export'`)
+- **Next.js 14** with App Router, deployed on **Vercel** (server-rendered; `output: 'export'` was removed so the gym-finder API routes work)
 - **React 18** with functional components, hooks, Server Components, and Client Components (`'use client'`)
 - **Tailwind CSS** with custom fitness design system and typography plugin
 - **Framer Motion** for smooth animations and page transitions
@@ -42,8 +42,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with th
 - `/workouts/` - Workout plans listing
 - `/workouts/[slug]/` - Dynamic workout pages
 - `/gym-finder/` - Interactive gym finder with Google Places API
-- `/shop/` - E-commerce section
-- `/api/` - Server-side API routes for external services
+- `/api/` - Server-side API routes for external services (gym finder)
+- NOTE: There is **no `/shop`** page. E-commerce was removed; `robots.js` actively
+  disallows `/shop`. A `useCart` hook still lingers in `Header.jsx` (cart icon) as
+  dead UI — remove or rebuild if e-commerce returns.
 
 **Layout System**:
 - Global layout (`src/app/layout.jsx`) with comprehensive metadata
@@ -171,11 +173,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with th
 
 ### Business Logic
 
-**E-commerce Features**:
-- Shopping cart with localStorage persistence (`src/hooks/useCart.js`)
-- Product catalog for supplements and equipment
-- Free shipping threshold: $99 NZD (calculated in `getShippingCost()`)
-- Standard shipping cost: $9.99 NZD
+**E-commerce Features** (NOT currently live — no shop page exists):
+- `src/hooks/useCart.js` (localStorage cart) still exists and is imported by
+  `Header.jsx`, but there is no `/shop` route to use it. Treat as dead/legacy
+  until e-commerce is rebuilt.
 
 **Calculator Tools**:
 - Form validation using react-hook-form and Zod schemas
@@ -199,16 +200,20 @@ This file provides guidance to Claude Code (claude.ai/code) when working with th
 **Next.js Config** (`next.config.js`):
 ```javascript
 {
-  output: 'export',           // Static site generation
+  // No 'output: export' — removed so the gym-finder API routes run on Vercel
   trailingSlash: true,        // URL trailing slash handling
-  images: { unoptimized: true }, // Static export compatibility
-  env: {                      // Environment variables
-    GOOGLE_PLACES_API_KEY: process.env.GOOGLE_PLACES_API_KEY,
-  }
+  images: {
+    // Optimizer enabled (we deploy on Vercel, not a static CDN export)
+    remotePatterns: [{ protocol: 'https', hostname: 'images.unsplash.com' }],
+  },
 }
 ```
+Note: API routes read `process.env.GOOGLE_PLACES_API_KEY` directly (not exposed
+via the `env` config, to avoid leaking it client-side).
 
-**Static Export**: Configured for deployment on CDN/static hosting with pre-rendered HTML
+**Deployment**: Vercel — server-rendered pages + SSG/ISR. `app/sitemap.js` and
+`app/robots.js` generate `/sitemap.xml` and `/robots.txt` dynamically (do NOT
+re-add static copies in `public/` — they shadow and conflict with these).
 
 **Performance Optimizations**:
 - Image optimization with fallbacks
@@ -439,17 +444,16 @@ GOOGLE_PLACES_API_KEY=your_google_places_api_key
 
 ## Current Project Status
 
-- **Tech Stack**: Next.js 14 App Router with static export
-- **SEO**: Fully optimized with comprehensive metadata and structured data
-- **Content**: 29 high-quality fitness articles with consistent formatting
-- **Features**: 6 fitness calculators (BMI, BMR, Macro, Body Fat, 1RM, Ideal Weight), gym finder, workout plans
-- **Performance**: Optimized for speed and Core Web Vitals
-- **Deployment**: Static export ready for CDN deployment
+- **Tech Stack**: Next.js 14 App Router, server-rendered + SSG/ISR on Vercel
+- **SEO**: Comprehensive metadata + structured data; dynamic sitemap/robots
+- **Content**: **15** fitness articles (in `src/data/products.js`) + 3 workout guides (chest/legs/core)
+- **Features**: 6 fitness calculators (BMI, BMR, Macro, Body Fat, 1RM, Ideal Weight), gym finder, workout guides
+- **Performance**: Image optimizer enabled; ongoing Core Web Vitals work
+- **Deployment**: Vercel
 
 **Recent Updates**:
 - Migrated from Vite to Next.js 14 App Router
-- Implemented comprehensive SEO optimization
-- Added structured data for rich snippets
+- Removed `output: 'export'` to enable gym-finder API routes (now SSR on Vercel)
+- SEO Tier 1 cleanup: removed conflicting static sitemap/robots, dead code, and
+  unverifiable marketing claims; optimized og-image; added missing canonicals
 - Optimized for New Zealand market
-- Fixed hydration issues with date formatting
-- Removed redundant static page generation (Next.js handles this natively)
