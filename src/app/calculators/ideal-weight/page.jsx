@@ -1,11 +1,10 @@
 'use client';
 
 import { useState, useEffect, Suspense } from "react";
-import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { TrendingUp, ArrowLeft, Info, Target, Users, Activity } from "lucide-react";
-import BlurIn from "../../../components/blurText";
+import { TrendingUp, Info, Target, Users } from "lucide-react";
 import ShareResults from "../../../components/ui/ShareResults";
+import CalculatorHero from "../../../components/calculators/CalculatorHero";
 import MedicalDisclaimer from "../../../components/MedicalDisclaimer";
 
 function IdealWeightCalculatorContent() {
@@ -187,48 +186,16 @@ function IdealWeightCalculatorContent() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-indigo-600 to-indigo-700 text-white overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1600&h=900&fit=crop&fm=webp&q=85"
-            alt="Ideal Weight Calculator"
-            className="w-full h-full object-cover opacity-30"
-          />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <Link
-            href="/calculators"
-            className="inline-flex items-center text-indigo-200 hover:text-white transition-colors mb-6"
-          >
-            <ArrowLeft className="mr-2" size={20} />
-            Back to Calculators
-          </Link>
-          
-          <BlurIn
-            className="text-5xl md:text-6xl font-bold mb-6"
-            word="Ideal Weight Calculator"
-          />
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl leading-relaxed">
-            Find your ideal weight range using multiple scientific formulas
-          </p>
-          
-          <div className="flex flex-wrap gap-4 text-sm">
-            <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
-              <TrendingUp className="mr-2" size={16} />
-              Multiple formulas
-            </div>
-            <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
-              <Target className="mr-2" size={16} />
-              Scientific approach
-            </div>
-            <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
-              <Users className="mr-2" size={16} />
-              Gender-specific
-            </div>
-          </div>
-        </div>
-      </div>
+      <CalculatorHero
+        eyebrow="Free calculator"
+        title="Ideal Weight Calculator"
+        subtitle="Find your ideal weight range using multiple scientific formulas."
+        badges={[
+          { icon: TrendingUp, label: "Multiple formulas" },
+          { icon: Target, label: "Scientific approach" },
+          { icon: Users, label: "Gender-specific" },
+        ]}
+      />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -246,7 +213,7 @@ function IdealWeightCalculatorContent() {
                   onClick={() => setUnit("metric")}
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                     unit === "metric"
-                      ? "bg-indigo-600 text-white"
+                      ? "bg-primary-600 text-white"
                       : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                   }`}
                 >
@@ -256,7 +223,7 @@ function IdealWeightCalculatorContent() {
                   onClick={() => setUnit("imperial")}
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                     unit === "imperial"
-                      ? "bg-indigo-600 text-white"
+                      ? "bg-primary-600 text-white"
                       : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                   }`}
                 >
@@ -275,7 +242,7 @@ function IdealWeightCalculatorContent() {
                   onClick={() => setGender("male")}
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                     gender === "male"
-                      ? "bg-indigo-600 text-white"
+                      ? "bg-primary-600 text-white"
                       : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                   }`}
                 >
@@ -285,7 +252,7 @@ function IdealWeightCalculatorContent() {
                   onClick={() => setGender("female")}
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                     gender === "female"
-                      ? "bg-indigo-600 text-white"
+                      ? "bg-primary-600 text-white"
                       : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                   }`}
                 >
@@ -303,7 +270,7 @@ function IdealWeightCalculatorContent() {
                 type="number"
                 value={height}
                 onChange={(e) => setHeight(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 placeholder={unit === "metric" ? "e.g., 175" : "e.g., 69"}
                 step="0.1"
               />
@@ -318,7 +285,7 @@ function IdealWeightCalculatorContent() {
                 type="number"
                 value={age}
                 onChange={(e) => setAge(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 placeholder="e.g., 30"
                 min="18"
                 max="100"
@@ -328,7 +295,7 @@ function IdealWeightCalculatorContent() {
             {/* Calculate Button */}
             <button
               onClick={calculateIdealWeight}
-              className="w-full bg-indigo-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+              className="w-full bg-primary-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
             >
               Calculate Ideal Weight
             </button>
@@ -351,10 +318,10 @@ function IdealWeightCalculatorContent() {
                   <h3 className="text-2xl font-bold text-gray-900 mb-6">Your Ideal Weight Range</h3>
                   
                   <div className="space-y-4">
-                    <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-4">
+                    <div className="bg-primary-50 border border-primary-200 rounded-lg p-4">
                       <div className="text-center">
-                        <h4 className="font-semibold text-indigo-900 mb-2">Average Ideal Weight</h4>
-                        <div className="text-3xl font-bold text-indigo-600">{results.average} {results.unit}</div>
+                        <h4 className="font-semibold text-primary-900 mb-2">Average Ideal Weight</h4>
+                        <div className="text-3xl font-bold text-primary-600">{results.average} {results.unit}</div>
                       </div>
                     </div>
 
@@ -407,7 +374,7 @@ function IdealWeightCalculatorContent() {
                   <ul className="space-y-3">
                     {recommendations.map((rec, index) => (
                       <li key={index} className="flex items-start">
-                        <Info className="text-indigo-500 mr-2 mt-0.5 flex-shrink-0" size={16} />
+                        <Info className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" size={16} />
                         <span className="text-gray-700 text-sm">{rec}</span>
                       </li>
                     ))}

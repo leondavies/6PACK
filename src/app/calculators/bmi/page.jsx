@@ -1,11 +1,10 @@
 'use client';
 
 import { useState, useEffect, Suspense } from "react";
-import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { Scale, ArrowLeft, Info, Target, TrendingUp, Heart } from "lucide-react";
-import BlurIn from "../../../components/blurText";
+import { Scale, Info, Target, TrendingUp, Heart } from "lucide-react";
 import ShareResults from "../../../components/ui/ShareResults";
+import CalculatorHero from "../../../components/calculators/CalculatorHero";
 import { CalculatorSEO } from "../../../components/SEO";
 import MedicalDisclaimer from "../../../components/MedicalDisclaimer";
 
@@ -173,38 +172,16 @@ function BMICalculatorContent() {
     <>
       <CalculatorSEO calculator={calculatorData} breadcrumbs={breadcrumbs} />
       <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-blue-900 to-blue-700 text-white overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1600&h=900&fit=crop&fm=webp&q=85"
-            alt="BMI Calculator"
-            className="w-full h-full object-cover opacity-30"
-          />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <Link
-            href="/calculators"
-            className="inline-flex items-center text-white hover:text-blue-200 transition-colors mb-6"
-          >
-            <ArrowLeft className="mr-2" size={20} />
-            Back to Calculators
-          </Link>
-          
-          <div className="text-center">
-            <div className="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Scale className="text-white" size={32} />
-            </div>
-            <BlurIn
-              className="text-4xl md:text-5xl font-bold mb-6"
-              word="BMI Calculator"
-            />
-            <p className="text-xl max-w-3xl mx-auto leading-relaxed">
-              Calculate your Body Mass Index to understand if you're in a healthy weight range
-            </p>
-          </div>
-        </div>
-      </div>
+      <CalculatorHero
+        eyebrow="Free calculator"
+        title="BMI Calculator"
+        subtitle="Calculate your Body Mass Index to understand if you're in a healthy weight range."
+        badges={[
+          { icon: Scale, label: "Body Mass Index" },
+          { icon: Heart, label: "Healthy range guide" },
+          { icon: Target, label: "Personalised tips" },
+        ]}
+      />
 
       {/* Main Content */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -253,7 +230,7 @@ function BMICalculatorContent() {
                 onChange={(e) => setHeight(e.target.value)}
                 placeholder={unit === "metric" ? "170" : "5.8"}
                 step={unit === "metric" ? "1" : "0.1"}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-primary-500 focus:border-primary-500"
               />
             </div>
 
@@ -268,7 +245,7 @@ function BMICalculatorContent() {
                 onChange={(e) => setWeight(e.target.value)}
                 placeholder={unit === "metric" ? "70" : "154"}
                 step="0.1"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-primary-500 focus:border-primary-500"
               />
             </div>
 
@@ -276,7 +253,7 @@ function BMICalculatorContent() {
             <div className="flex space-x-4">
               <button
                 onClick={calculateBMI}
-                className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
+                className="flex-1 bg-primary-600 text-white py-2 px-4 rounded-md hover:bg-primary-700 transition-colors"
               >
                 Calculate BMI
               </button>
@@ -295,7 +272,7 @@ function BMICalculatorContent() {
               <h2 className="text-2xl font-bold mb-6">Your Results</h2>
               
               <div className="text-center mb-6">
-                <div className="text-4xl font-bold text-blue-600 mb-2">{bmi}</div>
+                <div className="text-4xl font-bold text-primary-600 mb-2">{bmi}</div>
                 <div className={`inline-block px-3 py-1 rounded-full font-medium ${getCategoryColor()}`}>
                   {category}
                 </div>
@@ -303,7 +280,7 @@ function BMICalculatorContent() {
 
               <div className="mb-6">
                 <div className="flex items-center mb-2">
-                  <Info className="text-blue-500 mr-2" size={16} />
+                  <Info className="text-primary-500 mr-2" size={16} />
                   <span className="font-medium">Health Risk Assessment</span>
                 </div>
                 <p className="text-gray-600">{healthRisk}</p>
@@ -364,12 +341,12 @@ function BMICalculatorContent() {
         </div>
 
         {/* Additional Info */}
-        <div className="mt-8 bg-blue-50 rounded-lg p-6">
+        <div className="mt-8 bg-primary-50 rounded-lg p-6">
           <div className="flex items-start">
-            <Info className="text-blue-500 mr-3 mt-1" size={20} />
+            <Info className="text-primary-600 mr-3 mt-1" size={20} />
             <div>
-              <h4 className="font-semibold text-blue-900 mb-2">Important Note</h4>
-              <p className="text-blue-800 text-sm">
+              <h4 className="font-semibold text-primary-900 mb-2">Important Note</h4>
+              <p className="text-primary-800 text-sm">
                 BMI is a screening tool and doesn't directly measure body fat. It may not be accurate for athletes
                 with high muscle mass, pregnant women, or elderly individuals. Consult a healthcare provider for
                 personalized health assessment.
