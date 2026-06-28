@@ -1,4 +1,5 @@
 import { articles } from '../data/products';
+import { getAllLandingPageParams } from '../data/calculatorLandingPages';
 
 export default function sitemap() {
   const baseUrl = 'https://www.6pack.co.nz';
@@ -111,5 +112,13 @@ export default function sitemap() {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...articlePages];
+  // Programmatic calculator landing pages (high-intent money pages)
+  const calculatorLandingPagesUrls = getAllLandingPageParams().map(({ calculator, slug }) => ({
+    url: `${baseUrl}/calculators/${calculator}/${slug}/`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }));
+
+  return [...staticPages, ...articlePages, ...calculatorLandingPagesUrls];
 }

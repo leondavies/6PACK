@@ -1,9 +1,10 @@
 // For Next.js 14 App Router, we'll use the built-in metadata API instead of Helmet
 // This component now generates structured data that can be included in pages
 
-import { 
-  generateStructuredData, 
-  optimizeImageForSocial 
+import {
+  generateStructuredData,
+  optimizeImageForSocial,
+  generateFAQSchema
 } from '../utils/seo-enhanced';
 
 export default function SEO({
@@ -187,7 +188,22 @@ export function CalculatorSEO({
   );
 }
 
-export function GymFinderSEO({ 
+// Emits FAQPage JSON-LD from an array of { question, answer }.
+// Used by calculator landing pages (and reusable elsewhere) to win FAQ rich snippets.
+export function FAQPageSchema({ faqs }) {
+  if (!faqs || faqs.length === 0) return null;
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(generateFAQSchema(faqs))
+      }}
+    />
+  );
+}
+
+export function GymFinderSEO({
   breadcrumbs,
   children 
 }) {
