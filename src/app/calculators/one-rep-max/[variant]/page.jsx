@@ -4,10 +4,10 @@ import {
   getLandingPage,
   buildLandingMetadata,
 } from '../../../../data/calculatorLandingPages';
-import BmrCalculator from '../../../../components/calculators/BmrCalculator';
+import OneRepMaxCalculator from '../../../../components/calculators/OneRepMaxCalculator';
 import CalculatorLandingTemplate from '../../../../components/calculators/CalculatorLandingTemplate';
 
-const CALCULATOR = 'bmr';
+const CALCULATOR = 'one-rep-max';
 
 export function generateStaticParams() {
   return (calculatorLandingPages[CALCULATOR] || []).map((v) => ({ variant: v.slug }));
@@ -17,13 +17,13 @@ export function generateMetadata({ params }) {
   return buildLandingMetadata(CALCULATOR, params.variant);
 }
 
-export default function BmrLandingPage({ params }) {
+export default function OneRepMaxLandingPage({ params }) {
   const page = getLandingPage(CALCULATOR, params.variant);
   if (!page) return notFound();
 
   return (
-    <CalculatorLandingTemplate page={page} calculatorName="BMR Calculator" basePath="/calculators/bmr">
-      <BmrCalculator prefill={page.prefill} />
+    <CalculatorLandingTemplate page={page} calculatorName="1RM Calculator" basePath="/calculators/one-rep-max">
+      <OneRepMaxCalculator prefill={page.prefill} />
     </CalculatorLandingTemplate>
   );
 }
